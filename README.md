@@ -15,5 +15,5 @@ npm install
 
 You can run our unit tests with:
 ```bash
-npm test
+scripts/build_check.sh
 ```
