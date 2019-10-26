@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -r ts-node/register test/**",
-    "lint": "tslint"
+    "lint": "tslint --project tsconfig.json",
+    "compile": "tsc"
   },
   "author": "UBC Launch Pad",
   "license": "ISC",
