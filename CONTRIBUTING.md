@@ -60,3 +60,10 @@ Your change needs to pass our Travis build check and gain approval from some mem
 it can get merged. If a reviewer asks for a change, please make the change and update your branch again.
 Once your branch passes our Travis build and gains enough approvals, please merge your branch into master
 with an ordinary merge commit, not a rebase or squash merge.
+
+Travis uses this script to test code compilation, linting, and of course,
+tests.
+
+```bash
+scripts/build_check.sh
+```
