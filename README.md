@@ -13,9 +13,9 @@ git clone https://github.com/ubclaunchpad/ubcsim2.git
 npm install
 ```
 
-You can run our unit tests with:
+You can run compilation, linter, and tests with:
 ```bash
-npm test
+scripts/build_check.sh
 ```
 
 ## Build the app and deploy to GitHub Pages
