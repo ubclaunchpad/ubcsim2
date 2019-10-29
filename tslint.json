@@ -5,7 +5,9 @@
     ],
     "jsRules": {},
     "rules": {
-      "no-console": false
+      "no-console": false,
+      "indent": [true, "spaces", 4],
+      "align": [true, "statements", "members"]
     },
     "rulesDirectory": []
 }
