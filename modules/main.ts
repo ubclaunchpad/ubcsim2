@@ -1,14 +1,44 @@
 interface IEvent {
-    displayPrompt(): void;
+    displayPrompt(): string;
 
-    getInput(): void;
+    displayChoices(): string;
 
-    displayResponse(): void;
+    // getInput(): void;
 
-    updateEvents(state: State): void;
+    // displayResponse(): void;
+
+    // updateEvents(state: State): void;
+}
+
+class ShittyEvent implements IEvent {
+    private prompt: string;
+    private click: string;
+    private display: string;
+    constructor(prompt: string, click: string, display: string) {
+        this.prompt = prompt;
+        this.click = click;
+        this.display = display;
+    }
+
+    public displayPrompt(): string {
+        return this.prompt;
+    }
+
+    public displayChoices(): string {
+        return "<button onclick='displayResponse()'>" + this.click + "</button>";
+    }
+
 }
 
 const DEFAULT_SLEEP = 100;
+const SAUDER_FRIENDS = 100;
+const SAUDER_GPA = 2.0;
+const SCIENCE_FRIENDS = 50;
+const SCIENCE_GPA = 3.0;
+const ARTS_FRIENDS = 50;
+const ARTS_GPA = 2.0;
+const ENG_FRIENDS = 0;
+const ENG_GPA = 4.0;
 
 class State {
     public pool: IEvent[];
@@ -20,7 +50,7 @@ class State {
 
     constructor(friends: number, gpa: number) {
         this.pool = [];
-        this.queue = [];
+        this.queue = [ new ShittyEvent("This is a shitty event", "click here to conitnue", "I'm really phoning it in on these examples")];
         this.friends = friends;
         this.gpa = gpa;
         this.sleep = DEFAULT_SLEEP;

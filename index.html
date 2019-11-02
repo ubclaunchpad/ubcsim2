@@ -8,8 +8,52 @@
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
-    <script src="index.js"></script>
+    <h1>Hello, world</h1>
+    <h2 id="prompt">Welcome to UBC Sim!</h2>
+    <div id="choices">
+        <button onclick="chooseFaculty()">Start!</button>
+    </div>
 </body>
+
+<script src="modules/main.js"></script>
+<script>
+    let state = null;
+    let event = null;
+    function chooseFaculty() {
+        document.getElementById("prompt").innerText = "Choose your faculty!";
+        document.getElementById("choices").innerHTML =
+            "<button onclick='chooseArts()'>Arts</button>" +
+            "<button onclick='chooseEng()'>Engineering</button>" +
+            "<button onclick='chooseScience()'>Science</button>" +
+            "<button onclick='chooseSauder()'>Sauder</button>";
+    }
+
+    function chooseArts() {
+        state = new State(ARTS_FRIENDS, ARTS_GPA);
+        getNextEvent();
+    }
+
+    function chooseScience() {
+        state = new State(SCIENCE_FRIENDS, SCIENCE_GPA);
+        getNextEvent();
+    }
+
+    function chooseEng() {
+        state = new State(ENG_FRIENDS, ENG_GPA);
+        getNextEvent();
+    }
+
+    function chooseSauder() {
+        state = new State(SAUDER_FRIENDS, SAUDER_GPA);
+        getNextEvent();
+    }
+
+    function getNextEvent() {
+        event = state.getRandomEvent();
+        document.getElementById("prompt").innerText = event.displayPrompt();
+        document.getElementById("choices").innerHTML = event.displayChoices();
+    }
+</script>
+
 
 </html>
