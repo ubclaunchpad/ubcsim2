@@ -8,6 +8,7 @@ script:
 - npm install
 - scripts/build_check.sh
 deploy:
+  local-dir: "./dist"
   provider: pages
   skip_cleanup: true
   github_token: "$GITHUB_TOKEN"
