@@ -5,15 +5,15 @@ interface IEvent {
 
     // getInput(): void;
 
-    // displayResponse(): void;
+    displayResponse(): string;
 
     // updateEvents(state: State): void;
 }
 
 class ShittyEvent implements IEvent {
-    private prompt: string;
-    private click: string;
-    private display: string;
+    private readonly prompt: string;
+    private readonly click: string;
+    private readonly display: string;
     constructor(prompt: string, click: string, display: string) {
         this.prompt = prompt;
         this.click = click;
@@ -26,6 +26,10 @@ class ShittyEvent implements IEvent {
 
     public displayChoices(): string {
         return "<button onclick='displayResponse()'>" + this.click + "</button>";
+    }
+
+    public displayResponse(): string {
+        return this.display;
     }
 
 }
@@ -50,7 +54,10 @@ class State {
 
     constructor(friends: number, gpa: number) {
         this.pool = [];
-        this.queue = [ new ShittyEvent("This is a shitty event", "click here to conitnue", "I'm really phoning it in on these examples")];
+        this.queue = [
+            new ShittyEvent("This is a shitty event", "click here to conitnue", "I'm really phoning it in on these examples"),
+            new ShittyEvent("This is shiity envent number 2", "click her to break everything", "yeaaaa boiiii"),
+        ];
         this.friends = friends;
         this.gpa = gpa;
         this.sleep = DEFAULT_SLEEP;

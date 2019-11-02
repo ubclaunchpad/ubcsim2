@@ -53,6 +53,11 @@
         document.getElementById("prompt").innerText = event.displayPrompt();
         document.getElementById("choices").innerHTML = event.displayChoices();
     }
+
+    function displayResponse() {
+        document.getElementById("prompt").innerText = event.displayResponse();
+        document.getElementById("choices").innerHTML = "<button onclick='getNextEvent()'>continue</button>";
+    }
 </script>
 
 
