@@ -44,6 +44,7 @@ const ARTS_GPA = 2.0;
 const ENG_FRIENDS = 0;
 const ENG_GPA = 4.0;
 
+// tslint:disable-next-line:max-classes-per-file
 class State {
     public pool: IEvent[];
     public queue: IEvent[];  // Queue<IEvent>
@@ -64,7 +65,7 @@ class State {
         this.week = 0;
     }
 
-    public getRandomEvent(): IEvent {
+    public getRandomEvent(): IEvent|undefined {
         if (this.queue.length !== 0) {
             return this.queue.shift();
         }

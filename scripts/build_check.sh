@@ -7,5 +7,6 @@ pushd "${REPO_ROOT}"
 npm run compile
 npm run lint
 npm run test
+npm run build
 
 popd

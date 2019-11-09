@@ -4,10 +4,22 @@
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "lib": ["es6", "dom"]
+        "jsx": "preserve",
+        "lib": ["es6", "dom"],
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true
     },
     "files": [
-        "index.ts",
-        "modules/main.ts"
+        "src/index.ts"
+    ],
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        ".git",
+        "node_modules"
     ]
 }
