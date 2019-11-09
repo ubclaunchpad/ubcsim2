@@ -8,8 +8,7 @@
     "test": "mocha -r ts-node/register test/**",
     "lint": "tslint --project tsconfig.json",
     "compile": "tsc",
-    "start": "parcel serve public/index.html",
-    "watch": "parcel watch public/index.html",
+    "start": "parcel public/index.html",
     "build": "cross-env NODE_ENV=production parcel build public/index.html --public-url .",
     "deploy": "gh-pages -d dist"
   },
