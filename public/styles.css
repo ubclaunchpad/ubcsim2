@@ -1,0 +1,60 @@
+body {
+  font-family: "VT323", monospace;
+}
+
+.game-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.align-items {
+  height: 480px;
+  width: 300px;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.this-align-left {
+  text-align: left;
+}
+
+.this-align-center {
+  text-align: center;
+}
+
+.this-display-block {
+  display: block;
+}
+
+.faculty-badge {
+  height: 60px;
+  width: 60px;
+  border: 1px black solid;
+  border-radius: 10px;
+}
+
+.stat {
+  display: block;
+}
+
+.bottom-container {
+  padding: 10px 20px 10px 20px;
+  border: 1px black solid;
+  border-radius: 10px;
+}
