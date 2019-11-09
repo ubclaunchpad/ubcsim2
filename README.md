@@ -21,7 +21,7 @@ scripts/build_check.sh
 ## Build the app and deploy to GitHub Pages
 run the following command to build and deploy
 
-You can run your page locally using ```npm run start``` or ```npm run watch```, the ```npm run watch``` will watch for all changes you made/saved and re-render the page when necessary 
+You can run your page locally using ```npm run start```, this will automatically rebuild your app as you change files and supports hot module replacement for fast development.
 
 OR
 
