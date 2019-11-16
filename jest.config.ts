@@ -11,15 +11,5 @@ module.exports = {
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },
-  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
-  // "coverageThreshold": {
-  //   "global": {
-  //     "branches": 90,
-  //     "functions": 90,
-  //     "lines": 90,
-  //     "statements": 90
-  //   }
-  // },
-  // "coverageReporters": ["text"],
-  // "snapshotSerializers": ["my-serializer-module"]
+  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$"
 };
