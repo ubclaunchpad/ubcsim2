@@ -25,7 +25,7 @@ You can run your page locally using ```npm run start```, this will automatically
 
 OR
 
-To build your app and put resulted files in folder /dist using ```npm run build``` . (If you ever changed your .ts or .html, rebuild to compile .ts files to .js).
+To build your app and put resulted files in folder /build using ```npm run build``` . (If you ever changed your .ts or .html, rebuild to compile .ts files to .js).
 
 Deploy on GitHub Pages using ```npm run deploy```
 url: https://{github-account-name}.github.io/{repo-name}
