@@ -1,30 +1,57 @@
 {
   "name": "ubcsim2",
   "version": "1.0.0",
+  "private": true,
   "description": "A 'choose your own adventure' style browser game where the player attempts to survive a year as a student at UBC.",
   "homepage": "https://ubclaunchpad.github.io/ubcsim2",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r ts-node/register test/**",
     "lint": "tslint --project tsconfig.json",
     "compile": "tsc",
-    "start": "parcel public/index.html",
-    "build": "cross-env NODE_ENV=production parcel build public/index.html --public-url .",
-    "deploy": "gh-pages -d dist"
+    "test": "react-scripts test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "author": "UBC Launch Pad",
   "license": "ISC",
   "devDependencies": {
-    "@types/chai": "^4.2.3",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "@types/jest": "24.0.23",
     "@types/mocha": "^5.2.7",
-    "chai": "^4.2.0",
-    "mocha": "^6.2.1",
-    "ts-node": "^8.4.1",
-    "typescript": "^3.6.4",
+    "@types/node": "^12.12.8",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "babel-jest": "^24.9.0",
     "cross-env": "^6.0.3",
     "gh-pages": "^2.1.1",
-    "parcel-bundler": "^1.12.4",
-    "tslint": "^5.20.0"
+    "jest": "^24.9.0",
+    "mocha": "^6.2.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0",
+    "react-test-renderer": "^16.12.0",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.6.4"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
