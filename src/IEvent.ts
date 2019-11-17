@@ -1,13 +1,23 @@
-// import Player from "./Player";
+export interface IEvent {
+    prompt(): string;
+    imgPath(): string;
+    choices(): IChoice[];
+}
 
-export default interface IEvent {
-  displayPrompt(): string;
+export interface IChoice {
+    answer(): string;
+    followUps(): IEvent[];
+    statChanges(): StatChanges;
+}
 
-  displayChoices(): JSX.Element;
-  
-  displayResponse(): string;
-  
-  // getInput(): void;
+export class StatChanges {
+    public readonly dfriends: number;
+    public readonly dgpa: number;
+    public readonly dsleep: number;
 
-  // updateEvents(player: Player): void;
+    constructor(fds: number, gpa: number, sleep: number) {
+        this.dfriends = fds;
+        this.dgpa = gpa;
+        this.dsleep = sleep;
+    }
 }
