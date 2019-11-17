@@ -39,8 +39,23 @@ export default class App extends React.Component <IProps, IState> {
         };
     }
 
-    makeChoice(choice: IChoice) {
-        console.log(choice.answer());
+    makeChoice = (choice: IChoice) => {
+        this.state.playerStats.applyStatChanges(choice.statChanges());
+
+        for (let followUp of choice.followUps()) {
+            this.state.eventTracker.queueFollowUpEvent(followUp);
+        }
+
+        let nextEvent = this.state.eventTracker.getNextEvent();
+
+        this.setState(prevState => {
+            return {
+                week: prevState.week + 1,
+                playerStats: prevState.playerStats,
+                currentEvent: nextEvent,
+                eventTracker: prevState.eventTracker
+            };
+        });
     }
 
     render() {
