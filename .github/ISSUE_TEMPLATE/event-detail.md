@@ -1,8 +1,8 @@
 ---
 name: Event detail
 about: Detail an event to add to the game
-title: ''
-labels: design, enhancement, event
+title: "[EVENT] <Event name here>"
+labels: enhancement, design, event, dev
 assignees: ''
 
 ---
