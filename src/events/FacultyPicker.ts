@@ -1,6 +1,6 @@
-import {IEvent, IChoice, StatChanges} from "../IEvent";
+import {IEvent, IChoice, StatChanges} from "./core";
 
-export default class PickFaculty implements IEvent {
+export default class FacultyPicker implements IEvent {
     prompt(): string {
         return "Choose your faculty!";
     }

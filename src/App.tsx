@@ -1,6 +1,6 @@
 import React from "react";
 
-import {IEvent, IChoice} from "./IEvent";
+import {IEvent, IChoice} from "./events/core";
 import Player from "./Player";
 
 // // tslint:disable-next-line:no-empty-interface
@@ -40,12 +40,12 @@ export default class App extends React.Component <IProps, IState> {
 
     render() {
         const choices = this.state.event.choices().map((c: IChoice) => {
-            return ( <button key={c.answer()}>{c.answer()}</button> );
+            return <button className="choices-btn" key={c.answer()}>{c.answer()}</button> ;
         });
         return (
             <div className="App">
-            <h2 id="prompt">{this.state.event.prompt()}</h2>
-            <div id="choices">{choices}</div>
+                <h2 id="prompt">{this.state.event.prompt()}</h2>
+                <div id="choices">{choices}</div>
             </div>
         );
     }

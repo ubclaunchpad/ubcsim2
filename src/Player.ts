@@ -1,5 +1,5 @@
-import { IEvent }from "./IEvent";
-import PickFaculty from "./events/PickFaculty";
+import { IEvent }from "./events/core";
+import FacultyPicker from "./events/FacultyPicker";
 
 export default class Player {
     public pool: IEvent[];
@@ -11,7 +11,7 @@ export default class Player {
 
     constructor() {
         this.pool = [];
-        this.queue = [new PickFaculty()];
+        this.queue = [new FacultyPicker()];
         this.friends = 0;
         this.gpa = 0;
         this.sleep = 0;
@@ -19,7 +19,6 @@ export default class Player {
     }
 
     public getRandomEvent(): IEvent {
-
         return this.queue.length > 0 
             ? this.queue.shift() as IEvent
             : this.pool[Math.floor(Math.random() * this.pool.length)];
