@@ -2,6 +2,7 @@ import React from "react";
 
 import {IEvent, IChoice} from "./events/core";
 import Player from "./Player";
+import Choices from "./components/Choices";
 
 // // tslint:disable-next-line:no-empty-interface
 export interface IProps {}
@@ -31,6 +32,10 @@ export default class App extends React.Component <IProps, IState> {
         };
     }
 
+    makeChoice(choice: IChoice) {
+        console.log(choice.answer());
+    }
+
     getNextEvent() {
         let e = this.state.player.getRandomEvent();
         this.setState({ 
@@ -39,13 +44,13 @@ export default class App extends React.Component <IProps, IState> {
     }
 
     render() {
-        const choices = this.state.event.choices().map((c: IChoice) => {
-            return <button className="choices-btn" key={c.answer()}>{c.answer()}</button> ;
-        });
         return (
             <div className="App">
                 <h2 id="prompt">{this.state.event.prompt()}</h2>
-                <div id="choices">{choices}</div>
+                <Choices
+                    choices={this.state.event.choices()}
+                    makeChoice={this.makeChoice}
+                />
             </div>
         );
     }
