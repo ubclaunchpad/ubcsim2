@@ -30,7 +30,7 @@ class Arts implements IChoice {
     }
 
     statChanges(): StatChanges {
-        return new StatChanges(50, 3.0, 7);
+        return new StatChanges(50, 2.0, 100);
     }
 }
 
@@ -44,7 +44,7 @@ class Engineering implements IChoice {
     }
 
     statChanges(): StatChanges {
-        return new StatChanges(50, 3.0, 7);
+        return new StatChanges(0, 4.0, 100);
     }
 }
 
@@ -58,7 +58,7 @@ class Science implements IChoice {
     }
 
     statChanges(): StatChanges {
-        return new StatChanges(50, 3.0, 7);
+        return new StatChanges(50, 3.0, 100);
     }
 }
 
@@ -72,6 +72,6 @@ class Sauder implements IChoice {
     }
 
     statChanges(): StatChanges {
-        return new StatChanges(50, 3.0, 7);
+        return new StatChanges(100, 2.0, 100);
     }
 }
