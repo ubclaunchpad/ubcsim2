@@ -1,7 +1,8 @@
 import React from "react";
 
 import {IEvent, IChoice} from "./events/core";
-import FacultyPicker from "./events/FacultyPicker";
+import PickFacultyEvent from "./events/PickFacultyEvent";
+import BoomerGregorEvent from "./events/BoomerGregorEvent";
 
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";
@@ -25,8 +26,8 @@ export default class App extends React.Component <IProps, IState> {
 
         const playerStats = new PlayerStats();
         const eventTracker = new EventTracker(
-            [],
-            [new FacultyPicker()]
+            [new BoomerGregorEvent()],
+            [new PickFacultyEvent()]
         );
         let firstEvent = eventTracker.getNextEvent();
 
