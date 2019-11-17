@@ -14,15 +14,6 @@ export interface IState {
 
 export default class App extends React.Component <IProps, IState> {
 
-    public SAUDER_FRIENDS: number = 100;
-    public SAUDER_GPA: number = 2.0;
-    public SCIENCE_FRIENDS: number = 50;
-    public SCIENCE_GPA: number = 3.0;
-    public ARTS_FRIENDS: number = 50;
-    public ARTS_GPA: number = 2.0;
-    public ENG_FRIENDS: number = 0;
-    public ENG_GPA: number = 4.0;
-
     constructor(props: IProps) {
         super(props);
         const p = new Player();
@@ -34,13 +25,6 @@ export default class App extends React.Component <IProps, IState> {
 
     makeChoice(choice: IChoice) {
         console.log(choice.answer());
-    }
-
-    getNextEvent() {
-        let e = this.state.player.getRandomEvent();
-        this.setState({ 
-            event: e,
-        });
     }
 
     render() {
