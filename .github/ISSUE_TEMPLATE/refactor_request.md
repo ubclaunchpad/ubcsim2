@@ -2,7 +2,7 @@
 name: Refactor request
 about: Suggest how we can clean up our code
 title: ''
-labels: refactor
+labels: dev, refactor
 assignees: ''
 
 ---
