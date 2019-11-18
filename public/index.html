@@ -1,59 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>UBC Simulator 2</title>
 
     <!-- Import CSS -->
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index.css" />
 
     <!-- Import Font -->
     <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
   </head>
-
   <body>
-    <div class="game-container">
-      <div class="align-items">
-          <section id="scores-bar" class="row">
-              <!-- Right Column -->
-              <div class="row column this-align-left">
-              <div class="column">
-                  <span id="name">Name: </span>
-                  <div id="faculty" class="faculty-badge"></div>
-              </div>
-              <div class="column this-display-block">
-                  <span id="gpa" class="stat">GPA: </span>
-                  <span id="sleep" class="stat">SLEEP: </span>
-                  <span id="friends" class="stat">GPA: </span>
-              </div>
-              
-              </div>
-              <!-- Left Column -->
-              <div class="column">
-                  <span id="progress-bar">WEEK: </span>
-              </div>
-          </section>
-          <section id="gameplay-area">
-              <img src="assets/place-holder-image.png"></img>
-          </section>
-          <section id="bottom">
-            <div id="bottom-menu" class="bottom-container">
-                <p id="prompt" class="this-align-center">
-                  You have been invited to a toga party! Are you going to go?
-                </p>
-                <button type="button" class="nes-btn is-primary choice-A">CHOICE A</button>
-                <button type="button" class="nes-btn is-primary choice-b">CHOICE B</button>
-            </div>
-          </section>
-      </div>
-        
-    </div>
-    
-    
-    
+    <div id="root"></div>
   </body>
   <script src="../src/index.ts"></script>
 </html>
