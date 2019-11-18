@@ -27,7 +27,7 @@ class GrossFrats implements IChoice {
     }
 
     statChanges(): StatChanges {
-        return new StatChanges(0.5, 5, -20);
+        return new StatChanges(-20, 0.5, 5);
     }
 }
 
@@ -41,6 +41,6 @@ class YayBedsheets implements IChoice {
     }
 
     statChanges(): StatChanges {
-        return new StatChanges(-1.0, -50, 40);
+        return new StatChanges(40, -1.0, -50);
     }
 }
