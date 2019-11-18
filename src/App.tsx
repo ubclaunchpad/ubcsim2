@@ -1,51 +1,71 @@
 import React from "react";
 
 import {IEvent, IChoice} from "./events/core";
-import Player from "./Player";
+import PickFacultyEvent from "./events/PickFacultyEvent";
+import BoomerGregorEvent from "./events/BoomerGregorEvent";
+
+import PlayerStats from "./trackers/PlayerStats";
+import EventTracker from "./trackers/EventTracker";
+
+import Choices from "./components/Choices";
 
 // // tslint:disable-next-line:no-empty-interface
 export interface IProps {}
 
 export interface IState {
-    player: Player;
-    event: IEvent;
+    week: number;
+    playerStats: PlayerStats;
+    currentEvent: IEvent;
+    eventTracker: EventTracker;
 }
 
 export default class App extends React.Component <IProps, IState> {
 
-    public SAUDER_FRIENDS: number = 100;
-    public SAUDER_GPA: number = 2.0;
-    public SCIENCE_FRIENDS: number = 50;
-    public SCIENCE_GPA: number = 3.0;
-    public ARTS_FRIENDS: number = 50;
-    public ARTS_GPA: number = 2.0;
-    public ENG_FRIENDS: number = 0;
-    public ENG_GPA: number = 4.0;
-
     constructor(props: IProps) {
         super(props);
-        const p = new Player();
+
+        const playerStats = new PlayerStats();
+        const eventTracker = new EventTracker(
+            [new BoomerGregorEvent()],
+            [new PickFacultyEvent()]
+        );
+        let firstEvent = eventTracker.getNextEvent();
+
         this.state = {
-            player: p,
-            event: p.getRandomEvent(),
+            week: 1,
+            playerStats: playerStats,
+            currentEvent: firstEvent,
+            eventTracker: eventTracker
         };
     }
 
-    getNextEvent() {
-        let e = this.state.player.getRandomEvent();
-        this.setState({ 
-            event: e,
+    makeChoice = (choice: IChoice) => {
+        this.state.playerStats.applyStatChanges(choice.statChanges());
+
+        for (let followUp of choice.followUps()) {
+            this.state.eventTracker.queueFollowUpEvent(followUp);
+        }
+
+        let nextEvent = this.state.eventTracker.getNextEvent();
+
+        this.setState(prevState => {
+            return {
+                week: prevState.week + 1,
+                playerStats: prevState.playerStats,
+                currentEvent: nextEvent,
+                eventTracker: prevState.eventTracker
+            };
         });
     }
 
     render() {
-        const choices = this.state.event.choices().map((c: IChoice) => {
-            return <button className="choices-btn" key={c.answer()}>{c.answer()}</button> ;
-        });
         return (
             <div className="App">
-                <h2 id="prompt">{this.state.event.prompt()}</h2>
-                <div id="choices">{choices}</div>
+                <h2 id="prompt">{this.state.currentEvent.prompt()}</h2>
+                <Choices
+                    choices={this.state.currentEvent.choices()}
+                    makeChoice={this.makeChoice}
+                />
             </div>
         );
     }
