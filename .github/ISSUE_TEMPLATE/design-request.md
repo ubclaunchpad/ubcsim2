@@ -2,7 +2,7 @@
 name: Design Request
 about: Describe this issue template's purpose here.
 title: ''
-labels: enhancement
+labels: design, enhancement
 assignees: ''
 
 ---
