@@ -7,6 +7,7 @@ import BoomerGregorEvent from "./events/BoomerGregorEvent";
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";
 
+import Hud from "./components/Hud";
 import Choices from "./components/Choices";
 
 // // tslint:disable-next-line:no-empty-interface
@@ -61,6 +62,7 @@ export default class App extends React.Component <IProps, IState> {
     render() {
         return (
             <div className="App">
+                <Hud playerStats={this.state.playerStats}/>
                 <h2 id="prompt">{this.state.currentEvent.prompt()}</h2>
                 <Choices
                     choices={this.state.currentEvent.choices()}
