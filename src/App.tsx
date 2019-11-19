@@ -10,6 +10,8 @@ import EventTracker from "./trackers/EventTracker";
 import Hud from "./components/Hud";
 import Choices from "./components/Choices";
 
+import placeholderImg from "./assets/place-holder-image.png";
+
 // // tslint:disable-next-line:no-empty-interface
 export interface IProps {}
 
@@ -63,15 +65,20 @@ export default class App extends React.Component <IProps, IState> {
     }
 
     render() {
+        let currentEvent: IEvent = this.state.currentEvent;
         return (
             <div className="App">
                 <Hud
                     playerStats={this.state.playerStats}
                     week={this.state.week}
                 />
-                <h2 id="prompt">{this.state.currentEvent.prompt()}</h2>
+                <img
+                    src={currentEvent.imgPath() === "" ? placeholderImg : currentEvent.imgPath()}
+                    alt="Event illustration"
+                />
+                <h2 id="prompt">{currentEvent.prompt()}</h2>
                 <Choices
-                    choices={this.state.currentEvent.choices()}
+                    choices={currentEvent.choices()}
                     makeChoice={this.makeChoice}
                 />
             </div>
