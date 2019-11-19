@@ -33,6 +33,9 @@ export default class App extends React.Component <IProps, IState> {
         let firstEvent = eventTracker.getNextEvent();
 
         this.state = {
+            // TODO: The week number may not be how we choose to track time,
+            // we should create some abstraction for this similar to how
+            // `playerStats` is done
             week: 1,
             playerStats: playerStats,
             currentEvent: firstEvent,
@@ -62,7 +65,10 @@ export default class App extends React.Component <IProps, IState> {
     render() {
         return (
             <div className="App">
-                <Hud playerStats={this.state.playerStats}/>
+                <Hud
+                    playerStats={this.state.playerStats}
+                    week={this.state.week}
+                />
                 <h2 id="prompt">{this.state.currentEvent.prompt()}</h2>
                 <Choices
                     choices={this.state.currentEvent.choices()}
