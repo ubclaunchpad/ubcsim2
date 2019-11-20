@@ -2,6 +2,38 @@ body {
   font-family: "VT323", monospace;
 }
 
+#faculty-badge {
+  height: 60px;
+  width: 60px;
+  border: 3px black solid;
+  border-radius: 5px;
+}
+
+#player-stat-box {
+  height: 85px;
+  margin-top: 15px;
+}
+
+#gameplay-content-box {
+  height: 200px;
+  margin-top: 20px;
+}
+
+#user-interaction-box {
+  height: 140px;
+  margin-top: 15px;
+}
+
+#progress-bar {
+  width: 50px;
+  height: 15px;
+  border-image-outset: 1;
+}
+
+/* #name {
+  width: 50%;
+} */
+
 .game-container {
   height: 100%;
   width: 100%;
@@ -13,12 +45,16 @@ body {
   margin: 0;
 }
 
+.nes-btn {
+  margin: 10px;
+}
+
 .row {
-  display: flex;
+  display: block;
 }
 
 .column {
-  flex: 50%;
+  width: 50%;
 }
 
 .align-items {
@@ -30,6 +66,11 @@ body {
   width: 50%;
 }
 
+.fit-content-width {
+  width: fit-content;
+  float: left;
+}
+
 .this-align-left {
   text-align: left;
 }
@@ -38,23 +79,37 @@ body {
   text-align: center;
 }
 
+.this-align-right {
+  text-align: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
 .this-display-block {
   display: block;
 }
 
-.faculty-badge {
-  height: 60px;
-  width: 60px;
-  border: 1px black solid;
-  border-radius: 10px;
+.margin-right-10 {
+  margin-right: 10px;
 }
 
 .stat {
   display: block;
+  height: 20px;
 }
 
 .bottom-container {
   padding: 10px 20px 10px 20px;
-  border: 1px black solid;
+  border: 2px black solid;
   border-radius: 10px;
+}
+
+.choice-btn-half {
+  width: 35%;
 }

@@ -10,7 +10,7 @@ interface IProps {
 export default function ChoiceButton(props: IProps) {
     return (
         <button
-            className="ChoiceButton"
+            className="choice-btn-half is-primary nes-btn"
             onClick={() => props.makeChoice(props.choice)}
         >
             {props.choice.answer()}

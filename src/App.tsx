@@ -7,6 +7,8 @@ import BoomerGregorEvent from "./events/BoomerGregorEvent";
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";
 
+import img from "./assets/place-holder-image.png";
+
 import Choices from "./components/Choices";
 
 // // tslint:disable-next-line:no-empty-interface
@@ -61,41 +63,40 @@ export default class App extends React.Component <IProps, IState> {
     render() {
         return (
             <div className="game-container">
-                <h2 id="prompt">{this.state.currentEvent.prompt()}</h2>
-                <Choices
-                    choices={this.state.currentEvent.choices()}
-                    makeChoice={this.makeChoice}
-                />
                 <div className="align-items">
-                    <section id="scores-bar" className="row">
-                        {/* Right Column */}
-                        <div className="row column this-align-left">
-                        <div className="column">
-                            <span id="name">Name: </span>
-                            <div id="faculty" className="faculty-badge" />
+                    <section id="player-stat-box" className="row">
+                        <div className="row">
+                            <span id="name" className="this-align-left column float-left">Name: </span>
+                            <span id="progress-bar-title" className="this-align-right column float-right">WEEK: {this.state.playerStats.getWeek()}</span>
                         </div>
-                        <div className="column this-display-block">
-                            <span id="gpa" className="stat">GPA: </span>
-                            <span id="sleep" className="stat">SLEEP: </span>
-                            <span id="friends" className="stat">GPA: </span>
-                        </div>
-                        
-                        </div>
-                        {/* Left Column */}
-                        <div className="column">
-                            <span id="progress-bar">WEEK: </span>
+                        <div className="row">
+                            <span className="column this-align-left">
+                                <span className="fit-content-width margin-right-10 float-left">
+                                    <div id="faculty-badge" />
+                                </span>
+                                <span className="fit-content-width">
+                                    <div id="gpa" className="stat">GPA: {this.state.playerStats.getGpa()}</div>
+                                    <div id="sleep" className="stat">FRIENDS: {this.state.playerStats.getFriends()}</div>
+                                    <div id="friends" className="stat">SLEEP: {this.state.playerStats.getSleep()} %</div>
+                                </span>
+                            </span>
+                            <span className="column">
+                                <progress id="progress-bar" className="nes-progress is-success float-right" value="5" max="10" />
+                            </span>
                         </div>
                     </section>
-                    <section id="gameplay-area">
-                        <img src="../public/assets/place-holder-image.png" alt=""/>
+                    <section id="gameplay-content-box">
+                        <img src={img} alt="" />
                     </section>
-                    <section id="bottom">
+                    <section id="user-interaction-box">
                         <div id="bottom-menu" className="bottom-container">
                             <p id="prompt" className="this-align-center">
-                            You have been invited to a toga party! Are you going to go?
+                                {this.state.currentEvent.prompt()}
                             </p>
-                            <button type="button" className="nes-btn is-primary choice-A">CHOICE A</button>
-                            <button type="button" className="nes-btn is-primary choice-b">CHOICE B</button>
+                            <Choices
+                                choices={this.state.currentEvent.choices()}
+                                makeChoice={this.makeChoice}
+                            />
                         </div>
                     </section>
                 </div>
