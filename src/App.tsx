@@ -7,9 +7,10 @@ import BoomerGregorEvent from "./events/BoomerGregorEvent";
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";
 
-import img from "./assets/place-holder-image.png";
-
+import Hud from "./components/Hud";
 import Choices from "./components/Choices";
+
+import placeholderImg from "./assets/place-holder-image.png";
 
 // // tslint:disable-next-line:no-empty-interface
 export interface IProps {}
@@ -22,6 +23,7 @@ export interface IState {
 }
 
 export default class App extends React.Component <IProps, IState> {
+    private name: string;
 
     constructor(props: IProps) {
         super(props);
@@ -33,7 +35,14 @@ export default class App extends React.Component <IProps, IState> {
         );
         let firstEvent = eventTracker.getNextEvent();
 
+        //TODO: should we auto allocate a dummy player name or allow user to input their own?
+        this.name = "";
+
         this.state = {
+            // TODO: The week number may not be how we choose to track time,
+            // we should create some abstraction for this similar to how
+            // `playerStats` is done
+            // also consider Progress bar
             week: 1,
             playerStats: playerStats,
             currentEvent: firstEvent,
@@ -61,40 +70,28 @@ export default class App extends React.Component <IProps, IState> {
     }
 
     render() {
+        let currentEvent: IEvent = this.state.currentEvent;
         return (
             <div className="game-container">
                 <div className="align-items">
-                    <section id="player-stat-box" className="row">
-                        <div className="row">
-                            <span id="name" className="this-align-left column float-left">Name: </span>
-                            <span id="progress-bar-title" className="this-align-right column float-right">WEEK: {this.state.playerStats.getWeek()}</span>
-                        </div>
-                        <div className="row">
-                            <span className="column this-align-left">
-                                <span className="fit-content-width margin-right-10 float-left">
-                                    <div id="faculty-badge" />
-                                </span>
-                                <span className="fit-content-width">
-                                    <div id="gpa" className="stat">GPA: {this.state.playerStats.getGpa()}</div>
-                                    <div id="sleep" className="stat">FRIENDS: {this.state.playerStats.getFriends()}</div>
-                                    <div id="friends" className="stat">SLEEP: {this.state.playerStats.getSleep()} %</div>
-                                </span>
-                            </span>
-                            <span className="column">
-                                <progress id="progress-bar" className="nes-progress is-success float-right" value="5" max="10" />
-                            </span>
-                        </div>
-                    </section>
+                    <Hud
+                        playerStats={this.state.playerStats}
+                        week={this.state.week}
+                        name={this.name}
+                    />
                     <section id="gameplay-content-box">
-                        <img src={img} alt="" />
+                        <img
+                            src={currentEvent.imgPath() === "" ? placeholderImg : currentEvent.imgPath()}
+                            alt="Event illustration"
+                        />
                     </section>
                     <section id="user-interaction-box">
                         <div id="bottom-menu" className="bottom-container">
                             <p id="prompt" className="this-align-center">
-                                {this.state.currentEvent.prompt()}
+                                {currentEvent.prompt()}
                             </p>
                             <Choices
-                                choices={this.state.currentEvent.choices()}
+                                choices={currentEvent.choices()}
                                 makeChoice={this.makeChoice}
                             />
                         </div>
