@@ -67,6 +67,36 @@ export class NoVIPTixEvent implements IEvent {
     }
 }
 
+export class HasBoyfriendEvent implements IEvent {
+    prompt(): string {
+        return "The cute girl from the Life Building just posted a photo of her and her boyfriend at EDC.";
+    }
+
+    imgPath(): string {
+        return "";
+    }
+
+    choices(): IChoice[] {
+        return [
+            new FiveverAlone()
+        ];
+    }
+}
+
+class FiveverAlone implements IChoice {
+    answer(): string {
+        return "5ever alone";
+    }
+
+    followUps(): IEvent[] {
+        return [];
+    }
+
+    statChanges(): StatChanges {
+        return new StatChanges(-50, -1.5, -15);
+    }
+}
+
 class RunAway implements IChoice {
     answer(): string {
         return "meep merp. run away";
@@ -117,7 +147,9 @@ class ComplimentFilas implements IChoice {
     }
 
     followUps(): IEvent[] {
-        return [];
+        return [
+            new CuteFilasEvent()
+        ];
     }
 
     statChanges(): StatChanges {
@@ -145,7 +177,9 @@ class OhYes implements IChoice {
     }
 
     followUps(): IEvent[] {
-        return [];
+        return [
+            new HasBoyfriendEvent()
+        ];
     }
 
     statChanges(): StatChanges {
@@ -159,7 +193,9 @@ class Nope implements IChoice {
     }
 
     followUps(): IEvent[] {
-        return [];
+        return [
+            new NoVIPTixEvent()
+        ];
     }
 
     statChanges(): StatChanges {

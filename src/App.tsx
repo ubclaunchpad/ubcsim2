@@ -4,6 +4,7 @@ import {IEvent, IChoice} from "./events/core";
 import LandingEvent from "./events/LandingEvent";
 import PickFacultyEvent from "./events/PickFacultyEvent";
 import BoomerGregorEvent from "./events/BoomerGregorEvent";
+import {CuteGirlEvent} from "./events/CuteGirlEvent";
 
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";
