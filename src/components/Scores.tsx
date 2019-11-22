@@ -9,19 +9,22 @@ interface IProps {
 
 export default function Scores(props: IProps) {
     let playerStats: PlayerStats = props.playerStats;
+    let friends: string = playerStats.getFriends().toFixed(0);
+    let gpa: string = playerStats.getGpa().toFixed(2);
+    let sleep: string = playerStats.getSleep().toFixed(0);
     return (
         <div>
             <ScoreItem
                 scoreType="Friends"
-                scoreValue={String(playerStats.getFriends())}
+                scoreValue={friends}
             />
             <ScoreItem
                 scoreType="GPA"
-                scoreValue={String(playerStats.getGpa())}
+                scoreValue={gpa}
             />
             <ScoreItem
                 scoreType="Sleep"
-                scoreValue={String(playerStats.getSleep())}
+                scoreValue={sleep}
             />
         </div>
     );
