@@ -5,7 +5,7 @@ import LandingEvent from "./events/LandingEvent";
 import PickFacultyEvent from "./events/PickFacultyEvent";
 import BoomerGregorEvent from "./events/BoomerGregorEvent";
 import {CuteGirlEvent} from "./events/CuteGirlEvent";
-import {FratPartyEvent} from "./events/FratPartyEvent";
+import FratPartyEvent from "./events/FratPartyEvent";
 
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";

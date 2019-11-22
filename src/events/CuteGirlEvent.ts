@@ -19,7 +19,7 @@ export class CuteGirlEvent implements IEvent {
 
 export class CuteFilasEvent implements IEvent {
     prompt(): string {
-        return "She takes out her AirPods.<br>\"What did you say?\"";
+        return "She takes out her AirPods.\n\"What did you say?\"";
     }
 
     imgPath(): string {
