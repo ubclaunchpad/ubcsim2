@@ -1,4 +1,4 @@
-import { IEvent, IChoice, StatChanges } from "./core";
+import { GamePlayMode, IEvent, IChoice, StatChanges } from "./core";
 
 import ARTS from "../assets/ARTS.png";
 import APSC from "../assets/APSC.png";
@@ -29,12 +29,12 @@ export default class PickFacultyEvent implements IEvent {
         ];
     }
 
-    shouldGpcHidden(): boolean {
-        return true;
-    }
-
     hasBottomBoxBorder(): boolean {
         return false;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Hide;
     }
 }
 

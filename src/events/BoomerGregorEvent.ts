@@ -1,4 +1,4 @@
-import { IEvent, IChoice, StatChanges } from "./core";
+import { GamePlayMode, IEvent, IChoice, StatChanges } from "./core";
 
 export default class BoomerGregorEvent implements IEvent {
     prompt(): string {
@@ -16,12 +16,12 @@ export default class BoomerGregorEvent implements IEvent {
         ];
     }
 
-    shouldGpcHidden(): boolean {
-        return true;
-    }
-
     hasBottomBoxBorder(): boolean {
         return false;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Comics;
     }
 }
 

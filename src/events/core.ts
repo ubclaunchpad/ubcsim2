@@ -1,8 +1,14 @@
+export enum GamePlayMode {
+    Comics,
+    AcceptanceLetter,
+    Hide
+}
+
 export interface IEvent {
     prompt(): string;
     imgPath(): string;
     choices(): IChoice[];
-    shouldGpcHidden(): boolean;
+    gamePlayMode(): GamePlayMode;
     hasBottomBoxBorder(): boolean;
 }
 

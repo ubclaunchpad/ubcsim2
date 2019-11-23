@@ -75,11 +75,14 @@ export default class App extends React.Component <IProps, IState> {
             <div id="app">
                 <div id="game-container">
                     <Hud
-                        playerStats={this.state.playerStats}
-                        week={this.state.week}
-                        name={this.name}
+                      playerStats={this.state.playerStats}
+                      week={this.state.week}
+                      name={this.name}
                     />
-                    <GamePlayConsole shouldHide={currentEvent.shouldGpcHidden()} />
+                    <GamePlayConsole 
+                      mode={currentEvent.gamePlayMode()}
+                      imgPath={currentEvent.imgPath()}
+                    />
                     <section 
                       id="user-interaction-box" 
                       className={currentEvent.hasBottomBoxBorder() ? "nes-container is-rounded" : ""}

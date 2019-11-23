@@ -1,4 +1,4 @@
-import { IEvent, IChoice, StatChanges } from "./core";
+import { GamePlayMode, IEvent, IChoice, StatChanges } from "./core";
 
 export default class PickFacultyEvent implements IEvent {
 
@@ -16,12 +16,12 @@ export default class PickFacultyEvent implements IEvent {
         ];
     }
 
-    shouldGpcHidden(): boolean {
-        return false;
-    }
-
     hasBottomBoxBorder(): boolean {
         return true;
+    }
+
+    gamePlayMode(): GamePlayMode {
+      return GamePlayMode.AcceptanceLetter;
     }
 }
 
