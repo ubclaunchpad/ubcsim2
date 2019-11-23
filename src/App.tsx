@@ -82,7 +82,7 @@ export default class App extends React.Component <IProps, IState> {
                     <GamePlayConsole shouldHide={currentEvent.shouldGpcHidden()} />
                     <section 
                       id="user-interaction-box" 
-                      className={currentEvent.hasBottomBoxBorder() ? "nes-container is-rounded fix-pos-bottom" : ""}
+                      className={currentEvent.hasBottomBoxBorder() ? "nes-container is-rounded" : ""}
                     >
                         <div id="bottom-menu" className="bottom-container">
                             <p id="prompt" className="this-align-center">

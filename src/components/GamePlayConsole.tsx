@@ -7,12 +7,6 @@ interface IProps {
 export default function GamePlayConsole(props: IProps) {
     return (
         <section id="gameplay-container" className={props.shouldHide ? "hide" : ""}>
-            {/* tslint:disable-next-line:jsx-no-multiline-js */}
-            {/* <img
-                src={currentEvent.imgPath() === "" ? placeholderImg : currentEvent.imgPath()}
-                alt="Event illustration"
-            /> */}
-            {/* <div id="landing-box"> */}
             <div 
               id="gameplay-content-box" 
               className="nes-container is-centered"
