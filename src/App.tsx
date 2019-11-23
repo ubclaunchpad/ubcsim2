@@ -5,6 +5,8 @@ import LandingEvent from "./events/LandingEvent";
 import PickFacultyEvent from "./events/PickFacultyEvent";
 import PickResidenceEvent from "./events/PickResidenceEvent";
 import BoomerGregorEvent from "./events/BoomerGregorEvent";
+import {CuteGirlEvent} from "./events/CuteGirlEvent";
+import FratPartyEvent from "./events/FratPartyEvent";
 
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";
@@ -31,7 +33,7 @@ export default class App extends React.Component<IProps, IState> {
 
         const playerStats = new PlayerStats();
         const eventTracker = new EventTracker(
-            [new BoomerGregorEvent()],
+            [new BoomerGregorEvent(), new CuteGirlEvent(), new FratPartyEvent()],
             [new LandingEvent(), new PickFacultyEvent(), new PickResidenceEvent()]
         );
         let firstEvent = eventTracker.getNextEvent();
