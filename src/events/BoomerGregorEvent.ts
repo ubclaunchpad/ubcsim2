@@ -1,12 +1,14 @@
 import { GamePlayMode, IEvent, IChoice, StatChanges } from "./core";
 
+import GregorImg from "../assets/Gregor.png";
+
 export default class BoomerGregorEvent implements IEvent {
     prompt(): string {
         return "Dr. Gregor tells the class to start studying for CPSC 110 early!";
     }
 
     imgPath(): string {
-        return "";
+        return GregorImg;
     }
 
     choices(): IChoice[] {

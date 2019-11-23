@@ -26,6 +26,7 @@ const generateComic = (img: string) => {
         <img
             src={img === "" ? placeholderImg : img}
             alt="Gameplay comic"
+            className="event-illustration"
         />
     );
 };
