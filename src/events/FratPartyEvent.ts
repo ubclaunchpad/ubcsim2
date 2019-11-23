@@ -1,4 +1,4 @@
-import {IEvent, IChoice, StatChanges} from "./core";
+import {GamePlayMode, IEvent, IChoice, StatChanges} from "./core";
 
 export default class FratPartyEvent implements IEvent {
     prompt(): string {
@@ -14,6 +14,14 @@ export default class FratPartyEvent implements IEvent {
             new GrossFrats(),
             new YayBedsheets()
         ];
+    }
+
+    hasBottomBoxBorder(): boolean {
+        return false;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Comics;
     }
 }
 

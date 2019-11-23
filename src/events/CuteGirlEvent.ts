@@ -1,4 +1,4 @@
-import {IEvent, IChoice, StatChanges} from "./core";
+import {GamePlayMode, IEvent, IChoice, StatChanges} from "./core";
 
 export class CuteGirlEvent implements IEvent {
     prompt(): string {
@@ -14,6 +14,14 @@ export class CuteGirlEvent implements IEvent {
             new BuyTheTix(),
             new ComplimentFilas()
         ];
+    }
+
+    hasBottomBoxBorder(): boolean {
+        return false;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Comics;
     }
 }
 
@@ -32,6 +40,14 @@ export class CuteFilasEvent implements IEvent {
             new ShowFilas()
         ];
     }
+
+    hasBottomBoxBorder(): boolean {
+        return false;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Comics;
+    }
 }
 
 export class CuteGirlTixEvent implements IEvent {
@@ -49,6 +65,14 @@ export class CuteGirlTixEvent implements IEvent {
             new Nope()
         ];
     }
+
+    hasBottomBoxBorder(): boolean {
+        return false;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Comics;
+    }
 }
 
 export class NoVIPTixEvent implements IEvent {
@@ -65,6 +89,14 @@ export class NoVIPTixEvent implements IEvent {
             new StalkInstagram()
         ];
     }
+
+    hasBottomBoxBorder(): boolean {
+        return false;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Comics;
+    }
 }
 
 export class HasBoyfriendEvent implements IEvent {
@@ -80,6 +112,14 @@ export class HasBoyfriendEvent implements IEvent {
         return [
             new FiveverAlone()
         ];
+    }
+
+    hasBottomBoxBorder(): boolean {
+        return false;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Comics;
     }
 }
 

@@ -32,7 +32,7 @@ export default class App extends React.Component <IProps, IState> {
 
         const playerStats = new PlayerStats();
         const eventTracker = new EventTracker(
-            [new BoomerGregorEvent()],
+            [new BoomerGregorEvent(), new CuteGirlEvent(), new FratPartyEvent()],
             [new LandingEvent(), new PickFacultyEvent()]
         );
         let firstEvent = eventTracker.getNextEvent();
