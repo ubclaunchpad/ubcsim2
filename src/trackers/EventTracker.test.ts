@@ -13,6 +13,14 @@ class PoolEvent implements IEvent {
     choices(): IChoice[] {
         return [];
     }
+
+    shouldGpcHidden(): boolean {
+      return false;
+    }
+
+    hasBottomBoxBorder(): boolean {
+      return true;
+    }
 }
 
 class QueueEvent1 implements IEvent {
@@ -27,6 +35,14 @@ class QueueEvent1 implements IEvent {
     choices(): IChoice[] {
         return [];
     }
+
+    shouldGpcHidden(): boolean {
+      return false;
+    }
+
+    hasBottomBoxBorder(): boolean {
+      return true;
+    }
 }
 
 class QueueEvent2 implements IEvent {
@@ -40,6 +56,14 @@ class QueueEvent2 implements IEvent {
 
     choices(): IChoice[] {
         return [];
+    }
+
+    shouldGpcHidden(): boolean {
+      return false;
+    }
+
+    hasBottomBoxBorder(): boolean {
+      return true;
     }
 }
 
