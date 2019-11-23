@@ -1,12 +1,14 @@
 import {GamePlayMode, IEvent, IChoice, StatChanges} from "./core";
 
+import AbgImg from "../assets/ABG.png";
+
 export class CuteGirlEvent implements IEvent {
     prompt(): string {
         return "You see a cute girl in the Life Building, what do you do?";
     }
 
     imgPath(): string {
-        return "";
+        return AbgImg;
     }
 
     choices(): IChoice[] {
@@ -31,7 +33,7 @@ export class CuteFilasEvent implements IEvent {
     }
 
     imgPath(): string {
-        return "";
+        return AbgImg;
     }
 
     choices(): IChoice[] {
@@ -56,7 +58,7 @@ export class CuteGirlTixEvent implements IEvent {
     }
 
     imgPath(): string {
-        return "";
+        return AbgImg;
     }
 
     choices(): IChoice[] {
@@ -81,7 +83,7 @@ export class NoVIPTixEvent implements IEvent {
     }
 
     imgPath(): string {
-        return "";
+        return AbgImg;
     }
 
     choices(): IChoice[] {
@@ -105,7 +107,7 @@ export class HasBoyfriendEvent implements IEvent {
     }
 
     imgPath(): string {
-        return "";
+        return AbgImg;
     }
 
     choices(): IChoice[] {
