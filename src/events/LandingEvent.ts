@@ -1,4 +1,4 @@
-import {IEvent, IChoice, StatChanges} from "./core";
+import { IEvent, IChoice, StatChanges } from "./core";
 
 export default class PickFacultyEvent implements IEvent {
 
@@ -27,7 +27,7 @@ export default class PickFacultyEvent implements IEvent {
 
 class Start implements IChoice {
     answer(): string {
-        return "Start";
+        return "Accept Offer";
     }
 
     followUps(): IEvent[] {

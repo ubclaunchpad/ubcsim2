@@ -1,4 +1,4 @@
-import {IEvent, IChoice, StatChanges} from "./core";
+import { IEvent, IChoice, StatChanges } from "./core";
 
 import ARTS from "../assets/ARTS.png";
 import APSC from "../assets/APSC.png";
@@ -20,10 +20,10 @@ export default class PickFacultyEvent implements IEvent {
     choices(): IChoice[] {
         return [
             new Arts(),
+            new ApScience(),
             new Commerce(),
             new Forestry(),
             new Kinesiology(),
-            new ApScience(),
             new LFS(),
             new Science()
         ];
