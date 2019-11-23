@@ -5,5 +5,5 @@ interface IProps {
 }
 
 export default function TimeIndicator(props: IProps) {
-    return <span>Week: {props.week}</span>;
+    return <span id="progress-bar-title" className="this-align-right column float-right">Week: {props.week}</span>;
 }

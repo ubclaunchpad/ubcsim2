@@ -1,5 +1,5 @@
 import EventTracker from "./EventTracker";
-import {IEvent, IChoice} from "./../events/core";
+import {GamePlayMode, IEvent, IChoice} from "./../events/core";
 
 class PoolEvent implements IEvent {
     prompt(): string {
@@ -12,6 +12,14 @@ class PoolEvent implements IEvent {
 
     choices(): IChoice[] {
         return [];
+    }
+
+    hasBottomBoxBorder(): boolean {
+        return true;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Hide;
     }
 }
 
@@ -27,6 +35,14 @@ class QueueEvent1 implements IEvent {
     choices(): IChoice[] {
         return [];
     }
+
+    hasBottomBoxBorder(): boolean {
+        return true;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Hide;
+    }
 }
 
 class QueueEvent2 implements IEvent {
@@ -40,6 +56,14 @@ class QueueEvent2 implements IEvent {
 
     choices(): IChoice[] {
         return [];
+    }
+
+    hasBottomBoxBorder(): boolean {
+        return true;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Hide;
     }
 }
 

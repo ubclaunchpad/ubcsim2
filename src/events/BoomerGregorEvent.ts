@@ -1,8 +1,8 @@
-import {IEvent, IChoice, StatChanges} from "./core";
+import { GamePlayMode, IEvent, IChoice, StatChanges } from "./core";
 
 export default class BoomerGregorEvent implements IEvent {
     prompt(): string {
-        return "Gregor tells the class to start studying for 110 early!";
+        return "Dr. Gregor tells the class to start studying for CPSC 110 early!";
     }
 
     imgPath(): string {
@@ -14,6 +14,14 @@ export default class BoomerGregorEvent implements IEvent {
             new TrustNaturalRecursion(),
             new OkBoomer()
         ];
+    }
+
+    hasBottomBoxBorder(): boolean {
+        return false;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Comics;
     }
 }
 
@@ -33,7 +41,7 @@ class TrustNaturalRecursion implements IChoice {
 
 class OkBoomer implements IChoice {
     answer(): string {
-        return "Ok boomer";
+        return "Ok, Boomer";
     }
 
     followUps(): IEvent[] {

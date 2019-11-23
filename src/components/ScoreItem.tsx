@@ -6,5 +6,5 @@ interface IProps {
 }
 
 export default function ScoreItem(props: IProps) {
-    return <span>{props.scoreType}: {props.scoreValue}</span>;
+    return <span className="stat">{props.scoreType}: {props.scoreValue}</span>;
 }

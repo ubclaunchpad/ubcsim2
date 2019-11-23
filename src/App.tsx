@@ -1,6 +1,7 @@
 import React from "react";
 
 import {IEvent, IChoice} from "./events/core";
+import LandingEvent from "./events/LandingEvent";
 import PickFacultyEvent from "./events/PickFacultyEvent";
 import BoomerGregorEvent from "./events/BoomerGregorEvent";
 
@@ -8,11 +9,10 @@ import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";
 
 import Hud from "./components/Hud";
+import GamePlayConsole from "./components/GamePlayConsole";
 import Choices from "./components/Choices";
 
-import placeholderImg from "./assets/place-holder-image.png";
-
-// // tslint:disable-next-line:no-empty-interface
+// tslint:disable-next-line:no-empty-interface
 export interface IProps {}
 
 export interface IState {
@@ -23,6 +23,7 @@ export interface IState {
 }
 
 export default class App extends React.Component <IProps, IState> {
+    private name: string;
 
     constructor(props: IProps) {
         super(props);
@@ -30,15 +31,19 @@ export default class App extends React.Component <IProps, IState> {
         const playerStats = new PlayerStats();
         const eventTracker = new EventTracker(
             [new BoomerGregorEvent()],
-            [new PickFacultyEvent()]
+            [new LandingEvent(), new PickFacultyEvent()]
         );
         let firstEvent = eventTracker.getNextEvent();
+
+        //TODO: should we auto allocate a dummy player name or allow user to input their own?
+        this.name = "P1";
 
         this.state = {
             // TODO: The week number may not be how we choose to track time,
             // we should create some abstraction for this similar to how
             // `playerStats` is done
-            week: 1,
+            // also consider Progress bar
+            week: 0,
             playerStats: playerStats,
             currentEvent: firstEvent,
             eventTracker: eventTracker
@@ -67,20 +72,32 @@ export default class App extends React.Component <IProps, IState> {
     render() {
         let currentEvent: IEvent = this.state.currentEvent;
         return (
-            <div className="App">
-                <Hud
-                    playerStats={this.state.playerStats}
-                    week={this.state.week}
-                />
-                <img
-                    src={currentEvent.imgPath() === "" ? placeholderImg : currentEvent.imgPath()}
-                    alt="Event illustration"
-                />
-                <h2 id="prompt">{currentEvent.prompt()}</h2>
-                <Choices
-                    choices={currentEvent.choices()}
-                    makeChoice={this.makeChoice}
-                />
+            <div id="app">
+                <div id="game-container">
+                    <Hud
+                      playerStats={this.state.playerStats}
+                      week={this.state.week}
+                      name={this.name}
+                    />
+                    <GamePlayConsole 
+                      mode={currentEvent.gamePlayMode()}
+                      imgPath={currentEvent.imgPath()}
+                    />
+                    <section 
+                      id="user-interaction-box" 
+                      className={currentEvent.hasBottomBoxBorder() ? "nes-container is-rounded" : ""}
+                    >
+                        <div id="bottom-menu" className="bottom-container">
+                            <p id="prompt" className="this-align-center">
+                                {currentEvent.prompt()}
+                            </p>
+                            <Choices
+                                choices={currentEvent.choices()}
+                                makeChoice={this.makeChoice}
+                            />
+                        </div>
+                    </section>
+                </div>
             </div>
         );
     }

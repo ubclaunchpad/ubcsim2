@@ -1,5 +1,7 @@
 import {StatChanges} from "./../events/core";
 
+import Blank from "../assets/Blank.png";
+
 const FRIENDS_MIN = 0;
 const GPA_MAX = 4;
 const GPA_MIN = 0;
@@ -10,11 +12,13 @@ export default class PlayerStats {
     private friends: number;
     private gpa: number;
     private sleep: number;
+    private logo: string;
 
     constructor() {
         this.friends = 0;
         this.gpa = 0;
         this.sleep = 0;
+        this.logo = Blank;
     }
 
     public applyStatChanges(statChanges: StatChanges) {
@@ -36,6 +40,8 @@ export default class PlayerStats {
             this.sleep = SLEEP_MIN;
         else
             this.sleep = sleep;
+
+        if (statChanges.dlogo) this.logo = statChanges.dlogo;
     }
 
     public getFriends(): number {
@@ -48,5 +54,9 @@ export default class PlayerStats {
 
     public getSleep(): number {
         return this.sleep;
+    }
+
+    public getLogo(): string {
+        return this.logo;
     }
 }

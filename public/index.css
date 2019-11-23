@@ -1,0 +1,142 @@
+body {
+  font-family: "VT323", monospace;
+  background: #fff;
+}
+
+#root {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+#game-container {
+  height: 667px;
+  width: 350px;
+  background: white;
+  padding: 30px;
+}
+
+#player-stat-box {
+  margin-top: 35px;
+  height: 85px;
+}
+
+#gameplay-container {
+  height: fit-content;
+  margin: 31px;
+}
+
+#gameplay-content-box {
+  height: 225px;
+  width: 190px;
+  display: inline-block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.33);
+}
+
+#user-interaction-box {
+  margin-top: 26px;
+}
+
+#progress-bar {
+  width: 50px;
+  height: 15px;
+  border-image-outset: 1;
+  margin: 0;
+  border-image-width: 1.5;
+}
+
+#landing-box {
+  width: 190px;
+  height: 200px;
+  text-align: center;
+  border: solid 2px;
+  padding: 3px;
+  display: inline-block;
+}
+
+#enter-name {
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}
+
+.nes-container {
+  border-width: 2px;
+}
+
+.nes-container.is-rounded {
+  border-image-width: 2;
+}
+
+.nes-btn {
+  margin: 10px;
+  padding: 3px 4px;
+}
+
+.row {
+  display: block;
+}
+
+.column {
+  width: 50%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.fit-content-width {
+  width: fit-content;
+  float: left;
+}
+
+.this-align-left {
+  text-align: left;
+}
+
+.this-align-center {
+  text-align: center;
+}
+
+.this-align-right {
+  text-align: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.this-display-block {
+  display: block;
+}
+
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+.stat {
+  display: block;
+  height: 20px;
+}
+
+.choice-btn-half {
+  width: 35%;
+}
+
+.choice-btn-70 {
+  width: 70%;
+}

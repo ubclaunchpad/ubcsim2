@@ -1,4 +1,12 @@
-import {IEvent, IChoice, StatChanges} from "./core";
+import { GamePlayMode, IEvent, IChoice, StatChanges } from "./core";
+
+import ARTS from "../assets/ARTS.png";
+import APSC from "../assets/APSC.png";
+import COMM from "../assets/COMM.png";
+import FORE from "../assets/FORE.png";
+import KIN from "../assets/KIN.png";
+import LFSlogo from "../assets/LFS.png";
+import SCIE from "../assets/SCIE.png";
 
 export default class PickFacultyEvent implements IEvent {
     prompt(): string {
@@ -12,10 +20,21 @@ export default class PickFacultyEvent implements IEvent {
     choices(): IChoice[] {
         return [
             new Arts(),
-            new Engineering(),
-            new Science(),
-            new Sauder()
+            new ApScience(),
+            new Commerce(),
+            new Forestry(),
+            new Kinesiology(),
+            new LFS(),
+            new Science()
         ];
+    }
+
+    hasBottomBoxBorder(): boolean {
+        return false;
+    }
+
+    gamePlayMode(): GamePlayMode {
+        return GamePlayMode.Hide;
     }
 }
 
@@ -29,13 +48,13 @@ class Arts implements IChoice {
     }
 
     statChanges(): StatChanges {
-        return new StatChanges(50, 2.0, 100);
+        return new StatChanges(50, 2.0, 100, ARTS);
     }
 }
 
-class Engineering implements IChoice {
+class ApScience implements IChoice {
     answer(): string {
-        return "Engineering";
+        return "Applied Science";
     }
 
     followUps(): IEvent[] {
@@ -43,7 +62,7 @@ class Engineering implements IChoice {
     }
 
     statChanges(): StatChanges {
-        return new StatChanges(0, 4.0, 100);
+        return new StatChanges(0, 4.0, 100, APSC);
     }
 }
 
@@ -57,13 +76,13 @@ class Science implements IChoice {
     }
 
     statChanges(): StatChanges {
-        return new StatChanges(50, 3.0, 100);
+        return new StatChanges(50, 3.0, 100, SCIE);
     }
 }
 
-class Sauder implements IChoice {
+class Forestry implements IChoice {
     answer(): string {
-        return "Sauder";
+        return "Forestry";
     }
 
     followUps(): IEvent[] {
@@ -71,6 +90,48 @@ class Sauder implements IChoice {
     }
 
     statChanges(): StatChanges {
-        return new StatChanges(100, 2.0, 100);
+        return new StatChanges(100, 2.0, 100, FORE);
+    }
+}
+
+class Commerce implements IChoice {
+    answer(): string {
+        return "Commerce";
+    }
+
+    followUps(): IEvent[] {
+        return [];
+    }
+
+    statChanges(): StatChanges {
+        return new StatChanges(100, 2.0, 100, COMM);
+    }
+}
+
+class Kinesiology implements IChoice {
+    answer(): string {
+        return "Kinesiology";
+    }
+
+    followUps(): IEvent[] {
+        return [];
+    }
+
+    statChanges(): StatChanges {
+        return new StatChanges(100, 2.0, 100, KIN);
+    }
+}
+
+class LFS implements IChoice {
+    answer(): string {
+        return "Land and Food Systems";
+    }
+
+    followUps(): IEvent[] {
+        return [];
+    }
+
+    statChanges(): StatChanges {
+        return new StatChanges(100, 2.0, 100, LFSlogo);
     }
 }

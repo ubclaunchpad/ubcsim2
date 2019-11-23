@@ -1,4 +1,4 @@
-import {IEvent, IChoice} from "./../events/core";
+import {GamePlayMode, IEvent, IChoice} from "./../events/core";
 
 class NoMoreEventsEvent implements IEvent {
     prompt(): string {
@@ -11,6 +11,18 @@ class NoMoreEventsEvent implements IEvent {
 
     choices(): IChoice[] {
         return [];
+    }
+
+    shouldGpcHidden(): boolean {
+        return true;
+    }
+
+    hasBottomBoxBorder(): boolean {
+        return true;
+    }
+
+    gamePlayMode(): GamePlayMode {
+      return GamePlayMode.Hide;
     }
 }
 
