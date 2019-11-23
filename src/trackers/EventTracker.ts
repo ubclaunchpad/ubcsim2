@@ -12,6 +12,14 @@ class NoMoreEventsEvent implements IEvent {
     choices(): IChoice[] {
         return [];
     }
+
+    shouldGpcHidden(): boolean {
+        return true;
+    }
+
+    hasBottomBoxBorder(): boolean {
+        return true;
+    }
 }
 
 export default class EventTracker {

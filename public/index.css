@@ -1,48 +1,81 @@
 body {
   font-family: "VT323", monospace;
+  background: darkgrey;
 }
 
-#faculty-badge {
-  height: 60px;
-  width: 60px;
-  border: 3px black solid;
-  border-radius: 5px;
+#root {
+  height: 100vh;
 }
 
-#player-stat-box {
-  height: 85px;
-  margin-top: 15px;
-}
-
-#gameplay-content-box {
-  height: 200px;
-  margin-top: 20px;
-}
-
-#user-interaction-box {
-  height: 140px;
-  margin-top: 15px;
-}
-
-#progress-bar {
-  width: 50px;
-  height: 15px;
-  border-image-outset: 1;
-}
-
-/* #name {
-  width: 50%;
-} */
-
-.game-container {
+#app {
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 0;
   margin: 0;
+}
+
+#game-container {
+  height: 100vh;
+  width: 375px;
+  background: white;
+  padding: 30px;
+}
+
+#player-stat-box {
+  margin-top: 35px;
+  height: 85px;
+}
+
+#gameplay-container {
+  height: fit-content;
+  margin: 31px;
+}
+
+#gameplay-content-box {
+  height: 225px;
+  width: 190px;
+  display: inline-block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.33);
+}
+
+#user-interaction-box {
+  margin-top: 26px;
+}
+
+#progress-bar {
+  width: 50px;
+  height: 15px;
+  border-image-outset: 1;
+  margin: 0;
+  border-image-width: 1.5;
+}
+
+#landing-box {
+  width: 190px;
+  height: 200px;
+  text-align: center;
+  border: solid 2px;
+  padding: 3px;
+  display: inline-block;
+}
+
+#enter-name {
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}
+
+.nes-container {
+  border-width: 2px;
+}
+
+.nes-container.is-rounded {
+  border-image-width: 2;
 }
 
 .nes-btn {
@@ -55,11 +88,6 @@ body {
 
 .column {
   width: 50%;
-}
-
-.align-items {
-  height: 480px;
-  width: 300px;
 }
 
 .width-50 {
@@ -104,12 +132,16 @@ body {
   height: 20px;
 }
 
-.bottom-container {
-  padding: 10px 20px 10px 20px;
-  border: 2px black solid;
-  border-radius: 10px;
-}
-
 .choice-btn-half {
   width: 35%;
 }
+
+.choice-btn-70 {
+  width: 70%;
+}
+
+/* .fix-pos-bottom {
+  position: absolute;
+  top: 430px;
+  width: 310px;
+} */

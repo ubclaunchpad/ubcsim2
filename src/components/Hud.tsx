@@ -12,6 +12,7 @@ interface IProps {
 }
 
 export default function Hud(props: IProps) {
+
     return (
         <header id="player-stat-box" className="row">
             <div className="row">
@@ -20,8 +21,8 @@ export default function Hud(props: IProps) {
             </div>
             <div className="row">
                 <span className="column this-align-left">
-                    <span className="fit-content-width margin-right-10 float-left">
-                        <div id="faculty-badge" />
+                    <span id="faculty-badge" className="fit-content-width margin-right-10 float-left">
+                        <img className="nes-avatar is-large" src={props.playerStats.getLogo()} alt="Blank Faculty Logo" style={{imageRendering: "pixelated"}}/>
                     </span>
                     <span className="fit-content-width">
                         <Scores playerStats={props.playerStats}/>
@@ -38,7 +39,6 @@ export default function Hud(props: IProps) {
                     />
                 </span>
             </div>
-            
         </header>
     );
 }

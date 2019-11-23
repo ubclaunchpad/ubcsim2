@@ -15,6 +15,14 @@ export default class BoomerGregorEvent implements IEvent {
             new OkBoomer()
         ];
     }
+
+    shouldGpcHidden(): boolean {
+        return true;
+    }
+
+    hasBottomBoxBorder(): boolean {
+        return false;
+    }
 }
 
 class TrustNaturalRecursion implements IChoice {
