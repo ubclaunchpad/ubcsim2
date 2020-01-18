@@ -1,10 +1,10 @@
 import React from "react";
 
-import {IEvent, IChoice} from "./events/core";
+import { IEvent, IChoice } from "./events/core";
 import LandingEvent from "./events/LandingEvent";
 import PickFacultyEvent from "./events/PickFacultyEvent";
 import BoomerGregorEvent from "./events/BoomerGregorEvent";
-import {CuteGirlEvent} from "./events/CuteGirlEvent";
+import { CuteGirlEvent } from "./events/CuteGirlEvent";
 import FratPartyEvent from "./events/FratPartyEvent";
 
 import PlayerStats from "./trackers/PlayerStats";
@@ -15,7 +15,7 @@ import GamePlayConsole from "./components/GamePlayConsole";
 import Choices from "./components/Choices";
 
 // tslint:disable-next-line:no-empty-interface
-export interface IProps {}
+export interface IProps { }
 
 export interface IState {
     week: number;
@@ -24,7 +24,7 @@ export interface IState {
     eventTracker: EventTracker;
 }
 
-export default class App extends React.Component <IProps, IState> {
+export default class App extends React.Component<IProps, IState> {
     private name: string;
 
     constructor(props: IProps) {
@@ -75,19 +75,18 @@ export default class App extends React.Component <IProps, IState> {
         let currentEvent: IEvent = this.state.currentEvent;
         return (
             <div id="app">
-                <div id="game-container">
+                <div id="game-container" style={{ "marginTop": (window.innerHeight - 667) / 2 }}>
                     <Hud
-                      playerStats={this.state.playerStats}
-                      week={this.state.week}
-                      name={this.name}
+                        playerStats={this.state.playerStats}
+                        week={this.state.week}
+                        name={this.name}
                     />
-                    <GamePlayConsole 
-                      mode={currentEvent.gamePlayMode()}
-                      imgPath={currentEvent.imgPath()}
+                    <GamePlayConsole
+                        mode={currentEvent.gamePlayMode()}
+                        imgPath={currentEvent.imgPath()}
                     />
-                    <section 
-                      id="user-interaction-box" 
-                      className={currentEvent.hasBottomBoxBorder() ? "nes-container is-rounded" : ""}
+                    <section
+                        id="user-interaction-box"
                     >
                         <div id="bottom-menu" className="bottom-container">
                             <p id="prompt" className="this-align-center">

@@ -12,7 +12,7 @@ const generateAcceptanceLetter = () => {
     return (
         <div
             id="gameplay-content-box"
-            className="nes-container is-centered"
+            className="acceptance-letter is-centered"
         >
             <p>Dear, <span id="enter-name" className="nes-pointer">Enter Name</span>
             </p>

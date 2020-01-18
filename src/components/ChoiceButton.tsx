@@ -1,6 +1,6 @@
 import React from "react";
 
-import {IChoice} from "./../events/core";
+import { IChoice } from "./../events/core";
 
 interface IProps {
     choice: IChoice;
@@ -10,7 +10,7 @@ interface IProps {
 export default function ChoiceButton(props: IProps) {
     return (
         <button
-            className="choice-btn-70 is-primary nes-btn"
+            className="choice-btn-70 is-primary btn"
             onClick={() => props.makeChoice(props.choice)}
         >
             {props.choice.answer()}

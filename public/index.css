@@ -78,7 +78,7 @@ body {
   border-image-width: 2;
 }
 
-.nes-btn {
+.btn {
   margin: 10px;
   padding: 3px 4px;
 }
@@ -126,6 +126,10 @@ body {
 
 .margin-right-10 {
   margin-right: 10px;
+}
+
+.acceptance-letter {
+  border: 1px solid black;
 }
 
 .stat {
