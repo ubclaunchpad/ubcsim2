@@ -9,8 +9,8 @@ interface IProps {
 
 export default function ChoiceButton(props: IProps) {
     return (
-        <button
-            className="choice-btn-70 is-primary btn"
+        <button type="button"
+            className="choice-btn-70 web-work-blue btn"
             onClick={() => props.makeChoice(props.choice)}
         >
             {props.choice.answer()}

@@ -22,6 +22,7 @@ body {
   width: 350px;
   background: white;
   padding: 30px;
+  margin: 0;
 }
 
 #player-stat-box {
@@ -66,6 +67,20 @@ body {
   text-decoration: underline;
 }
 
+#bottom-menu {
+  border: 1px solid black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.33);
+  border-radius: 15px;
+  padding: 5px;
+}
+
+#faculty-badge {
+  height: 60px;
+  width: 60px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
 .hide {
   display: none;
 }
@@ -79,8 +94,30 @@ body {
 }
 
 .btn {
-  margin: 10px;
-  padding: 3px 4px;
+  display: inline-block;
+  overflow-wrap: normal;
+  margin-bottom: 10px;
+  font-weight: 400;
+  text-align: center;
+  white-space: normal;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.web-work-blue {
+  background-color: #000077;
+  color: #fff;
 }
 
 .row {
@@ -130,6 +167,7 @@ body {
 
 .acceptance-letter {
   border: 1px solid black;
+  padding-top: 30px;
 }
 
 .stat {
