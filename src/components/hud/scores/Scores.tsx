@@ -1,7 +1,7 @@
 import React from "react";
 
 import ScoreItem from "./ScoreItem";
-import PlayerStats from "./../trackers/PlayerStats";
+import PlayerStats from "./../../../trackers/PlayerStats";
 
 interface IProps {
     playerStats: PlayerStats;
