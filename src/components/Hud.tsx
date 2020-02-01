@@ -21,21 +21,21 @@ export default function Hud(props: IProps) {
             </div>
             <div className="row">
                 <span className="column this-align-left">
-                    <span id="faculty-badge" className="fit-content-width margin-right-10 float-left">
-                        <img className="nes-avatar is-large" src={props.playerStats.getLogo()} alt="Blank Faculty Logo" style={{imageRendering: "pixelated"}}/>
+                    <span className="fit-content-width margin-right-10 float-left">
+                        <img className="nes-avatar is-large" src={props.playerStats.getLogo()} alt="Blank Faculty Logo" style={{ imageRendering: "pixelated" }} />
                     </span>
                     <span className="fit-content-width">
-                        <Scores playerStats={props.playerStats}/>
+                        <Scores playerStats={props.playerStats} />
                     </span>
                 </span>
                 <span className="column">
                     {/* TODO: need to discuss how process should be defined  */}
                     {/* and make the progress bar meaningful. */}
-                    <progress 
-                      id="progress-bar" 
-                      className="nes-progress is-success float-right" 
-                      value="5" 
-                      max="10" 
+                    <progress
+                        id="progress-bar"
+                        className="nes-progress is-success float-right"
+                        value="5"
+                        max="10"
                     />
                 </span>
             </div>
