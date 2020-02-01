@@ -1,4 +1,9 @@
-import {GamePlayMode, IEvent, IChoice, StatChanges} from "./core";
+import { GamePlayMode, IEvent, IChoice, StatChanges } from "./core";
+
+import AbgBoyfriend from "./../assets/abg_boyfriend.png";
+import AbgSad from "./../assets/abg_sad.png";
+import AbgNormal from "./../assets/abg_normal.png";
+import AbgNoAirpods from "./../assets/abg_no_airpods.png";
 
 export class CuteGirlEvent implements IEvent {
     prompt(): string {
@@ -6,7 +11,7 @@ export class CuteGirlEvent implements IEvent {
     }
 
     imgPath(): string {
-        return "";
+        return AbgNormal;
     }
 
     choices(): IChoice[] {
@@ -31,7 +36,7 @@ export class CuteFilasEvent implements IEvent {
     }
 
     imgPath(): string {
-        return "";
+        return AbgNoAirpods;
     }
 
     choices(): IChoice[] {
@@ -56,7 +61,7 @@ export class CuteGirlTixEvent implements IEvent {
     }
 
     imgPath(): string {
-        return "";
+        return AbgSad;
     }
 
     choices(): IChoice[] {
@@ -81,7 +86,7 @@ export class NoVIPTixEvent implements IEvent {
     }
 
     imgPath(): string {
-        return "";
+        return AbgSad;
     }
 
     choices(): IChoice[] {
@@ -105,7 +110,7 @@ export class HasBoyfriendEvent implements IEvent {
     }
 
     imgPath(): string {
-        return "";
+        return AbgBoyfriend;
     }
 
     choices(): IChoice[] {

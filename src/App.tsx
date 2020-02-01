@@ -11,9 +11,9 @@ import FratPartyEvent from "./events/FratPartyEvent";
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";
 
-import Hud from "./components/Hud";
-import GamePlayConsole from "./components/GamePlayConsole";
-import Choices from "./components/Choices";
+import Hud from "./components/hud/Hud";
+import GamePlayConsole from "./components/gamePlayConsole/GamePlayConsole";
+import Choices from "./components/choices/Choices";
 
 // tslint:disable-next-line:no-empty-interface
 export interface IProps { }

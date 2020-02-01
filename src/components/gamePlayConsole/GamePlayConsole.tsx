@@ -1,7 +1,7 @@
 import React from "react";
 
-import placeholderImg from "../assets/place-holder-image.png";
-import { GamePlayMode } from "../events/core";
+import placeholderImg from "../../assets/place-holder-image.png";
+import { GamePlayMode } from "../../events/core";
 
 interface IProps {
     mode: GamePlayMode;
@@ -26,6 +26,7 @@ const generateComic = (img: string) => {
         <img
             src={img === "" ? placeholderImg : img}
             alt="Gameplay comic"
+            className="event-illustration"
         />
     );
 };
