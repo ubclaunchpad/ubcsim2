@@ -1,7 +1,7 @@
 import React from "react";
 
-import placeholderImg from "../assets/place-holder-image.png";
-import { GamePlayMode } from "../events/core";
+import placeholderImg from "../../assets/place-holder-image.png";
+import { GamePlayMode } from "../../events/core";
 
 interface IProps {
     mode: GamePlayMode;
