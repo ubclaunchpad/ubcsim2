@@ -2,6 +2,22 @@ body {
   font-family: "VT323", monospace;
   background: #fff;
 }
+/* 
+@font-face {
+  font-family: 'kongtext';
+  src: url('kongtext.eot'); 
+  src: url('kongtext.eot?#iefix') format('embedded-opentype'), 
+       url('kongtext.woff') format('woff'),
+       url('kongtext.ttf')  format('truetype'), 
+       url('kongtext.svg#svgFontName') format('svg'); 
+}
+
+body {
+  font-size: 9px;
+  letter-spacing: 0em;
+  font-family: "kongtext";
+  background: #fff;
+} */
 
 #root {
   height: 100%;
@@ -115,6 +131,20 @@ body {
   user-select: none;
 }
 
+.btn-animation {
+  color: #fff;
+  background-color: #000077;
+  box-shadow: 2px 3px #999;
+}
+
+.btn-animation:hover {background-color: #000055}
+
+.btn-animation:active {
+  background-color: #000077;
+  box-shadow: 2px 2px #666;
+  transform: translateY(1px); 
+}
+
 .web-work-blue {
   background-color: #000077;
   color: #fff;
@@ -168,6 +198,7 @@ body {
 .acceptance-letter {
   border: 1px solid black;
   padding-top: 30px;
+  padding: 10px;
 }
 
 .stat {
