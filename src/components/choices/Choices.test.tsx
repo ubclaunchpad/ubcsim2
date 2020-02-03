@@ -9,8 +9,9 @@ it("renders choices correctly", () => {
     const {getByText} = render(
         <Choices
             choices={choices}
-            makeChoice={(c) => {c}}
-        />);
+            makeChoice={(c) => {c;}}
+        />
+    );
     for (const c of choices) {
         expect(getByText(c.answer())).toBeInTheDocument();
     }
