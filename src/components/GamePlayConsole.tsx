@@ -1,10 +1,9 @@
 import React from "react";
 
 import placeholderImg from "../assets/place-holder-image.png";
-import { GamePlayMode } from "../events/core";
 
 interface IProps {
-    mode: GamePlayMode;
+    mode: string;
     imgPath: string;
 }
 
@@ -33,8 +32,8 @@ const generateComic = (img: string) => {
 
 export default function GamePlayConsole(props: IProps) {
     return (
-        <section id="gameplay-container" className={props.mode === GamePlayMode.Hide ? "hide" : ""}>
-            {props.mode === GamePlayMode.AcceptanceLetter ? generateAcceptanceLetter() : generateComic(props.imgPath)}
+        <section id="gameplay-container" className={props.mode === "Hide" ? "hide" : ""}>
+            {props.mode === "AcceptanceLetter" ? generateAcceptanceLetter() : generateComic(props.imgPath)}
         </section >
     );
 }

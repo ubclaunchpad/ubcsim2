@@ -1,0 +1,112 @@
+{
+  "BoomerGregorEvent":
+  {
+    "prompt": "Dr. Gregor tells the class to start studying for CPSC 110 early!",
+    "imgPath": "/assets/Gregor.png",
+    "choices": [
+      "TrustNaturalRecurion",
+      "OkBoomer"
+    ],
+    "hasBottomBoxBorder" : false,
+    "gamePlayMode": "Comics"
+  },
+  "CuteGirlEvent":
+  {
+    "prompt": "You see a cute girl in the Life Building, what do you do?",
+    "imgPath": "/assets/abg_normal.png",
+    "choices": [
+      "BuyTheTix",
+      "ComplimentFilas"
+    ],
+    "hasBottomBoxBorder" : false,
+    "gamePlayMode": "Comics"
+  },
+  "CuteFilasEvent":
+  {
+    "prompt": "She takes out her AirPods.\n\"What did you say?\"",
+    "imgPath": "/assets/abg_no_airpods.png",
+    "choices": [
+      "RunAway",
+      "ShowFilas"
+    ],
+    "hasBottomBoxBorder" : false,
+    "gamePlayMode": "Comics"
+  },
+  "CuteGirlTixEvent": 
+  {
+    "prompt": "The cute girl from the Life Building asked if you got the VIP tickets for EDC. Did you?",
+    "imgPath": "/assets/abg_sad.png",
+    "choices": [
+      "OhYes",
+      "Nope"
+    ],
+    "hasBottomBoxBorder" : false,
+    "gamePlayMode": "Comics"
+  },
+  "NoVIPTixEvent": 
+  {
+    "prompt": "The cute girl from the Life Building doesn't like you anymore because you're poor ):",
+    "imgPath": "/assets/abg_sad.png",
+    "choices": [
+      "StalkInstagram"
+    ],
+    "hasBottomBoxBorder" : false,
+    "gamePlayMode": "Comics"
+  },
+  "HasBoyfriendEvent": 
+  {
+    "prompt": "The cute girl from the Life Building just posted a photo of her and her boyfriend at EDC.",
+    "imgPath": "/assets/abg_boyfriend.png",
+    "choices": [
+      "FiveverAlone"
+    ],
+    "hasBottomBoxBorder" : false,
+    "gamePlayMode": "Comics"
+  },
+  "FratPartyEvent": 
+  {
+    "prompt": "You have been asked to go to a toga party! Are you going to go?",
+    "imgPath": "",
+    "choices": [
+      "GrossFrats",
+      "YayBedsheets"
+    ],
+    "hasBottomBoxBorder" : false,
+    "gamePlayMode": "Comics"
+  },
+  "LandingEvent":
+  {
+    "prompt": "This is going to be the best 4 years of my life!",
+    "imgPath": "",
+    "choices": [
+      "return"
+    ],
+    "hasBottomBoxBorder" : true,
+    "gamePlayMode": "AcceptanceLetter"
+  },
+  "PickFacultyEvent":
+  {
+    "prompt": "Choose your faculty!",
+    "imgPath": "",
+    "choices": [
+      "Arts",
+      "ApScience",
+      "Commerce",
+      "Forestry",
+      "Kinesiology",
+      "LFS",
+      "Science"
+    ],
+    "hasBottomBoxBorder" : false,
+    "gamePlayMode": "Hide"
+  },
+  "NoMoreEventsEvent":
+  {
+    "prompt": "Oops! No more events!",
+    "imgPath": "",
+    "choices": [],
+    "shouldGpcHidden": true,
+    "hasBottomBoxBorder" : true,
+    "gamePlayMode": "Hide"
+  }
+}

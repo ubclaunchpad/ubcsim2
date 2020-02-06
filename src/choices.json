@@ -1,0 +1,122 @@
+{
+  "TrustNaturalRecursion":
+  {
+    "answer":"Trust the natural recursion",
+    "followUps":"",
+    "statChanges":[10, 0.5, -15]
+  },
+  "OkBoomer": 
+  {
+    "answer":"Ok, Boomer",
+    "followUps":"",
+    "statChanges":[60, -0.02, -8]
+  },
+  "FiveverAlone": 
+  {
+    "answer":"5ever alone",
+    "followUps":"",
+    "statChanges":[-50, -1.5, -15]
+  },
+  "RunAway":
+  {
+    "answer":"meep merp. run away",
+    "followUps":"",
+    "statChanges":[-25, 0, -15]
+  },
+  "ShowFilas": 
+  {
+    "answer":"Show her your Filas",
+    "followUps":"",
+    "statChanges":[35, 0.5, 0]
+  },
+  "BuyTheTix": 
+  {
+    "answer":"Buy her EDC (Electronic Daisy Carnival) tickets",
+    "followUps":"CuteGirlTixEvent",
+    "statChanges":[5, -0.01, 0]
+  },
+  "ComplimentFilas":
+  {
+    "answer":"Compliment her Filas",
+    "followUps":"CuteFilasEvent",
+    "statChanges":[1, 0, 0]
+  },
+  "StalkInstagram": 
+  {
+    "answer":"Stalk her on Instagram",
+    "followUps":"",
+    "statChanges":[-50, -1.5, -35]
+  },
+  "OhYes":
+  {
+    "answer":"OH YES",
+    "followUps":"HasBoyfriendEvent",
+    "statChanges":[20, -0.02, -3]
+  },
+  "Nope":
+  {
+    "answer":"no...",
+    "followUps":"NoVIPTixEvent",
+    "statChanges":[-5, 0, 0]
+  },
+  "GrossFrats":
+  {
+    "answer":"Ew! Frats are gross!",
+    "followUps":"",
+    "statChanges":[-20, 0.5, 5]
+  },
+  "YayBedsheets":
+  {
+    "answer":"I love wearing my bedsheets!",
+    "followUps":"",
+    "statChanges":[40, -1.0, -50]
+  },
+  "Start":
+  {
+    "answer":"Accept Offer",
+    "followUps":"",
+    "statChanges":[0, 0, 0]
+  },
+  "Arts":
+  {
+    "answer":"Arts",
+    "followUps":"",
+    "statChanges":[50, 2.0, 100, "/assets/ARTS.png"]
+  },
+  "ApScience":
+  {
+    "answer":"Applied Science",
+    "followUps":"",
+    "statChanges":[0, 4.0, 100, "/assets/APSC.png"]
+  },
+  "Science":
+  {
+    "answer":"Science",
+    "followUps":"",
+    "statChanges":[50, 3.0, 100, "/assets/SCIE.png"]
+  },
+  "Forestry":
+  {
+    "answer":"Forestry",
+    "followUps":"",
+    "statChanges":[100, 2.0, 100, "/assets/FORE.png"]
+  },
+  "Commerce":
+  {
+    "answer":"Commerce",
+    "followUps":"",
+    "statChanges":[100, 2.0, 100, "/assets/COMM.png"]
+  },
+  "Kinesiology":
+  {
+    "answer":"Kinesiology",
+    "followUps":"",
+    "statChanges":[100, 2.0, 100, "/assets/KIN.png"]
+  },
+  "LFS":
+  {
+    "answer":"Land and Food Systems",
+    "followUps":"",
+    "statChanges":[100, 2.0, 100, "/assets/LFS.png"]
+  }
+}

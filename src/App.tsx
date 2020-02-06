@@ -1,11 +1,6 @@
 import React from "react";
 
 import {IEvent, IChoice} from "./events/core";
-import LandingEvent from "./events/LandingEvent";
-import PickFacultyEvent from "./events/PickFacultyEvent";
-import BoomerGregorEvent from "./events/BoomerGregorEvent";
-import {CuteGirlEvent} from "./events/CuteGirlEvent";
-import FratPartyEvent from "./events/FratPartyEvent";
 
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";
@@ -13,6 +8,7 @@ import EventTracker from "./trackers/EventTracker";
 import Hud from "./components/Hud";
 import GamePlayConsole from "./components/GamePlayConsole";
 import Choices from "./components/Choices";
+import events from "./events.json";
 
 // tslint:disable-next-line:no-empty-interface
 export interface IProps {}
@@ -32,8 +28,8 @@ export default class App extends React.Component <IProps, IState> {
 
         const playerStats = new PlayerStats();
         const eventTracker = new EventTracker(
-            [new BoomerGregorEvent(), new CuteGirlEvent(), new FratPartyEvent()],
-            [new LandingEvent(), new PickFacultyEvent()]
+            [events.BoomerGregorEvent, events.CuteGirlEvent, events.FratPartyEvent],
+            [events.LandingEvent, events.PickFacultyEvent]
         );
         let firstEvent = eventTracker.getNextEvent();
 
@@ -53,9 +49,8 @@ export default class App extends React.Component <IProps, IState> {
     }
 
     makeChoice = (choice: IChoice) => {
-        this.state.playerStats.applyStatChanges(choice.statChanges());
-
-        for (let followUp of choice.followUps()) {
+        this.state.playerStats.applyStatChanges(choice.statChanges);
+        for (let followUp of choice.followUps) {
             this.state.eventTracker.queueFollowUpEvent(followUp);
         }
 
@@ -82,19 +77,19 @@ export default class App extends React.Component <IProps, IState> {
                       name={this.name}
                     />
                     <GamePlayConsole 
-                      mode={currentEvent.gamePlayMode()}
-                      imgPath={currentEvent.imgPath()}
+                      mode={currentEvent.gamePlayMode}
+                      imgPath={currentEvent.imgPath}
                     />
                     <section 
                       id="user-interaction-box" 
-                      className={currentEvent.hasBottomBoxBorder() ? "nes-container is-rounded" : ""}
+                      className={currentEvent.hasBottomBoxBorder ? "nes-container is-rounded" : ""}
                     >
                         <div id="bottom-menu" className="bottom-container">
                             <p id="prompt" className="this-align-center">
-                                {currentEvent.prompt()}
+                                {currentEvent.prompt}
                             </p>
                             <Choices
-                                choices={currentEvent.choices()}
+                                choices={currentEvent.choices}
                                 makeChoice={this.makeChoice}
                             />
                         </div>

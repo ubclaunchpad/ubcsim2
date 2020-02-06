@@ -1,21 +1,15 @@
-export enum GamePlayMode {
-    Comics,
-    AcceptanceLetter,
-    Hide
-}
-
 export interface IEvent {
-    prompt(): string;
-    imgPath(): string;
-    choices(): IChoice[];
-    gamePlayMode(): GamePlayMode;
-    hasBottomBoxBorder(): boolean;
+    "prompt": string;
+    "imgPath": string;
+    "choices": string[];
+    "gamePlayMode": string;
+    "hasBottomBoxBorder": boolean;
 }
 
 export interface IChoice {
-    answer(): string;
-    followUps(): IEvent[];
-    statChanges(): StatChanges;
+    "answer": string;
+    "followUps": IEvent[];
+    "statChanges": StatChanges;
 }
 
 export class StatChanges {
