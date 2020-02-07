@@ -1,5 +1,3 @@
-import {StatChanges} from "./../events/core";
-
 import Blank from "../assets/Blank.png";
 
 const FRIENDS_MIN = 0;
@@ -21,11 +19,11 @@ export default class PlayerStats {
         this.logo = Blank;
     }
 
-    public applyStatChanges(statChanges: StatChanges) {
-        let friends: number = this.friends + statChanges.dfriends;
+    public applyStatChanges(statChanges: number[]) {
+        let friends: number = this.friends + statChanges[0];
         this.friends = friends >= FRIENDS_MIN ? friends : 0;
 
-        let gpa: number = this.gpa + statChanges.dgpa;
+        let gpa: number = this.gpa + statChanges[1];
         if (gpa > GPA_MAX)
             this.gpa = GPA_MAX;
         else if (gpa < GPA_MIN)
@@ -33,7 +31,7 @@ export default class PlayerStats {
         else
             this.gpa = gpa;
 
-        let sleep: number = this.sleep + statChanges.dsleep;
+        let sleep: number = this.sleep + statChanges[2];
         if (sleep > SLEEP_MAX)
             this.sleep = SLEEP_MAX;
         else if (sleep < SLEEP_MIN)
@@ -41,7 +39,7 @@ export default class PlayerStats {
         else
             this.sleep = sleep;
 
-        if (statChanges.dlogo) this.logo = statChanges.dlogo;
+        // if (statChanges.dlogo) this.logo = statChanges.dlogo;
     }
 
     public getFriends(): number {

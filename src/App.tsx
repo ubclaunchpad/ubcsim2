@@ -8,7 +8,9 @@ import EventTracker from "./trackers/EventTracker";
 import Hud from "./components/Hud";
 import GamePlayConsole from "./components/GamePlayConsole";
 import Choices from "./components/Choices";
+import ChoicesManager from "./events/ChoicesManager";
 import events from "./events.json";
+import choices from "./choices.json";
 
 // tslint:disable-next-line:no-empty-interface
 export interface IProps {}
@@ -22,6 +24,7 @@ export interface IState {
 
 export default class App extends React.Component <IProps, IState> {
     private name: string;
+	private mgr: ChoicesManager;
 
     constructor(props: IProps) {
         super(props);
@@ -35,7 +38,7 @@ export default class App extends React.Component <IProps, IState> {
 
         //TODO: should we auto allocate a dummy player name or allow user to input their own?
         this.name = "P1";
-
+		this.mgr = new ChoicesManager(choices);
         this.state = {
             // TODO: The week number may not be how we choose to track time,
             // we should create some abstraction for this similar to how
@@ -90,6 +93,7 @@ export default class App extends React.Component <IProps, IState> {
                             </p>
                             <Choices
                                 choices={currentEvent.choices}
+								mgr={this.mgr}
                                 makeChoice={this.makeChoice}
                             />
                         </div>

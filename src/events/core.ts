@@ -9,7 +9,7 @@ export interface IEvent {
 export interface IChoice {
     "answer": string;
     "followUps": IEvent[];
-    "statChanges": StatChanges;
+    "statChanges": number[];
 }
 
 export class StatChanges {
