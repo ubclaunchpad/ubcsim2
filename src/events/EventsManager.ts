@@ -1,4 +1,4 @@
-import { IEvent } from "./Core";
+import { IEvent } from "./core";
 
 export default class EventsManager {
     private mgr: Map<string, IEvent> = new Map<string, IEvent>();

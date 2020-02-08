@@ -2,7 +2,7 @@
   "BoomerGregorEvent":
   {
     "prompt": "Dr. Gregor tells the class to start studying for CPSC 110 early!",
-    "imgPath": "/assets/Gregor.png",
+    "imgPath": "Gregor.png",
     "choices": [
       "TrustNaturalRecursion",
       "OkBoomer"
@@ -13,7 +13,7 @@
   "CuteGirlEvent":
   {
     "prompt": "You see a cute girl in the Life Building, what do you do?",
-    "imgPath": "/assets/abg_normal.png",
+    "imgPath": "abg_normal.png",
     "choices": [
       "BuyTheTix",
       "ComplimentFilas"
@@ -24,7 +24,7 @@
   "CuteFilasEvent":
   {
     "prompt": "She takes out her AirPods.\n\"What did you say?\"",
-    "imgPath": "/assets/abg_no_airpods.png",
+    "imgPath": "abg_no_airpods.png",
     "choices": [
       "RunAway",
       "ShowFilas"
@@ -35,7 +35,7 @@
   "CuteGirlTixEvent": 
   {
     "prompt": "The cute girl from the Life Building asked if you got the VIP tickets for EDC. Did you?",
-    "imgPath": "/assets/abg_sad.png",
+    "imgPath": "abg_sad.png",
     "choices": [
       "OhYes",
       "Nope"
@@ -46,7 +46,7 @@
   "NoVIPTixEvent": 
   {
     "prompt": "The cute girl from the Life Building doesn't like you anymore because you're poor ):",
-    "imgPath": "/assets/abg_sad.png",
+    "imgPath": "abg_sad.png",
     "choices": [
       "StalkInstagram"
     ],
@@ -56,7 +56,7 @@
   "HasBoyfriendEvent": 
   {
     "prompt": "The cute girl from the Life Building just posted a photo of her and her boyfriend at EDC.",
-    "imgPath": "/assets/abg_boyfriend.png",
+    "imgPath": "abg_boyfriend.png",
     "choices": [
       "FiveverAlone"
     ],

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { IEvent, IChoice } from "./events/Core";
+import { IEvent, IChoice } from "./events/core";
 
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";

@@ -26,7 +26,7 @@ const generateComic = (img: string) => {
 
     return (
         <Img
-            src={img === "" ? placeholderImg : `..${img}`}
+            src={img === "" ? placeholderImg : require(`../assets/${img}`)}
             alt="Gameplay comic"
             className="event-illustration"
         />

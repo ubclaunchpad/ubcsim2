@@ -1,4 +1,4 @@
-import {IEvent} from "../events/Core";
+import {IEvent} from "../events/core";
 import events from "../events.json";
 
 export default class EventTracker {

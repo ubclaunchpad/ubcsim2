@@ -1,4 +1,4 @@
-import { IChoice } from "./Core";
+import { IChoice } from "./core";
 
 export default class ChoicesManager {
     private mgr: Map<string, IChoice> = new Map<string, IChoice>();
