@@ -4,7 +4,7 @@
     "prompt": "Dr. Gregor tells the class to start studying for CPSC 110 early!",
     "imgPath": "/assets/Gregor.png",
     "choices": [
-      "TrustNaturalRecurion",
+      "TrustNaturalRecursion",
       "OkBoomer"
     ],
     "hasBottomBoxBorder" : false,
@@ -79,7 +79,7 @@
     "prompt": "This is going to be the best 4 years of my life!",
     "imgPath": "",
     "choices": [
-      "return"
+      "Start"
     ],
     "hasBottomBoxBorder" : true,
     "gamePlayMode": "AcceptanceLetter"

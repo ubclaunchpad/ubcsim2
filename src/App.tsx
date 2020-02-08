@@ -1,6 +1,6 @@
 import React from "react";
 
-import {IEvent, IChoice} from "./events/core";
+import { IEvent, IChoice } from "./events/Core";
 
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";
@@ -9,6 +9,7 @@ import Hud from "./components/Hud";
 import GamePlayConsole from "./components/GamePlayConsole";
 import Choices from "./components/Choices";
 import ChoicesManager from "./events/ChoicesManager";
+import EventsManager from "./events/EventsManager";
 import events from "./events.json";
 import choices from "./choices.json";
 
@@ -24,7 +25,8 @@ export interface IState {
 
 export default class App extends React.Component <IProps, IState> {
     private name: string;
-	private mgr: ChoicesManager;
+    private cManager: ChoicesManager;
+    private eManager: EventsManager;
 
     constructor(props: IProps) {
         super(props);
@@ -38,7 +40,8 @@ export default class App extends React.Component <IProps, IState> {
 
         //TODO: should we auto allocate a dummy player name or allow user to input their own?
         this.name = "P1";
-		this.mgr = new ChoicesManager(choices);
+        this.cManager = new ChoicesManager(choices);
+        this.eManager = new EventsManager(events);
         this.state = {
             // TODO: The week number may not be how we choose to track time,
             // we should create some abstraction for this similar to how
@@ -53,9 +56,9 @@ export default class App extends React.Component <IProps, IState> {
 
     makeChoice = (choice: IChoice) => {
         this.state.playerStats.applyStatChanges(choice.statChanges);
-        for (let followUp of choice.followUps) {
-            this.state.eventTracker.queueFollowUpEvent(followUp);
-        }
+        if (choice.followUp !== ""){
+          this.state.eventTracker.queueFollowUpEvent(this.eManager.get(choice.followUp));
+        } 
 
         let nextEvent = this.state.eventTracker.getNextEvent();
 
@@ -93,7 +96,7 @@ export default class App extends React.Component <IProps, IState> {
                             </p>
                             <Choices
                                 choices={currentEvent.choices}
-								mgr={this.mgr}
+                                mgr={this.cManager}
                                 makeChoice={this.makeChoice}
                             />
                         </div>

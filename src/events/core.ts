@@ -8,7 +8,7 @@ export interface IEvent {
 
 export interface IChoice {
     "answer": string;
-    "followUps": IEvent[];
+    "followUp": string;
     "statChanges": number[];
 }
 

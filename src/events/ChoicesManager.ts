@@ -1,4 +1,4 @@
-import {IChoice} from "./core";
+import { IChoice } from "./Core";
 
 export default class ChoicesManager {
     private mgr: Map<string, IChoice> = new Map<string, IChoice>();
@@ -14,10 +14,10 @@ export default class ChoicesManager {
 
     public get(c: string): IChoice {
         const res = this.mgr.get(c);
-        if (res === undefined) {
+        if (!res) {
             throw new Error(`fatal: cannot find choice '${c}'`);
         } else {
             return res;
         }
     }
-};
+}
