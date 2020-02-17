@@ -1,8 +1,8 @@
 import React from "react";
 
 import ChoiceButton from "./ChoiceButton";
-import { IChoice } from "../events/core";
-import ChoicesManager from "../events/ChoicesManager";
+import { IChoice } from "./../../events/core";
+import ChoicesManager from "./../../events/ChoicesManager";
 
 interface IProps {
     choices: string[];

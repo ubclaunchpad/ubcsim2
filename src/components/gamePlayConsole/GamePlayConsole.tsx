@@ -1,6 +1,6 @@
 import React from "react";
 import Img from "react-image";
-import placeholderImg from "../assets/place-holder-image.png";
+import placeholderImg from "./../../assets/place-holder-image.png";
 
 interface IProps {
     mode: string;
@@ -26,7 +26,7 @@ const generateComic = (img: string) => {
 
     return (
         <Img
-            src={img === "" ? placeholderImg : require(`../assets/${img}`)}
+            src={img === "" ? placeholderImg : require(`../../assets/${img}`)}
             alt="Gameplay comic"
             className="event-illustration"
         />

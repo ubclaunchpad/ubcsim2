@@ -1,9 +1,9 @@
 import React from "react";
 
-import Scores from "./Scores";
+import Scores from "./scores/Scores";
 import NameIndicator from "./NameIndicator";
 import TimeIndicator from "./TimeIndicator";
-import PlayerStats from "./../trackers/PlayerStats";
+import PlayerStats from "./../../trackers/PlayerStats";
 
 interface IProps {
     playerStats: PlayerStats;
