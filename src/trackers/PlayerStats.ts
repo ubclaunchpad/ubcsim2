@@ -19,7 +19,7 @@ export default class PlayerStats {
         this.logo = Blank;
     }
 
-    public applyStatChanges(statChanges: number[]) {
+    public applyStatChanges(statChanges: number[], dlogo?: string) {
         let friends: number = this.friends + statChanges[0];
         this.friends = friends >= FRIENDS_MIN ? friends : 0;
 
@@ -39,7 +39,7 @@ export default class PlayerStats {
         else
             this.sleep = sleep;
 
-        // if (statChanges.dlogo) this.logo = statChanges.dlogo;
+        if (dlogo) this.logo = require(`../assets/${dlogo}`);
     }
 
     public getFriends(): number {

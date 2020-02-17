@@ -55,7 +55,9 @@ export default class App extends React.Component <IProps, IState> {
     }
 
     makeChoice = (choice: IChoice) => {
-        this.state.playerStats.applyStatChanges(choice.statChanges);
+        if (choice.dlogo) this.state.playerStats.applyStatChanges(choice.statChanges, choice.dlogo);
+        else this.state.playerStats.applyStatChanges(choice.statChanges);
+        
         if (choice.followUp !== ""){
           this.state.eventTracker.queueFollowUpEvent(this.eManager.get(choice.followUp));
         } 

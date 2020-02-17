@@ -10,4 +10,5 @@ export interface IChoice {
     "answer": string;
     "followUp": string;
     "statChanges": number[];
+    "dlogo"?: string;
 }
