@@ -125,5 +125,20 @@
     "followUp":"",
     "statChanges":[100, 2.0, 100],
     "dlogo": "LFS.png"
+  },
+  "TotemPark": {
+    "answer": "Totem Park",
+    "followUp": "",
+    "statChanges": [0, 0, 0]
+  },
+  "PlaceVanier": {
+    "answer": "Place Vanier",
+    "followUp": "",
+    "statChanges": [0, 0, 0]
+  },
+  "OrchardCommons": {
+    "answer": "Orchard Commons",
+    "followUp": "",
+    "statChanges": [0, 0, 0]
   }
 }

@@ -13,7 +13,7 @@ import GamePlayConsole from "./components/gamePlayConsole/GamePlayConsole";
 import Choices from "./components/choices/Choices";
 
 // tslint:disable-next-line:no-empty-interface
-export interface IProps {}
+export interface IProps { }
 
 export interface IState {
     week: number;
@@ -22,7 +22,7 @@ export interface IState {
     eventTracker: EventTracker;
 }
 
-export default class App extends React.Component <IProps, IState> {
+export default class App extends React.Component<IProps, IState> {
     private name: string;
     private cManager: ChoicesManager;
     private eManager: EventsManager;
@@ -33,7 +33,7 @@ export default class App extends React.Component <IProps, IState> {
         const playerStats = new PlayerStats();
         const eventTracker = new EventTracker(
             [events.BoomerGregorEvent, events.CuteGirlEvent, events.FratPartyEvent],
-            [events.LandingEvent, events.PickFacultyEvent]
+            [events.LandingEvent, events.PickFacultyEvent, events.PickResidenceEvent]
         );
         let firstEvent = eventTracker.getNextEvent();
 
@@ -79,17 +79,17 @@ export default class App extends React.Component <IProps, IState> {
             <div id="app">
                 <div id="game-container">
                     <Hud
-                      playerStats={this.state.playerStats}
-                      week={this.state.week}
-                      name={this.name}
+                        playerStats={this.state.playerStats}
+                        week={this.state.week}
+                        name={this.name}
                     />
                     <GamePlayConsole 
-                      mode={currentEvent.gamePlayMode}
-                      imgPath={currentEvent.imgPath}
+                        mode={currentEvent.gamePlayMode}
+                        imgPath={currentEvent.imgPath}
                     />
                     <section 
-                      id="user-interaction-box" 
-                      className={currentEvent.hasBottomBoxBorder ? "nes-container is-rounded" : ""}
+                        id="user-interaction-box" 
+                        className={currentEvent.hasBottomBoxBorder ? "nes-container is-rounded" : ""}
                     >
                         <div id="bottom-menu" className="bottom-container">
                             <p id="prompt" className="this-align-center">

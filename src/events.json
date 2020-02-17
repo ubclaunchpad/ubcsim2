@@ -108,5 +108,16 @@
     "shouldGpcHidden": true,
     "hasBottomBoxBorder" : true,
     "gamePlayMode": "Hide"
+  },
+  "PickResidenceEvent": {
+    "prompt": "It's time to move into your first year residence!",
+    "imgPath": "",
+    "choices": [
+      "TotemPark",
+      "PlaceVanier",
+      "OrchardCommons"
+    ],
+    "hasBottomBoxBorder": false,
+    "gamePlayMode": "Hide"
   }
 }
