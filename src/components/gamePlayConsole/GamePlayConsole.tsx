@@ -1,5 +1,4 @@
 import React from "react";
-import Img from "react-image";
 import placeholderImg from "./../../assets/place-holder-image.png";
 
 interface IProps {
@@ -21,11 +20,8 @@ const generateAcceptanceLetter = () => {
 };
 
 const generateComic = (img: string) => {
-    // img = ".." + img;
-    // console.log(img)
-
     return (
-        <Img
+        <img
             src={img === "" ? placeholderImg : require(`../../assets/${img}`)}
             alt="Gameplay comic"
             className="event-illustration"
