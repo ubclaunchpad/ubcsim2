@@ -105,7 +105,6 @@
     "prompt": "Oops! No more events!",
     "imgPath": "",
     "choices": [],
-    "shouldGpcHidden": true,
     "hasBottomBoxBorder" : true,
     "gamePlayMode": "Hide"
   },
