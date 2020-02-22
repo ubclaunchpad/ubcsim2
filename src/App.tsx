@@ -24,8 +24,8 @@ export interface IState {
 
 export default class App extends React.Component<IProps, IState> {
     private name: string;
-    private cManager: ChoicesManager;
-    private eManager: EventsManager;
+    private choiceManager: ChoicesManager;
+    private eventManager: EventsManager;
 
     constructor(props: IProps) {
         super(props);
@@ -39,8 +39,8 @@ export default class App extends React.Component<IProps, IState> {
 
         //TODO: should we auto allocate a dummy player name or allow user to input their own?
         this.name = "P1";
-        this.cManager = new ChoicesManager(choices);
-        this.eManager = new EventsManager(events);
+        this.choiceManager = new ChoicesManager(choices);
+        this.eventManager = new EventsManager(events);
         this.state = {
             // TODO: The week number may not be how we choose to track time,
             // we should create some abstraction for this similar to how
@@ -58,7 +58,7 @@ export default class App extends React.Component<IProps, IState> {
         else this.state.playerStats.applyStatChanges(choice.statChanges);
         
         if (choice.followUp !== ""){
-          this.state.eventTracker.queueFollowUpEvent(this.eManager.get(choice.followUp));
+          this.state.eventTracker.queueFollowUpEvent(this.eventManager.get(choice.followUp));
         } 
 
         let nextEvent = this.state.eventTracker.getNextEvent();
@@ -97,7 +97,7 @@ export default class App extends React.Component<IProps, IState> {
                             </p>
                             <Choices
                                 choices={currentEvent.choices}
-                                mgr={this.cManager}
+                                mgr={this.choiceManager}
                                 makeChoice={this.makeChoice}
                             />
                         </div>
