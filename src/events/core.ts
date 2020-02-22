@@ -1,3 +1,9 @@
+export const GamePlayMode = {
+  "Comics": "Comics",
+  "AcceptanceLetter": "AcceptanceLetter",
+  "Hide": "Hide"
+};
+
 export interface IEvent {
     "prompt": string;
     "imgPath": string;
