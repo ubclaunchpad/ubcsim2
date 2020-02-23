@@ -1,5 +1,5 @@
-import {IEvent} from "../events/core";
-import events from "../events.json";
+import { IEvent } from "../events/core";
+import { GamePlayMode } from "../events/core";
 
 export default class EventTracker {
     private pool: IEvent[];
@@ -22,7 +22,13 @@ export default class EventTracker {
             return event;
         }
         else
-            return events.NoMoreEventsEvent;
+            return {
+                "prompt": "Oops! No more events!",
+                "imgPath": "",
+                "choices": [],
+                "hasBottomBoxBorder": true,
+                "gamePlayMode": GamePlayMode.Hide
+            };
     }
 
     public queueFollowUpEvent(event: IEvent) {
