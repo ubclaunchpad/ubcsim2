@@ -6,9 +6,14 @@ import Unity, { UnityContent } from "react-unity-webgl";
 //     "buildplacething/Build/UnityLoader.js"
 // )
 
-const unityContent2 = new UnityContent(
-    "unity_builds/Build/unity_builds.json",
-    "unity_builds/Build/UnityLoader.js"
+// const unityContent2 = new UnityContent(
+//     "unity_builds/Build/unity_builds.json",
+//     "unity_builds/Build/UnityLoader.js"
+// )
+
+const eventContent = new UnityContent(
+    "eventishere/Build/eventishere.json",
+    "eventishere/Build/UnityLoader.js"
 )
 
 export interface IProps {}
@@ -22,6 +27,11 @@ export default class App extends React.Component <IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {current_i: true};
+
+        eventContent.on("DoSomething", () => {
+            console.log("UNITY TALKIN");
+            console.log("YEAH");
+        });
     }
 
     changeGame = () => {
@@ -45,7 +55,7 @@ export default class App extends React.Component <IProps, IState> {
                 </button>
                 {/* <Unity unityContent={this.state.current_i ? unityContent2 : unityContent1} /> */}
                 <h1>{this.state.current_i ? "TRUE" : "FALSE"}</h1>
-                {this.state.current_i ? <Unity unityContent={unityContent2} /> : null}
+                {this.state.current_i ? <Unity unityContent={eventContent} /> : null}
             </div>
         );
     }
