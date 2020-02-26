@@ -12,8 +12,8 @@ import Unity, { UnityContent } from "react-unity-webgl";
 // )
 
 const eventContent = new UnityContent(
-    "eventishere/Build/eventishere.json",
-    "eventishere/Build/UnityLoader.js"
+    "build2/Build/build2.json",
+    "build2/Build/UnityLoader.js"
 )
 
 export interface IProps {}
@@ -28,9 +28,14 @@ export default class App extends React.Component <IProps, IState> {
         super(props);
         this.state = {current_i: true};
 
-        eventContent.on("DoSomething", () => {
-            console.log("UNITY TALKIN");
+        eventContent.on("WinMiniGame", () => {
+            console.log("We won!");
             console.log("YEAH");
+        });
+
+        eventContent.on("LoseMiniGame", () => {
+            console.log("We lost!");
+            console.log("NO");
         });
     }
 
@@ -55,7 +60,17 @@ export default class App extends React.Component <IProps, IState> {
                 </button>
                 {/* <Unity unityContent={this.state.current_i ? unityContent2 : unityContent1} /> */}
                 <h1>{this.state.current_i ? "TRUE" : "FALSE"}</h1>
-                {this.state.current_i ? <Unity unityContent={eventContent} /> : null}
+                {/* {this.state.current_i ? <Unity unityContent={eventContent} height="25%" width="100px" /> : null} */}
+                <div
+                    style={{
+                      backgroundColor: 'blue',
+                      width: '500px',
+                      height: '500px'
+                    }}
+                >
+                    <Unity unityContent={eventContent} height="10%" width="10%"/>
+                </div>
+
             </div>
         );
     }
