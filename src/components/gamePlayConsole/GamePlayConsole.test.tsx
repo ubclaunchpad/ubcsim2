@@ -17,7 +17,7 @@ it("renders acceptance letter when asked to", () => {
 });
 
 it("renders comic when asked to", () => {
-    const {getByText} = render(
+    render(
         <GamePlayConsole
             mode={GamePlayMode.Comics}
             imgPath="Gregor.png"
