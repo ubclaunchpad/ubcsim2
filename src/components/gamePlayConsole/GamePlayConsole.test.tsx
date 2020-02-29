@@ -20,9 +20,7 @@ it("renders comic when asked to", () => {
     const {getByText} = render(
         <GamePlayConsole
             mode={GamePlayMode.Comics}
-            imgPath="someting.png"
+            imgPath="Gregor.png"
         />
     );
-
-    expect(getByText("Please accept this offer")).not.toBeInTheDocument();
 });
