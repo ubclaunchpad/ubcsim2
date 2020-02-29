@@ -1,30 +1,5 @@
-import {GamePlayMode, IEvent, IChoice} from "./../events/core";
-
-class NoMoreEventsEvent implements IEvent {
-    prompt(): string {
-        return "Oops! No more events!";
-    }
-
-    imgPath(): string {
-        return "";
-    }
-
-    choices(): IChoice[] {
-        return [];
-    }
-
-    shouldGpcHidden(): boolean {
-        return true;
-    }
-
-    hasBottomBoxBorder(): boolean {
-        return true;
-    }
-
-    gamePlayMode(): GamePlayMode {
-      return GamePlayMode.Hide;
-    }
-}
+import { IEvent } from "../events/core";
+import { GamePlayMode } from "../events/core";
 
 export default class EventTracker {
     private pool: IEvent[];
@@ -47,7 +22,13 @@ export default class EventTracker {
             return event;
         }
         else
-            return new NoMoreEventsEvent();
+            return {
+                "prompt": "Oops! No more events!",
+                "imgPath": "",
+                "choices": [],
+                "hasBottomBoxBorder": true,
+                "gamePlayMode": GamePlayMode.Hide
+            };
     }
 
     public queueFollowUpEvent(event: IEvent) {

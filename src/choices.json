@@ -1,0 +1,144 @@
+{
+  "TrustNaturalRecursion":
+  {
+    "answer":"Trust the natural recursion",
+    "followUp":"",
+    "statChanges":[10, 0.5, -15]
+  },
+  "OkBoomer": 
+  {
+    "answer":"Ok, Boomer",
+    "followUp":"",
+    "statChanges":[60, -0.02, -8]
+  },
+  "FiveverAlone": 
+  {
+    "answer":"5ever alone",
+    "followUp":"",
+    "statChanges":[-50, -1.5, -15]
+  },
+  "RunAway":
+  {
+    "answer":"meep merp. run away",
+    "followUp":"",
+    "statChanges":[-25, 0, -15]
+  },
+  "ShowFilas": 
+  {
+    "answer":"Show her your Filas",
+    "followUp":"",
+    "statChanges":[35, 0.5, 0]
+  },
+  "BuyTheTix": 
+  {
+    "answer":"Buy her EDC (Electronic Daisy Carnival) tickets",
+    "followUp":"CuteGirlTixEvent",
+    "statChanges":[5, -0.01, 0]
+  },
+  "ComplimentFilas":
+  {
+    "answer":"Compliment her Filas",
+    "followUp":"CuteFilasEvent",
+    "statChanges":[1, 0, 0]
+  },
+  "StalkInstagram": 
+  {
+    "answer":"Stalk her on Instagram",
+    "followUp":"",
+    "statChanges":[-50, -1.5, -35]
+  },
+  "OhYes":
+  {
+    "answer":"OH YES",
+    "followUp":"HasBoyfriendEvent",
+    "statChanges":[20, -0.02, -3]
+  },
+  "Nope":
+  {
+    "answer":"no...",
+    "followUp":"NoVIPTixEvent",
+    "statChanges":[-5, 0, 0]
+  },
+  "GrossFrats":
+  {
+    "answer":"Ew! Frats are gross!",
+    "followUp":"",
+    "statChanges":[-20, 0.5, 5]
+  },
+  "YayBedsheets":
+  {
+    "answer":"I love wearing my bedsheets!",
+    "followUp":"",
+    "statChanges":[40, -1.0, -50]
+  },
+  "Start":
+  {
+    "answer":"Accept Offer",
+    "followUp":"",
+    "statChanges":[0, 0, 0]
+  },
+  "Arts":
+  {
+    "answer":"Arts",
+    "followUp":"",
+    "statChanges":[50, 2.0, 100],
+    "dlogo": "ARTS.png"
+  },
+  "ApScience":
+  {
+    "answer":"Applied Science",
+    "followUp":"",
+    "statChanges":[0, 4.0, 100],
+    "dlogo": "APSC.png"
+  },
+  "Science":
+  {
+    "answer":"Science",
+    "followUp":"",
+    "statChanges":[50, 3.0, 100],
+    "dlogo": "SCIE.png"
+  },
+  "Forestry":
+  {
+    "answer":"Forestry",
+    "followUp":"",
+    "statChanges":[100, 2.0, 100],
+    "dlogo": "FORE.png"
+  },
+  "Commerce":
+  {
+    "answer":"Commerce",
+    "followUp":"",
+    "statChanges":[100, 2.0, 100],
+    "dlogo": "COMM.png"
+  },
+  "Kinesiology":
+  {
+    "answer":"Kinesiology",
+    "followUp":"",
+    "statChanges":[100, 2.0, 100],
+    "dlogo": "KIN.png"
+  },
+  "LFS":
+  {
+    "answer":"Land and Food Systems",
+    "followUp":"",
+    "statChanges":[100, 2.0, 100],
+    "dlogo": "LFS.png"
+  },
+  "TotemPark": {
+    "answer": "Totem Park",
+    "followUp": "",
+    "statChanges": [0, 0, 0]
+  },
+  "PlaceVanier": {
+    "answer": "Place Vanier",
+    "followUp": "",
+    "statChanges": [0, 0, 0]
+  },
+  "OrchardCommons": {
+    "answer": "Orchard Commons",
+    "followUp": "",
+    "statChanges": [0, 0, 0]
+  }
+}
