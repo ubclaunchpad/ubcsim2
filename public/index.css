@@ -36,7 +36,7 @@ body {
 #game-container {
   height: 667px;
   width: 350px;
-  background: white;
+  background: #FFFDC1;;
   padding: 30px;
   margin: 0;
 }
@@ -84,9 +84,18 @@ body {
 }
 
 #bottom-menu {
-  border: 1px solid black;
+  border: 2px solid #e6e6e6;
+  background-color: #f6f6f6;
+  padding: 5px;
+  z-index: 1;
+  position: relative;
+}
+
+.container-border {
+  background: white;
+  border: 3px solid #0B1164;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.33);
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 5px;
 }
 
@@ -197,6 +206,7 @@ body {
 
 .acceptance-letter {
   border: 1px solid black;
+  background: white;
   padding-top: 30px;
   padding: 10px;
 }
