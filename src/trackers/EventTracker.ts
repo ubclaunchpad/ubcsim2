@@ -2,26 +2,41 @@ import { IEvent } from "../events/core";
 import { GamePlayMode } from "../events/core";
 
 export default class EventTracker {
+    readonly SEASONAL_CHANCE = 30;
     private pool: IEvent[];
     private queue: IEvent[];
+    private seasonal: IEvent[][];
 
-    constructor(eventPool: IEvent[], eventQueue: IEvent[]) {
+    constructor(eventPool: IEvent[], eventQueue: IEvent[], seasonalPool: IEvent[][]) {
         this.pool = eventPool;
         this.queue = eventQueue;
+        this.seasonal = seasonalPool;
     }
 
-    public getNextEvent(): IEvent {
+    public getNextEvent(week: number): IEvent {
         // The queue being non-empty indicates there is a follow up
         // event to go through, otherwise pick a random event
         if (this.queue.length > 0)
             return this.queue.shift() as IEvent;
-        else if (this.pool.length > 0){
+
+        const r = Math.random() * 100;
+        const month = Math.floor(week / 4) + 9;
+        if (this.pool.length > 0 &&
+                (r > this.SEASONAL_CHANCE || this.seasonal[month].length === 0)) {
+            // If we roll a normal pool or if there are no seasonal events then
+            // use the normal pool (given that there are still things in the
+            // normal pool)
             let event = this.pool[Math.floor(Math.random() * this.pool.length)];
             const index = this.pool.indexOf(event);
             this.pool.splice(index, 1);
             return event;
-        }
-        else
+        } else if (r <= this.SEASONAL_CHANCE && this.seasonal[month].length > 0) {
+            // Else we use the seasonal events pool
+            let event = this.seasonal[month][Math.floor(Math.random() * this.seasonal[month].length)];
+            const index = this.seasonal[month].indexOf(event);
+            this.seasonal[month].splice(index, 1);
+            return event;
+        } else {
             return {
                 "prompt": "Oops! No more events!",
                 "imgPath": "",
@@ -29,6 +44,7 @@ export default class EventTracker {
                 "hasBottomBoxBorder": true,
                 "gamePlayMode": GamePlayMode.Hide
             };
+        }
     }
 
     public queueFollowUpEvent(event: IEvent) {
