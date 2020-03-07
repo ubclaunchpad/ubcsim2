@@ -1,14 +1,6 @@
 import React from "react";
 
 import { IEvent, IChoice } from "./events/core";
-<<<<<<< HEAD
-import LandingEvent from "./events/LandingEvent";
-import PickFacultyEvent from "./events/PickFacultyEvent";
-import BoomerGregorEvent from "./events/BoomerGregorEvent";
-import { CuteGirlEvent } from "./events/CuteGirlEvent";
-import FratPartyEvent from "./events/FratPartyEvent";
-=======
->>>>>>> master
 
 import PlayerStats from "./trackers/PlayerStats";
 import EventTracker from "./trackers/EventTracker";
@@ -63,10 +55,10 @@ export default class App extends React.Component<IProps, IState> {
 
     makeChoice = (choice: IChoice) => {
         this.state.playerStats.applyStatChanges(choice.statChanges, choice.dlogo);
-        
-        if (choice.followUp !== ""){
-          this.state.eventTracker.queueFollowUpEvent(this.eventManager.get(choice.followUp));
-        } 
+
+        if (choice.followUp !== "") {
+            this.state.eventTracker.queueFollowUpEvent(this.eventManager.get(choice.followUp));
+        }
 
         let nextEvent = this.state.eventTracker.getNextEvent();
 
@@ -90,22 +82,13 @@ export default class App extends React.Component<IProps, IState> {
                         week={this.state.week}
                         name={this.name}
                     />
-<<<<<<< HEAD
                     <GamePlayConsole
-                        mode={currentEvent.gamePlayMode()}
-                        imgPath={currentEvent.imgPath()}
-                    />
-                    <section
-                        id="user-interaction-box"
-=======
-                    <GamePlayConsole 
                         mode={currentEvent.gamePlayMode}
                         imgPath={currentEvent.imgPath}
                     />
-                    <section 
-                        id="user-interaction-box" 
+                    <section
+                        id="user-interaction-box"
                         className={currentEvent.hasBottomBoxBorder ? "nes-container is-rounded" : ""}
->>>>>>> master
                     >
                         <div id="bottom-menu" className="bottom-container">
                             <p id="prompt" className="this-align-center">
