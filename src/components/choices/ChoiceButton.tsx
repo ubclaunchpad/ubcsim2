@@ -13,7 +13,7 @@ export default function ChoiceButton(props: IProps) {
             className="choice-btn-70 web-work-blue btn btn-animation"
             onClick={() => props.makeChoice(props.choice)}
         >
-            {props.choice.answer()}
+            {props.choice.answer}
         </button>
     );
 }

@@ -1,10 +1,9 @@
 import React from "react";
-
-import placeholderImg from "../../assets/place-holder-image.png";
-import { GamePlayMode } from "../../events/core";
+import placeholderImg from "./../../assets/place-holder-image.png";
+import { GamePlayMode } from "./../../events/core";
 
 interface IProps {
-    mode: GamePlayMode;
+    mode: string;
     imgPath: string;
 }
 
@@ -24,7 +23,7 @@ const generateAcceptanceLetter = () => {
 const generateComic = (img: string) => {
     return (
         <img
-            src={img === "" ? placeholderImg : img}
+            src={img === "" ? placeholderImg : require(`../../assets/${img}`)}
             alt="Gameplay comic"
             className="event-illustration"
         />
