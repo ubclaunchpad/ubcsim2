@@ -55,16 +55,16 @@ export default class App extends React.Component<IProps, IState> {
 
     makeChoice = (choice: IChoice) => {
         this.state.playerStats.applyStatChanges(choice.statChanges, choice.dlogo);
-        
-        if (choice.followUp !== ""){
-          this.state.eventTracker.queueFollowUpEvent(this.eventManager.get(choice.followUp));
-        } 
+
+        if (choice.followUp !== "") {
+            this.state.eventTracker.queueFollowUpEvent(this.eventManager.get(choice.followUp));
+        }
 
         let nextEvent = this.state.eventTracker.getNextEvent();
 
         this.setState(prevState => {
             return {
-                week: prevState.week + 1,
+                week: choice.followUp !== "" ? prevState.week : prevState.week + 1,
                 playerStats: prevState.playerStats,
                 currentEvent: nextEvent,
                 eventTracker: prevState.eventTracker
@@ -82,24 +82,28 @@ export default class App extends React.Component<IProps, IState> {
                         week={this.state.week}
                         name={this.name}
                     />
-                    <GamePlayConsole 
+                    <GamePlayConsole
                         mode={currentEvent.gamePlayMode}
                         imgPath={currentEvent.imgPath}
                     />
-                    <section 
-                        id="user-interaction-box" 
-                        className={currentEvent.hasBottomBoxBorder ? "nes-container is-rounded" : ""}
+                    <section
+                        id="user-interaction-box"
+                        className={currentEvent.hasBottomBoxBorder ? "is-rounded" : ""}
                     >
-                        <div id="bottom-menu" className="bottom-container">
-                            <p id="prompt" className="this-align-center">
-                                {currentEvent.prompt}
-                            </p>
-                            <Choices
-                                choices={currentEvent.choices}
-                                mgr={this.choiceManager}
-                                makeChoice={this.makeChoice}
-                            />
+                        <div className="container-border">
+                            <div id="bottom-menu" className="bottom-container">
+                                <p id="prompt" className="this-align-center">
+                                    {currentEvent.prompt}
+                                </p>
+                                <Choices
+                                    choices={currentEvent.choices}
+                                    mgr={this.choiceManager}
+                                    makeChoice={this.makeChoice}
+                                />
+                            </div>
                         </div>
+
+
                     </section>
                 </div>
             </div>
