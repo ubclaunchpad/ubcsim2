@@ -83,6 +83,34 @@
     "statChanges":[40, -1.0, -50],
     "minigame": ""
   },
+  "GiveUpMidterm":
+  {
+    "answer":"*walks out*",
+    "followUp":"",
+    "statChanges":[0, -1.0, 0],
+    "minigame": ""
+  },
+  "LoremIpsum":
+  {
+    "answer":"Stop thinking start writing",
+    "followUp":"",
+    "statChanges":[0, 2, 0],
+    "minigame": "EssayWrite"
+  },
+  "UseWheels":
+  {
+    "answer":"*Puts on helmet*",
+    "followUp":"",
+    "statChanges":[10, 0.5, 0],
+    "minigame": "SquirrelJump"
+  },
+  "SquirrelPictures":
+  {
+    "answer":"I gotta get pictures!",
+    "followUp":"",
+    "statChanges":[20, -0.5, 0],
+    "minigame": ""
+  },
   "Start":
   {
     "answer":"Accept Offer",

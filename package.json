@@ -9,7 +9,7 @@
     "lint": "tslint --project tsconfig.json",
     "compile": "tsc",
     "test": "react-scripts test",
-    "start": "react-scripts start",
+    "start": "scripts/app_start.sh",
     "build": "react-scripts build",
     "deploy": "gh-pages -d build"
   },

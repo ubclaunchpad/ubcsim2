@@ -44,7 +44,7 @@ export default class App extends React.Component<IProps, IState> {
 
         const playerStats = new PlayerStats();
         const eventTracker = new EventTracker(
-            [events.BoomerGregorEvent, events.CuteGirlEvent, events.FratPartyEvent],
+            [events.BoomerGregorEvent, events.CuteGirlEvent, events.FratPartyEvent, events.MidtermEvent, events.SquirrelEvent],
             [events.LandingEvent, events.PickFacultyEvent, events.PickResidenceEvent]
         );
         let firstEvent = eventTracker.getNextEvent();
