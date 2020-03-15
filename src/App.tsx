@@ -61,9 +61,22 @@ export default class App extends React.Component<IProps, IState> {
 
     makeChoice = (choice: IChoice) => {
         this.state.playerStats.applyStatChanges(choice.statChanges, choice.dlogo);
-        
-        if (choice.followUp !== ""){
-          this.state.eventTracker.queueFollowUpEvent(this.eventManager.get(choice.followUp));
+
+        if (this.state.week >= 2 && this.state.playerStats.getGpa() < 1.0) {
+            // Losing condition
+            this.state.eventTracker.queueFollowUpEvent(
+                this.eventManager.get("LoseEvent")
+            );
+        } else if (this.state.week > 5) {
+            // Winning condition if not losing
+            this.state.eventTracker.queueFollowUpEvent(
+                this.eventManager.get("WinEvent")
+            );
+        } else if (choice.followUp !== ""){
+            // The game isn't ending and there is a follow up event
+            this.state.eventTracker.queueFollowUpEvent(
+                this.eventManager.get(choice.followUp)
+            );
         } 
 
         let nextEvent = this.state.eventTracker.getNextEvent(this.state.week);
