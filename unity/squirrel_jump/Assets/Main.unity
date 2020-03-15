@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 484438822}
   - component: {fileID: 484438823}
   - component: {fileID: 484438824}
+  - component: {fileID: 484438825}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -276,8 +277,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 54010422f0b29a94fa53eade53af20a3, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 430afa0c1df74dc44bf178eb3a03e0ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -297,8 +298,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484438819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.84, y: -1.15, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -1.84, y: -0.79, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 872934491}
   m_Father: {fileID: 0}
@@ -344,14 +345,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.87, y: 0.86}
+    oldSize: {x: 2.22, y: 3.06}
     newSize: {x: 0.87, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.87, y: 0.86}
+  m_Size: {x: 0.9, y: 2.5}
   m_EdgeRadius: 0
 --- !u!114 &484438824
 MonoBehaviour:
@@ -368,10 +369,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 8
   groundCheck: {fileID: 872934491}
-  groundCheckRadius: 1
+  groundCheckRadius: 1.3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+--- !u!95 &484438825
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484438819}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c8fd4566215d622439d90c226529ddb5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &544420903
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +590,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8458916162517126210, guid: 2ddaf463b046da14fa7cd61dc6693452,
+        type: 3}
+      propertyPath: groundCheckRadius
+      value: 1.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8458916162517126217, guid: 2ddaf463b046da14fa7cd61dc6693452,
         type: 3}
       propertyPath: m_Name
@@ -580,6 +605,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8458916162517126221, guid: 2ddaf463b046da14fa7cd61dc6693452,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458916162517126221, guid: 2ddaf463b046da14fa7cd61dc6693452,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458916162517126222, guid: 2ddaf463b046da14fa7cd61dc6693452,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8458916162517126223, guid: 2ddaf463b046da14fa7cd61dc6693452,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -588,7 +628,7 @@ PrefabInstance:
     - target: {fileID: 8458916162517126223, guid: 2ddaf463b046da14fa7cd61dc6693452,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.15
+      value: -0.79
       objectReference: {fileID: 0}
     - target: {fileID: 8458916162517126223, guid: 2ddaf463b046da14fa7cd61dc6693452,
         type: 3}
@@ -634,6 +674,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458916162517126223, guid: 2ddaf463b046da14fa7cd61dc6693452,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458916162517126223, guid: 2ddaf463b046da14fa7cd61dc6693452,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ddaf463b046da14fa7cd61dc6693452, type: 3}
