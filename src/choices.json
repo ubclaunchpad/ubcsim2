@@ -3,85 +3,127 @@
   {
     "answer":"Trust the natural recursion",
     "followUp":"",
-    "statChanges":[10, 0.5, -15]
+    "statChanges":[10, 0.5, -15],
+    "minigame": ""
   },
   "OkBoomer": 
   {
     "answer":"Ok, Boomer",
     "followUp":"",
-    "statChanges":[60, -0.02, -8]
+    "statChanges":[60, -0.02, -8],
+    "minigame": ""
   },
   "FiveverAlone": 
   {
     "answer":"5ever alone",
     "followUp":"",
-    "statChanges":[-50, -1.5, -15]
+    "statChanges":[-50, -1.5, -15],
+    "minigame": ""
   },
   "RunAway":
   {
     "answer":"meep merp. run away",
     "followUp":"",
-    "statChanges":[-25, 0, -15]
+    "statChanges":[-25, 0, -15],
+    "minigame": ""
   },
   "ShowFilas": 
   {
     "answer":"Show her your Filas",
     "followUp":"",
-    "statChanges":[35, 0.5, 0]
+    "statChanges":[35, 0.5, 0],
+    "minigame": ""
   },
   "BuyTheTix": 
   {
     "answer":"Buy her EDC (Electronic Daisy Carnival) tickets",
     "followUp":"CuteGirlTixEvent",
-    "statChanges":[5, -0.01, 0]
+    "statChanges":[5, -0.01, 0],
+    "minigame": ""
   },
   "ComplimentFilas":
   {
     "answer":"Compliment her Filas",
     "followUp":"CuteFilasEvent",
-    "statChanges":[1, 0, 0]
+    "statChanges":[1, 0, 0],
+    "minigame": ""
   },
   "StalkInstagram": 
   {
     "answer":"Stalk her on Instagram",
     "followUp":"",
-    "statChanges":[-50, -1.5, -35]
+    "statChanges":[-50, -1.5, -35],
+    "minigame": ""
   },
   "OhYes":
   {
     "answer":"OH YES",
     "followUp":"HasBoyfriendEvent",
-    "statChanges":[20, -0.02, -3]
+    "statChanges":[20, -0.02, -3],
+    "minigame": ""
   },
   "Nope":
   {
     "answer":"no...",
     "followUp":"NoVIPTixEvent",
-    "statChanges":[-5, 0, 0]
+    "statChanges":[-5, 0, 0],
+    "minigame": ""
   },
   "GrossFrats":
   {
     "answer":"Ew! Frats are gross!",
     "followUp":"",
-    "statChanges":[-20, 0.5, 5]
+    "statChanges":[-20, 0.5, 5],
+    "minigame": ""
   },
   "YayBedsheets":
   {
     "answer":"I love wearing my bedsheets!",
     "followUp":"",
-    "statChanges":[40, -1.0, -50]
+    "statChanges":[40, -1.0, -50],
+    "minigame": ""
+  },
+  "GiveUpMidterm":
+  {
+    "answer":"*walks out*",
+    "followUp":"",
+    "statChanges":[0, -1.0, 0],
+    "minigame": ""
+  },
+  "LoremIpsum":
+  {
+    "answer":"Stop thinking start writing",
+    "followUp":"",
+    "statChanges":[0, 2, 0],
+    "minigame": "EssayWrite"
+  },
+  "UseWheels":
+  {
+    "answer":"*Puts on helmet*",
+    "followUp":"",
+    "statChanges":[10, 0.5, 0],
+    "minigame": "SquirrelJump"
+  },
+  "SquirrelPictures":
+  {
+    "answer":"I gotta get pictures!",
+    "followUp":"",
+    "statChanges":[20, -0.5, 0],
+    "minigame": ""
   },
   "Start":
   {
     "answer":"Accept Offer",
     "followUp":"",
-    "statChanges":[0, 0, 0]
+    "statChanges":[0, 0, 0],
+    "minigame": ""
   },
   "Arts":
   {
     "answer":"Arts",
     "followUp":"",
     "statChanges":[50, 2.0, 100],
+    "minigame": "",
     "dlogo": "ARTS.png"
   },
   "ApScience":
@@ -89,6 +131,7 @@
     "answer":"Applied Science",
     "followUp":"",
     "statChanges":[0, 4.0, 100],
+    "minigame": "",
     "dlogo": "APSC.png"
   },
   "Science":
@@ -96,6 +139,7 @@
     "answer":"Science",
     "followUp":"",
     "statChanges":[50, 3.0, 100],
+    "minigame": "",
     "dlogo": "SCIE.png"
   },
   "Forestry":
@@ -103,6 +147,7 @@
     "answer":"Forestry",
     "followUp":"",
     "statChanges":[100, 2.0, 100],
+    "minigame": "",
     "dlogo": "FORE.png"
   },
   "Commerce":
@@ -110,6 +155,7 @@
     "answer":"Commerce",
     "followUp":"",
     "statChanges":[100, 2.0, 100],
+    "minigame": "",
     "dlogo": "COMM.png"
   },
   "Kinesiology":
@@ -117,6 +163,7 @@
     "answer":"Kinesiology",
     "followUp":"",
     "statChanges":[100, 2.0, 100],
+    "minigame": "",
     "dlogo": "KIN.png"
   },
   "LFS":
@@ -124,21 +171,25 @@
     "answer":"Land and Food Systems",
     "followUp":"",
     "statChanges":[100, 2.0, 100],
+    "minigame": "",
     "dlogo": "LFS.png"
   },
   "TotemPark": {
     "answer": "Totem Park",
     "followUp": "",
-    "statChanges": [0, 0, 0]
+    "statChanges": [0, 0, 0],
+    "minigame": ""
   },
   "PlaceVanier": {
     "answer": "Place Vanier",
     "followUp": "",
-    "statChanges": [0, 0, 0]
+    "statChanges": [0, 0, 0],
+    "minigame": ""
   },
   "OrchardCommons": {
     "answer": "Orchard Commons",
     "followUp": "",
-    "statChanges": [0, 0, 0]
+    "statChanges": [0, 0, 0],
+    "minigame": ""
   }
 }

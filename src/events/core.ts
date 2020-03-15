@@ -1,7 +1,8 @@
 export const GamePlayMode = {
     Comics: "Comics",
     AcceptanceLetter: "AcceptanceLetter",
-    Hide: "Hide"
+    Hide: "Hide",
+    Minigame: "Minigame"
 };
 
 export interface IEvent {
@@ -17,4 +18,12 @@ export interface IChoice {
     followUp: string;
     statChanges: number[];
     dlogo?: string;
+    minigame: string;
+}
+
+export interface IMinigame {
+    build: string;
+    winStatChanges: number[];
+    loseStatChanges: number[];
+    prompt: string;
 }

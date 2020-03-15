@@ -73,7 +73,29 @@
 		],
 		"hasBottomBoxBorder" : false,
 		"gamePlayMode": "Comics"
-	},
+    },
+    "SquirrelEvent":
+    {
+        "prompt": "You have a lecture across campus but there are squirrels in the way!",
+        "imgPath": "",
+        "choices": [
+            "UseWheels",
+            "SquirrelPictures"
+        ],
+        "hasBottomBoxBorder": false,
+        "gamePlayMode": "Comics"
+    },
+    "MidtermEvent":
+    {
+        "prompt": "This midterm has an essay component ;_;",
+        "imgPath": "",
+        "choices": [
+            "GiveUpMidterm",
+            "LoremIpsum"
+        ],
+        "hasBottomBoxBorder": false,
+        "gamePlayMode": "Comics"
+    },
 	"LandingEvent":
 	{
 		"prompt": "This is going to be the best 4 years of my life!",
