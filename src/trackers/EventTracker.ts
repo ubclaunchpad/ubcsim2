@@ -20,7 +20,8 @@ export default class EventTracker {
             return this.queue.shift() as IEvent;
 
         const r = Math.random() * 100;
-        const month = Math.floor(week / 4) + 9;
+        // 0 to 11
+        const month = (Math.floor(week / 4) + 8) % 12;
         if (this.pool.length > 0 &&
                 (r > this.SEASONAL_CHANCE || this.seasonal[month].length === 0)) {
             // If we roll a normal pool or if there are no seasonal events then
