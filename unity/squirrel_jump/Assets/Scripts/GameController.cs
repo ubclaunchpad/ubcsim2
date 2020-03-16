@@ -15,9 +15,10 @@ public class GameController : MonoBehaviour
     public Transform enemySpawnPoint;
 
     private float nextEnemySpawn = 2.0f;
-    private float spawnTimer = 3.0f;
     public int enemiesToSpawn = 10;
     private GameObject[] spawnedEnemies;
+    private float minEnemyTimingGap = 1.0f;
+    private float maxEnemyTimingGap = 2.5f;
     private bool gameIsDone;
 
     // Start is called before the first frame update
@@ -31,6 +32,7 @@ public class GameController : MonoBehaviour
     {
         if (Time.time >= nextEnemySpawn && enemiesToSpawn > 0)
         {
+            float spawnTimer = Random.Range(minEnemyTimingGap, maxEnemyTimingGap);
             nextEnemySpawn += spawnTimer;
             Instantiate(enemy, enemySpawnPoint.transform.position, enemySpawnPoint.transform.rotation);
             enemiesToSpawn--;
@@ -41,13 +43,11 @@ public class GameController : MonoBehaviour
         if (player != null && spawnedEnemies.Length <= 0 && enemiesToSpawn <= 0 && !gameIsDone)
         {
             gameIsDone = true;
-            Debug.Log("Win here");
             WinMiniGame();
         }
         else if (player == null && !gameIsDone)
         {
             gameIsDone = true;
-            Debug.Log("Lose here");
             LoseMiniGame();
         }
     }
