@@ -44,6 +44,7 @@ export default class App extends React.Component<IProps, IState> {
         super(props);
 
         const playerStats = new PlayerStats();
+		const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
 
         //TODO: should we auto allocate a dummy player name or allow user to input their own?
         this.name = "P1";
@@ -53,11 +54,14 @@ export default class App extends React.Component<IProps, IState> {
         for (const w of config.events.seasonal) {
             seasons.push(w.map(this.eventManager.get.bind(this.eventManager)));
         }
-        const eventTracker = new EventTracker(
-            config.events.pool.map(this.eventManager.get.bind(this.eventManager)),
+        let eventTracker = new EventTracker(
+			config.events.pool.map(this.eventManager.get.bind(this.eventManager)),
             config.events.followUp.map(this.eventManager.get.bind(this.eventManager)),
-            seasons
+			seasons
         );
+		if (isMobile) {
+			eventTracker.removeMobiles(this.choiceManager);
+		}
         let firstEvent = eventTracker.getNextEvent(0);
         this.minigameManager = new MinigamesManager(minigames);
         this.state = {

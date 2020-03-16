@@ -1,5 +1,6 @@
 import { IEvent } from "../events/core";
 import { GamePlayMode } from "../events/core";
+import ChoicesManager from "../events/ChoicesManager";
 
 export default class EventTracker {
     readonly SEASONAL_CHANCE = 30;
@@ -11,6 +12,17 @@ export default class EventTracker {
         this.pool = eventPool;
         this.queue = eventQueue;
         this.seasonal = seasonalPool;
+    }
+
+    public removeMobiles(cm: ChoicesManager) {
+        this.pool = this.pool.filter(evt =>
+                                     evt.choices.map(cm.get.bind(cm))
+                                     .every(c => c.minigame === ""));
+        for (let i = 0; i < this.seasonal.length; ++i) {
+            this.seasonal[i] = this.seasonal[i].filter(evt =>
+                                                       evt.choices.map(cm.get.bind(cm))
+                                                       .every(c => c.minigame === ""));
+        }
     }
 
     public getNextEvent(week: number): IEvent {
