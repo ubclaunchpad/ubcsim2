@@ -11,12 +11,14 @@ export default class PlayerStats {
     private gpa: number;
     private sleep: number;
     private logo: string;
+    private scoreChangedAnimation: string[];
 
     constructor() {
         this.friends = 0;
         this.gpa = 0;
         this.sleep = 0;
         this.logo = Blank;
+        this.scoreChangedAnimation = [];
     }
 
     public applyStatChanges(statChanges: number[], dlogo?: string) {
@@ -40,6 +42,17 @@ export default class PlayerStats {
             this.sleep = sleep;
 
         if (dlogo) this.logo = require(`../assets/${dlogo}`);
+
+        this.scoreChangedAnimation = [];
+        statChanges.forEach((s) => {
+            if (s < 0) {
+                this.scoreChangedAnimation.push("redIn");
+            } else if (s > 0) {
+                this.scoreChangedAnimation.push("greenIn");
+            } else {
+                this.scoreChangedAnimation.push("");
+            }
+        });
     }
 
     public getFriends(): number {
@@ -56,5 +69,9 @@ export default class PlayerStats {
 
     public getLogo(): string {
         return this.logo;
+    }
+
+    public getScoreAnimation(): string[] {
+        return this.scoreChangedAnimation;
     }
 }

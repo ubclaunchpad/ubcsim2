@@ -144,3 +144,21 @@ body {
 .event-illustration {
   width: 100%
 }
+
+.greenIn{
+    animation: greenIn 5s;
+}
+
+.redIn{
+    animation: redIn 5s;
+}
+
+@keyframes greenIn{
+    0%{     color: green; font-size: 20px;   }
+    100%{   color: #000; font-size: 16px;   }
+}
+
+@keyframes redIn{
+    0%{     color: red; font-size: 20px;   }
+    100%{   color: #000; font-size: 16px;    }
+}
