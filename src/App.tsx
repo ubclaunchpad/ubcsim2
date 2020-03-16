@@ -44,7 +44,6 @@ export default class App extends React.Component<IProps, IState> {
         super(props);
 
         const playerStats = new PlayerStats();
-        let firstEvent = eventTracker.getNextEvent();
 
         //TODO: should we auto allocate a dummy player name or allow user to input their own?
         this.name = "P1";
@@ -95,7 +94,7 @@ export default class App extends React.Component<IProps, IState> {
                 );
             } 
 
-            let nextEvent = this.state.eventTracker.getNextEvent();
+            let nextEvent = this.state.eventTracker.getNextEvent(this.state.week + 1);
 
             this.setState(prevState => {
                 return {
@@ -131,7 +130,7 @@ export default class App extends React.Component<IProps, IState> {
 
     finishMinigame = (statChanges: number[]) => {
         this.state.playerStats.applyStatChanges(statChanges, "");
-        let nextEvent = this.state.eventTracker.getNextEvent();
+        let nextEvent = this.state.eventTracker.getNextEvent(this.state.week + 1);
         this.setState(prevState => {
             return {
                 week: prevState.week + 1,
