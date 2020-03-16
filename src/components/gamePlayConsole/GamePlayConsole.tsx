@@ -1,10 +1,14 @@
 import React from "react";
 import placeholderImg from "./../../assets/place-holder-image.png";
 import { GamePlayMode } from "./../../events/core";
+import Unity, { UnityContent } from "react-unity-webgl";
+import { IMinigame } from "./../../events/core";
 
 interface IProps {
     mode: string;
     imgPath: string;
+    minigame: IMinigame;
+    finishMinigame(statChanges: number[]): void;
 }
 
 const generateAcceptanceLetter = () => {
@@ -30,10 +34,51 @@ const generateComic = (img: string) => {
     );
 };
 
+const generateMiniGame = (minigame: IMinigame, finishMinigame: Function) => {
+    let unityBuildName: string = minigame.build;
+    let unityContent = new UnityContent(
+        `unity/${unityBuildName}/Build/${unityBuildName}.json`,
+        `unity/${unityBuildName}/Build/UnityLoader.js`,
+    );
+
+    unityContent.on("WinMiniGame", () => {
+        console.log("HEY WE WON");
+        finishMinigame(minigame.winStatChanges);
+    });
+
+    unityContent.on("LoseMiniGame", () => {
+        console.log("HEY WE LOST");
+        finishMinigame(minigame.loseStatChanges);
+    });
+
+    return (
+        <div
+            style={{width: "inherit", height: "250px", margin: "auto"}}
+        >
+            <Unity unityContent={unityContent} />
+        </div>
+    );
+};
+
+const generateConsole = (props: IProps) => {
+    if (props.mode === GamePlayMode.AcceptanceLetter)
+    {
+        return generateAcceptanceLetter();
+    }
+    else if (props.mode === GamePlayMode.Minigame)
+    {
+        return generateMiniGame(props.minigame, props.finishMinigame);
+    }
+    else
+    {
+        return generateComic(props.imgPath);
+    }
+};
+
 export default function GamePlayConsole(props: IProps) {
     return (
         <section id="gameplay-container" className={props.mode === GamePlayMode.Hide ? "hide" : ""}>
-            {props.mode === GamePlayMode.AcceptanceLetter ? generateAcceptanceLetter() : generateComic(props.imgPath)}
+            {generateConsole(props)}
         </section >
     );
 }
