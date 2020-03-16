@@ -1,0 +1,24 @@
+{
+	"events": {
+		"pool": [
+			"BoomerGregorEvent", "CuteGirlEvent", "FratPartyEvent", "MidtermEvent", "SquirrelEvent"
+		],
+		"followUp": [
+			"LandingEvent", "PickFacultyEvent", "PickResidenceEvent"
+		],
+		"seasonal": [
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[]
+		]
+	}
+}

@@ -9,6 +9,7 @@ import EventsManager from "./events/EventsManager";
 import MinigamesManager from "./events/MinigamesManager";
 import events from "./events.json";
 import choices from "./choices.json";
+import config from "./game-config.json";
 import minigames from "./minigames.json";
 import Hud from "./components/hud/Hud";
 import GamePlayConsole from "./components/gamePlayConsole/GamePlayConsole";
@@ -43,16 +44,21 @@ export default class App extends React.Component<IProps, IState> {
         super(props);
 
         const playerStats = new PlayerStats();
-        const eventTracker = new EventTracker(
-            [events.BoomerGregorEvent, events.CuteGirlEvent, events.FratPartyEvent, events.MidtermEvent, events.SquirrelEvent],
-            [events.LandingEvent, events.PickFacultyEvent, events.PickResidenceEvent]
-        );
-        let firstEvent = eventTracker.getNextEvent();
 
         //TODO: should we auto allocate a dummy player name or allow user to input their own?
         this.name = "P1";
         this.choiceManager = new ChoicesManager(choices);
         this.eventManager = new EventsManager(events);
+        let seasons = [];
+        for (const w of config.events.seasonal) {
+            seasons.push(w.map(this.eventManager.get.bind(this.eventManager)));
+        }
+        const eventTracker = new EventTracker(
+            config.events.pool.map(this.eventManager.get.bind(this.eventManager)),
+            config.events.followUp.map(this.eventManager.get.bind(this.eventManager)),
+            seasons
+        );
+        let firstEvent = eventTracker.getNextEvent(0);
         this.minigameManager = new MinigamesManager(minigames);
         this.state = {
             // TODO: The week number may not be how we choose to track time,
@@ -88,7 +94,7 @@ export default class App extends React.Component<IProps, IState> {
                 );
             } 
 
-            let nextEvent = this.state.eventTracker.getNextEvent();
+            let nextEvent = this.state.eventTracker.getNextEvent(this.state.week + 1);
 
             this.setState(prevState => {
                 return {
@@ -124,7 +130,7 @@ export default class App extends React.Component<IProps, IState> {
 
     finishMinigame = (statChanges: number[]) => {
         this.state.playerStats.applyStatChanges(statChanges, "");
-        let nextEvent = this.state.eventTracker.getNextEvent();
+        let nextEvent = this.state.eventTracker.getNextEvent(this.state.week + 1);
         this.setState(prevState => {
             return {
                 week: prevState.week + 1,
