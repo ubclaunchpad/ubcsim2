@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/ubcsim2/static/js/main.03ab79cc.chunk.js",
-    "main.js.map": "/ubcsim2/static/js/main.03ab79cc.chunk.js.map",
+    "main.js": "/ubcsim2/static/js/main.765a0f71.chunk.js",
+    "main.js.map": "/ubcsim2/static/js/main.765a0f71.chunk.js.map",
     "runtime-main.js": "/ubcsim2/static/js/runtime-main.8f9f83a3.js",
     "runtime-main.js.map": "/ubcsim2/static/js/runtime-main.8f9f83a3.js.map",
-    "static/js/2.8d7c2be1.chunk.js": "/ubcsim2/static/js/2.8d7c2be1.chunk.js",
-    "static/js/2.8d7c2be1.chunk.js.map": "/ubcsim2/static/js/2.8d7c2be1.chunk.js.map",
+    "static/js/2.bf698b97.chunk.js": "/ubcsim2/static/js/2.bf698b97.chunk.js",
+    "static/js/2.bf698b97.chunk.js.map": "/ubcsim2/static/js/2.bf698b97.chunk.js.map",
     "index.html": "/ubcsim2/index.html",
-    "precache-manifest.d48d8aa124ba25361db776638e15fd90.js": "/ubcsim2/precache-manifest.d48d8aa124ba25361db776638e15fd90.js",
+    "precache-manifest.0adbdbb03b40f68dda644b48bc431cfc.js": "/ubcsim2/precache-manifest.0adbdbb03b40f68dda644b48bc431cfc.js",
     "service-worker.js": "/ubcsim2/service-worker.js",
     "static/media/abg_boyfriend.png": "/ubcsim2/static/media/abg_boyfriend.5eb701e5.png",
     "static/media/abg_no_airpods.png": "/ubcsim2/static/media/abg_no_airpods.e58d9c98.png",
@@ -17,7 +17,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8f9f83a3.js",
-    "static/js/2.8d7c2be1.chunk.js",
-    "static/js/main.03ab79cc.chunk.js"
+    "static/js/2.bf698b97.chunk.js",
+    "static/js/main.765a0f71.chunk.js"
   ]
 }
