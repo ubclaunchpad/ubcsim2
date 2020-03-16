@@ -146,11 +146,11 @@ body {
 }
 
 .greenIn{
-    animation: greenIn 5s;
+    animation: greenIn 1s;
 }
 
 .redIn{
-    animation: redIn 5s;
+    animation: redIn 1s;
 }
 
 @keyframes greenIn{
