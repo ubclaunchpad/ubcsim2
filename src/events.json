@@ -1,122 +1,158 @@
 {
-  "BoomerGregorEvent":
-  {
-    "prompt": "Dr. Gregor tells the class to start studying for CPSC 110 early!",
-    "imgPath": "Gregor.png",
-    "choices": [
-      "TrustNaturalRecursion",
-      "OkBoomer"
-    ],
-    "hasBottomBoxBorder" : false,
-    "gamePlayMode": "Comics"
-  },
-  "CuteGirlEvent":
-  {
-    "prompt": "You see a cute girl in the Life Building, what do you do?",
-    "imgPath": "abg_normal.png",
-    "choices": [
-      "BuyTheTix",
-      "ComplimentFilas"
-    ],
-    "hasBottomBoxBorder" : false,
-    "gamePlayMode": "Comics"
-  },
-  "CuteFilasEvent":
-  {
-    "prompt": "She takes out her AirPods.\n\"What did you say?\"",
-    "imgPath": "abg_no_airpods.png",
-    "choices": [
-      "RunAway",
-      "ShowFilas"
-    ],
-    "hasBottomBoxBorder" : false,
-    "gamePlayMode": "Comics"
-  },
-  "CuteGirlTixEvent": 
-  {
-    "prompt": "The cute girl from the Life Building asked if you got the VIP tickets for EDC. Did you?",
-    "imgPath": "abg_sad.png",
-    "choices": [
-      "OhYes",
-      "Nope"
-    ],
-    "hasBottomBoxBorder" : false,
-    "gamePlayMode": "Comics"
-  },
-  "NoVIPTixEvent": 
-  {
-    "prompt": "The cute girl from the Life Building doesn't like you anymore because you're poor ):",
-    "imgPath": "abg_sad.png",
-    "choices": [
-      "StalkInstagram"
-    ],
-    "hasBottomBoxBorder" : false,
-    "gamePlayMode": "Comics"
-  },
-  "HasBoyfriendEvent": 
-  {
-    "prompt": "The cute girl from the Life Building just posted a photo of her and her boyfriend at EDC.",
-    "imgPath": "abg_boyfriend.png",
-    "choices": [
-      "FiveverAlone"
-    ],
-    "hasBottomBoxBorder" : false,
-    "gamePlayMode": "Comics"
-  },
-  "FratPartyEvent": 
-  {
-    "prompt": "You have been asked to go to a toga party! Are you going to go?",
-    "imgPath": "",
-    "choices": [
-      "GrossFrats",
-      "YayBedsheets"
-    ],
-    "hasBottomBoxBorder" : false,
-    "gamePlayMode": "Comics"
-  },
-  "LandingEvent":
-  {
-    "prompt": "This is going to be the best 4 years of my life!",
-    "imgPath": "",
-    "choices": [
-      "Start"
-    ],
-    "hasBottomBoxBorder" : true,
-    "gamePlayMode": "AcceptanceLetter"
-  },
-  "PickFacultyEvent":
-  {
-    "prompt": "Choose your faculty!",
-    "imgPath": "",
-    "choices": [
-      "Arts",
-      "ApScience",
-      "Commerce",
-      "Forestry",
-      "Kinesiology",
-      "LFS",
-      "Science"
-    ],
-    "hasBottomBoxBorder" : false,
-    "gamePlayMode": "Hide"
-  },
-  "NoMoreEventsEvent":
-  {
-    "prompt": "Oops! No more events!",
-    "imgPath": "",
-    "choices": [],
-    "hasBottomBoxBorder" : true,
-    "gamePlayMode": "Hide"
-  },
-  "PickResidenceEvent": {
-    "prompt": "It's time to move into your first year residence!",
-    "imgPath": "",
-    "choices": [
-      "TotemPark",
-      "PlaceVanier",
-      "OrchardCommons"
-    ],
-    "hasBottomBoxBorder": false,
-    "gamePlayMode": "Hide"
-  }
+	"BoomerGregorEvent":
+	{
+		"prompt": "Dr. Gregor tells the class to start studying for CPSC 110 early!",
+		"imgPath": "Gregor.png",
+		"choices": [
+			"TrustNaturalRecursion",
+			"OkBoomer"
+		],
+		"hasBottomBoxBorder" : false,
+		"gamePlayMode": "Comics"
+	},
+	"CuteGirlEvent":
+	{
+		"prompt": "You see a cute girl in the Life Building, what do you do?",
+		"imgPath": "abg_normal.png",
+		"choices": [
+			"BuyTheTix",
+			"ComplimentFilas"
+		],
+		"hasBottomBoxBorder" : false,
+		"gamePlayMode": "Comics"
+	},
+	"CuteFilasEvent":
+	{
+		"prompt": "She takes out her AirPods.\n\"What did you say?\"",
+		"imgPath": "abg_no_airpods.png",
+		"choices": [
+			"RunAway",
+			"ShowFilas"
+		],
+		"hasBottomBoxBorder" : false,
+		"gamePlayMode": "Comics"
+	},
+	"CuteGirlTixEvent": 
+	{
+		"prompt": "The cute girl from the Life Building asked if you got the VIP tickets for EDC. Did you?",
+		"imgPath": "abg_sad.png",
+		"choices": [
+			"OhYes",
+			"Nope"
+		],
+		"hasBottomBoxBorder" : false,
+		"gamePlayMode": "Comics"
+	},
+	"NoVIPTixEvent": 
+	{
+		"prompt": "The cute girl from the Life Building doesn't like you anymore because you're poor ):",
+		"imgPath": "abg_sad.png",
+		"choices": [
+			"StalkInstagram"
+		],
+		"hasBottomBoxBorder" : false,
+		"gamePlayMode": "Comics"
+	},
+	"HasBoyfriendEvent": 
+	{
+		"prompt": "The cute girl from the Life Building just posted a photo of her and her boyfriend at EDC.",
+		"imgPath": "abg_boyfriend.png",
+		"choices": [
+			"FiveverAlone"
+		],
+		"hasBottomBoxBorder" : false,
+		"gamePlayMode": "Comics"
+	},
+	"FratPartyEvent": 
+	{
+		"prompt": "You have been asked to go to a toga party! Are you going to go?",
+		"imgPath": "",
+		"choices": [
+			"GrossFrats",
+			"YayBedsheets"
+		],
+		"hasBottomBoxBorder" : false,
+		"gamePlayMode": "Comics"
+    },
+    "SquirrelEvent":
+    {
+        "prompt": "You have a lecture across campus but there are squirrels in the way!",
+        "imgPath": "",
+        "choices": [
+            "UseWheels",
+            "SquirrelPictures"
+        ],
+        "hasBottomBoxBorder": false,
+        "gamePlayMode": "Comics"
+    },
+    "MidtermEvent":
+    {
+        "prompt": "This midterm has an essay component ;_;",
+        "imgPath": "",
+        "choices": [
+            "GiveUpMidterm",
+            "LoremIpsum"
+        ],
+        "hasBottomBoxBorder": false,
+        "gamePlayMode": "Comics"
+    },
+	"LandingEvent":
+	{
+		"prompt": "This is going to be the best 4 years of my life!",
+		"imgPath": "",
+		"choices": [
+			"Start"
+		],
+		"hasBottomBoxBorder" : true,
+		"gamePlayMode": "AcceptanceLetter"
+	},
+	"PickFacultyEvent":
+	{
+		"prompt": "Choose your faculty!",
+		"imgPath": "",
+		"choices": [
+			"Arts",
+			"ApScience",
+			"Commerce",
+			"Forestry",
+			"Kinesiology",
+			"LFS",
+			"Science"
+		],
+		"hasBottomBoxBorder" : false,
+		"gamePlayMode": "Hide"
+	},
+	"NoMoreEventsEvent":
+	{
+		"prompt": "Oops! No more events!",
+		"imgPath": "",
+		"choices": [],
+		"hasBottomBoxBorder" : true,
+		"gamePlayMode": "Hide"
+	},
+	"PickResidenceEvent": {
+		"prompt": "It's time to move into your first year residence!",
+		"imgPath": "",
+		"choices": [
+			"TotemPark",
+			"PlaceVanier",
+			"OrchardCommons"
+		],
+		"hasBottomBoxBorder": false,
+		"gamePlayMode": "Hide"
+	},
+	"WinEvent": {
+		"prompt": "You win! You have survived!",
+		"imgPath": "",
+		"choices": [],
+		"hasBottomBoxBorder": false,
+		"gamePlayMode": "GameOver"
+	},
+	"LoseEvent": {
+		"prompt": "Game over. You lose.",
+		"imgPath": "",
+		"choices": [],
+		"hasBottomBoxBorder": false,
+		"gamePlayMode": "GameOver"
+	}
 }
