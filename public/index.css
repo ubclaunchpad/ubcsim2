@@ -1,23 +1,10 @@
 body {
-  font-family: "VT323", monospace;
-  background: #fff;
-}
-/* 
-@font-face {
-  font-family: 'kongtext';
-  src: url('kongtext.eot'); 
-  src: url('kongtext.eot?#iefix') format('embedded-opentype'), 
-       url('kongtext.woff') format('woff'),
-       url('kongtext.ttf')  format('truetype'), 
-       url('kongtext.svg#svgFontName') format('svg'); 
-}
-
-body {
   font-size: 9px;
-  letter-spacing: 0em;
-  font-family: "kongtext";
+  letter-spacing: normal;
+  line-height: 1.6;
+  font-family: 'Press Start 2P', cursive;
   background: #fff;
-} */
+}
 
 #root {
   height: 100%;
@@ -90,14 +77,6 @@ body {
   position: relative;
 }
 
-.container-border {
-  background: white;
-  border: 3px solid #0B1164;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.33);
-  border-radius: 10px;
-  padding: 5px;
-}
-
 #faculty-badge {
   height: 60px;
   width: 60px;
@@ -110,52 +89,30 @@ body {
 }
 
 .nes-container {
-  border-width: 2px;
+  border: 3px solid #0B1164;
+  background: white;
+  border-width: 4px;
+  padding: 2px;
 }
 
-.nes-container.is-rounded {
-  border-image-width: 2;
-}
-
-.btn {
-  display: inline-block;
-  overflow-wrap: normal;
+.nes-btn {
+  color: #fff;
+  background-color: rgb(36, 44, 163);
   margin-bottom: 10px;
-  font-weight: 400;
-  text-align: center;
-  white-space: normal;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  background-image: none;
-  border: 1px solid transparent;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 5px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
-.btn-animation {
+.nes-btn::after {
+  box-shadow: inset -4px -4px #0B1164;
+}
+
+.nes-btn:hover {
   color: #fff;
-  background-color: #000077;
-  box-shadow: 2px 3px #999;
+  text-decoration: none;
+  background-color: rgb(34, 42, 153);
 }
 
-.btn-animation:hover {background-color: #000055}
-
-.btn-animation:active {
-  background-color: #000077;
-  box-shadow: 2px 2px #666;
-  transform: translateY(1px); 
-}
-
-.web-work-blue {
-  background-color: #000077;
-  color: #fff;
+.nes-btn:hover::after {
+  box-shadow: inset -6px -6px #0B1164;
 }
 
 .row {
@@ -227,20 +184,34 @@ body {
   width: 100%
 }
 
-.greenIn{
-    animation: greenIn 1s;
+.greenIn {
+  animation: greenIn 1s;
 }
 
-.redIn{
-    animation: redIn 1s;
+.redIn {
+  animation: redIn 1s;
 }
 
-@keyframes greenIn{
-    0%{     color: green; font-size: 20px;   }
-    100%{   color: #000; font-size: 16px;   }
+@keyframes greenIn {
+  0% {
+    color: green;
+    font-size: 20px;
+  }
+
+  100% {
+    color: #000;
+    font-size: 16px;
+  }
 }
 
-@keyframes redIn{
-    0%{     color: red; font-size: 20px;   }
-    100%{   color: #000; font-size: 16px;    }
+@keyframes redIn {
+  0% {
+    color: red;
+    font-size: 20px;
+  }
+
+  100% {
+    color: #000;
+    font-size: 16px;
+  }
 }
