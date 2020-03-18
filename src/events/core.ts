@@ -11,6 +11,7 @@ export interface IEvent {
     choices: string[];
     gamePlayMode: string;
     hasBottomBoxBorder: boolean;
+    hasInnerFill: boolean;
 }
 
 export interface IChoice {

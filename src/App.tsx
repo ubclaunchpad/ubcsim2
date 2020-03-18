@@ -117,6 +117,7 @@ export default class App extends React.Component<IProps, IState> {
                 "imgPath": "",
                 "choices": [],
                 "hasBottomBoxBorder": false,
+                "hasInnerFill": false,
                 "gamePlayMode": GamePlayMode.Minigame
             };
 
@@ -164,9 +165,9 @@ export default class App extends React.Component<IProps, IState> {
                     />
                     <section
                         id="user-interaction-box"
-                        className={currentEvent.hasBottomBoxBorder ? "nes-container is-rounded" : ""}
+                        className={currentEvent.hasBottomBoxBorder ? "nes-container" : ""}
                     >
-                        <div id="bottom-menu" className="bottom-container">
+                        <div id="bottom-menu" className="bottom-container" style={currentEvent.hasInnerFill ? {} : { border: "none", background: "none" }}>
                             <p id="prompt" className="this-align-center">
                                 {currentEvent.prompt}
                             </p>
@@ -178,7 +179,7 @@ export default class App extends React.Component<IProps, IState> {
                         </div>
                     </section>
                 </div>
-            </div>
+            </div >
         );
     }
 }
