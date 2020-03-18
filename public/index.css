@@ -1,5 +1,5 @@
 body {
-  font-size: 9px;
+  font-size: 8px;
   letter-spacing: normal;
   line-height: 1.6;
   font-family: 'Press Start 2P', cursive;
@@ -185,43 +185,53 @@ body {
 }
 
 .greenIn {
-  animation: greenIn 0.5s;
+  animation: greenIn 0.4s;
 }
 
 .redIn {
-  animation: redIn 0.5s;
+  animation: redIn 0.4s;
 }
 
 @keyframes greenIn {
   0% {
-    color: green;
+    color: #94CB4B;
     font-size: 10px;
   }
 
+  20% {
+    color: #94CB4B;
+    font-size: 8px;
+  }
+
   85% {
-    color: green;
-    font-size: 9px;
+    color: #94CB4B;
+    font-size: 8px;
   }
 
   100% {
     color: #000;
-    font-size: 9px;
+    font-size: 8px;
   }
 }
 
 @keyframes redIn {
   0% {
-    color: red;
+    color: #ce372b;
     font-size: 10px;
   }
 
+  20% {
+    color: #ce372b;
+    font-size: 8px;
+  }
+
   85% {
-    color: red;
-    font-size: 9px;
+    color: #ce372b;
+    font-size: 8px;
   }
 
   100% {
     color: #000;
-    font-size: 9px;
+    font-size: 8px;
   }
 }
