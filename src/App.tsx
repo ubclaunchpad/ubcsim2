@@ -137,7 +137,7 @@ export default class App extends React.Component<IProps, IState> {
         let nextEvent = this.state.eventTracker.getNextEvent(this.state.week + 1);
         this.setState(prevState => {
             return {
-                week: choice.followUp !== "" ? prevState.week : prevState.week + 1,
+                week: prevState.week + 1,
                 playerStats: prevState.playerStats,
                 currentEvent: nextEvent,
                 eventTracker: prevState.eventTracker,
@@ -164,22 +164,18 @@ export default class App extends React.Component<IProps, IState> {
                     />
                     <section
                         id="user-interaction-box"
-                        className={currentEvent.hasBottomBoxBorder ? "is-rounded" : ""}
+                        className={currentEvent.hasBottomBoxBorder ? "nes-container is-rounded" : ""}
                     >
-                        <div className="container-border">
-                            <div id="bottom-menu" className="bottom-container">
-                                <p id="prompt" className="this-align-center">
-                                    {currentEvent.prompt}
-                                </p>
-                                <Choices
-                                    choices={currentEvent.choices}
-                                    mgr={this.choiceManager}
-                                    makeChoice={this.makeChoice}
-                                />
-                            </div>
+                        <div id="bottom-menu" className="bottom-container">
+                            <p id="prompt" className="this-align-center">
+                                {currentEvent.prompt}
+                            </p>
+                            <Choices
+                                choices={currentEvent.choices}
+                                mgr={this.choiceManager}
+                                makeChoice={this.makeChoice}
+                            />
                         </div>
-
-
                     </section>
                 </div>
             </div>
