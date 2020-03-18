@@ -115,6 +115,10 @@ body {
   box-shadow: inset -6px -6px #0B1164;
 }
 
+.nes-btn:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px #0B1164;
+}
+
 .row {
   display: block;
 }
