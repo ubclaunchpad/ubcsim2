@@ -1,6 +1,6 @@
 import React from "react";
 
-import {IChoice} from "./../../events/core";
+import { IChoice } from "./../../events/core";
 
 interface IProps {
     choice: IChoice;
