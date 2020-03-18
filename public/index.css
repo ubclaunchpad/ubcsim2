@@ -185,33 +185,43 @@ body {
 }
 
 .greenIn {
-  animation: greenIn 1s;
+  animation: greenIn 0.5s;
 }
 
 .redIn {
-  animation: redIn 1s;
+  animation: redIn 0.5s;
 }
 
 @keyframes greenIn {
   0% {
     color: green;
-    font-size: 20px;
+    font-size: 10px;
+  }
+
+  85% {
+    color: green;
+    font-size: 9px;
   }
 
   100% {
     color: #000;
-    font-size: 16px;
+    font-size: 9px;
   }
 }
 
 @keyframes redIn {
   0% {
     color: red;
-    font-size: 20px;
+    font-size: 10px;
+  }
+
+  85% {
+    color: red;
+    font-size: 9px;
   }
 
   100% {
     color: #000;
-    font-size: 16px;
+    font-size: 9px;
   }
 }
