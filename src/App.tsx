@@ -80,7 +80,7 @@ export default class App extends React.Component<IProps, IState> {
     makeChoice = (choice: IChoice) => {
         if (choice.minigame === "") {
             this.state.playerStats.applyStatChanges(choice.statChanges, choice.dlogo);
-        
+
             if (this.state.week >= 2 && this.state.playerStats.getGpa() < 1.0) {
                 // Losing condition
                 this.state.eventTracker.queueFollowUpEvent(
@@ -91,12 +91,12 @@ export default class App extends React.Component<IProps, IState> {
                 this.state.eventTracker.queueFollowUpEvent(
                     this.eventManager.get("WinEvent")
                 );
-            } else if (choice.followUp !== ""){
+            } else if (choice.followUp !== "") {
                 // The game isn't ending and there is a follow up event
                 this.state.eventTracker.queueFollowUpEvent(
                     this.eventManager.get(choice.followUp)
                 );
-            } 
+            }
 
             let nextEvent = this.state.eventTracker.getNextEvent(this.state.week + 1);
 
@@ -156,14 +156,14 @@ export default class App extends React.Component<IProps, IState> {
                         week={this.state.week}
                         name={this.name}
                     />
-                    <GamePlayConsole 
+                    <GamePlayConsole
                         mode={currentEvent.gamePlayMode}
                         imgPath={currentEvent.imgPath}
                         minigame={this.state.currentMinigame}
                         finishMinigame={this.finishMinigame}
                     />
-                    <section 
-                        id="user-interaction-box" 
+                    <section
+                        id="user-interaction-box"
                         className={currentEvent.hasBottomBoxBorder ? "nes-container is-rounded" : ""}
                     >
                         <div id="bottom-menu" className="bottom-container">
