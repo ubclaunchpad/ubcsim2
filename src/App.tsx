@@ -149,9 +149,28 @@ export default class App extends React.Component<IProps, IState> {
 
     render() {
         let currentEvent: IEvent = this.state.currentEvent;
+
+        // some screen resizing things...
+        const height = 667;
+        const width = 350;
+        let scale = (Math.min(
+            window.innerHeight / height,
+            window.innerWidth / width
+        ));
+        scale = Math.floor(scale) >= 1 ? Math.floor(scale) : 1;
+
+        let topMargin = (window.innerHeight - 667) / 2;
+        topMargin = topMargin > 0 ? topMargin : 0;
+
+        var style = {
+            marginTop: topMargin + 'px',
+            transform: 'scale(' + scale + ')',
+        };
+
+
         return (
-            <div id="app">
-                <div id="game-container" style={{ "marginTop": (window.innerHeight - 667) / 2 }}>
+            <div id="app" >
+                <div id="game-container" style={style} className="nes-container is-gold has-box-shadow">
                     <Hud
                         playerStats={this.state.playerStats}
                         week={this.state.week}

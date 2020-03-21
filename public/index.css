@@ -6,6 +6,10 @@ body {
   background: #fff;
 }
 
+p {
+  color: #000 !important;
+}
+
 #root {
   height: 100%;
 }
@@ -28,8 +32,8 @@ body {
 }
 
 #player-stat-box {
-  margin-top: 35px;
-  height: 85px;
+  margin-top: 30px;
+  height: 90px;
 }
 
 #gameplay-container {
@@ -96,6 +100,12 @@ body {
   background-color: #0B1164;
 }
 
+.nes-container.has-box-shadow {
+  -webkit-box-shadow: 11px 11px 14px -8px rgba(128, 128, 128, 1);
+  -moz-box-shadow: 11px 11px 14px -8px rgba(128, 128, 128, 1);
+  box-shadow: 11px 11px 14px -8px rgba(128, 128, 128, 1);
+}
+
 .nes-btn {
   color: #fff;
   background-color: rgb(36, 44, 163);
@@ -118,6 +128,10 @@ body {
 
 .nes-btn:active:not(.is-disabled)::after {
   box-shadow: inset 4px 4px #0B1164;
+}
+
+.is-gold {
+  background-color: rgb(228, 203, 153);
 }
 
 .row {
@@ -163,6 +177,14 @@ body {
 
 .margin-right-10 {
   margin-right: 10px;
+}
+
+.padding-top-7 {
+  padding-top: 7px;
+}
+
+.this-margin-bottom-5 {
+  margin-bottom: 5px;
 }
 
 .acceptance-letter {
