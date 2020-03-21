@@ -163,8 +163,8 @@ export default class App extends React.Component<IProps, IState> {
         topMargin = topMargin > 0 ? topMargin : 0;
 
         var style = {
-            marginTop: topMargin + 'px',
-            transform: 'scale(' + scale + ')',
+            marginTop: topMargin + "px",
+            transform: "scale(" + scale + ")",
         };
 
 
