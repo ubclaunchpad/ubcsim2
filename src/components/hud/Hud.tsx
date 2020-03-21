@@ -22,7 +22,7 @@ export default function Hud(props: IProps) {
             <div className="row">
                 <span className="column this-align-left">
                     <span className="fit-content-width margin-right-10 float-left">
-                        <img className="nes-avatar is-large" src={props.playerStats.getLogo()} alt="Blank Faculty Logo" style={{ imageRendering: "pixelated" }} />
+                        <img className="nes-avatar is-large" src={props.playerStats.getLogo()} alt="Blank Faculty Logo" />
                     </span>
                     <span className="fit-content-width">
                         <Scores playerStats={props.playerStats} />

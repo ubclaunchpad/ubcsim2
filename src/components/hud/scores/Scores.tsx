@@ -15,7 +15,7 @@ export default function Scores(props: IProps) {
     let scoreChangedAnimation: string[] = playerStats.getScoreAnimation();
 
     return (
-        <div>
+        <div className="padding-top-7">
             <ScoreItem
                 scoreType="Friends"
                 scoreValue={friends}
