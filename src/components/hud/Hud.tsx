@@ -3,6 +3,7 @@ import React from "react";
 import Scores from "./scores/Scores";
 import NameIndicator from "./NameIndicator";
 import TimeIndicator from "./TimeIndicator";
+import ProgressBar from "./ProgressBar";
 import PlayerStats from "./../../trackers/PlayerStats";
 
 interface IProps {
@@ -29,14 +30,7 @@ export default function Hud(props: IProps) {
                     </span>
                 </span>
                 <span className="column">
-                    {/* TODO: need to discuss how process should be defined  */}
-                    {/* and make the progress bar meaningful. */}
-                    <progress
-                        id="progress-bar"
-                        className="nes-progress is-success float-right"
-                        value="5"
-                        max="10"
-                    />
+                    <ProgressBar week={props.week} />
                 </span>
             </div>
         </header>

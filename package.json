@@ -11,7 +11,7 @@
     "test": "react-scripts test",
     "start": "scripts/app_start.sh",
     "build": "react-scripts build",
-    "deploy": "gh-pages -d build"
+    "deploy": "scripts/app_deploy.sh"
   },
   "author": "UBC Launch Pad",
   "license": "ISC",
