@@ -15,11 +15,12 @@ const generateAcceptanceLetter = () => {
     return (
         <div
             id="gameplay-content-box"
-            className="acceptance-letter is-centered"
+            className="acceptance-letter"
         >
-            <p>Dear, <span id="enter-name" className="nes-pointer">Enter Name</span>
-            </p>
-            <p>Congratulations! <br />Please accept this offer of admission to UBC.</p>
+            <p>Dear, <span id="enter-name" className="nes-pointer">Enter Name</span></p>
+            <p>Congratulations! <br />
+                Please accept this offer of admission to UBC.</p><br />
+            <p>Survive the school year by balancing your social life, grades, and sleep!</p>
         </div>
     );
 };
@@ -53,7 +54,7 @@ const generateMiniGame = (minigame: IMinigame, finishMinigame: Function) => {
 
     return (
         <div
-            style={{width: "inherit", height: "250px", margin: "auto"}}
+            style={{ width: "inherit", height: "250px", margin: "auto" }}
         >
             <Unity unityContent={unityContent} />
         </div>
@@ -61,16 +62,13 @@ const generateMiniGame = (minigame: IMinigame, finishMinigame: Function) => {
 };
 
 const generateConsole = (props: IProps) => {
-    if (props.mode === GamePlayMode.AcceptanceLetter)
-    {
+    if (props.mode === GamePlayMode.AcceptanceLetter) {
         return generateAcceptanceLetter();
     }
-    else if (props.mode === GamePlayMode.Minigame)
-    {
+    else if (props.mode === GamePlayMode.Minigame) {
         return generateMiniGame(props.minigame, props.finishMinigame);
     }
-    else
-    {
+    else {
         return generateComic(props.imgPath);
     }
 };
