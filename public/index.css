@@ -29,6 +29,7 @@ p {
   width: 350px;
   padding: 30px;
   margin: 0;
+  border: 3px solid #002145;
 }
 
 #player-stat-box {
@@ -93,7 +94,7 @@ p {
 }
 
 .nes-container {
-  border: 1px solid black;
+  border: 3px solid black;
   background: white;
   border-width: 2px;
   padding: 4px;
@@ -130,8 +131,8 @@ p {
   box-shadow: inset 4px 4px #0B1164;
 }
 
-.is-gold {
-  background-color: rgb(228, 203, 153);
+.is-ubc-alt-blue {
+  background-color: #97D4E9;
 }
 
 .row {

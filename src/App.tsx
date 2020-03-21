@@ -170,7 +170,7 @@ export default class App extends React.Component<IProps, IState> {
 
         return (
             <div id="app" >
-                <div id="game-container" style={style} className="nes-container is-gold has-box-shadow">
+                <div id="game-container" style={style} className="nes-container is-ubc-alt-blue has-box-shadow">
                     <Hud
                         playerStats={this.state.playerStats}
                         week={this.state.week}
