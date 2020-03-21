@@ -64,7 +64,7 @@
 		"gamePlayMode": "Comics"
 	},
 	"FratPartyEvent": {
-		"prompt": "You have been asked to go to a toga party! Are you going to go?",
+		"prompt": "You are invited to a toga party! Are you going to go?",
 		"imgPath": "",
 		"choices": [
 			"GrossFrats",
