@@ -3,5 +3,5 @@
 # Fetch Unity minigame binaries
 scripts/unity_fetch.sh
 
-# Start app
-react-scripts start
+# Deploy app
+gh-pages -d build
