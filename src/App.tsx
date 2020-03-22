@@ -167,7 +167,6 @@ export default class App extends React.Component<IProps, IState> {
             transform: "scale(" + scale + ")",
         };
 
-
         return (
             <div id="app" >
                 <div id="game-container" style={style} className="nes-container is-ubc-alt-blue has-box-shadow">

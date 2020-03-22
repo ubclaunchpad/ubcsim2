@@ -1,9 +1,6 @@
 body {
-  font-size: 8px;
-  letter-spacing: normal;
-  line-height: 1.6;
-  font-family: 'Press Start 2P', cursive;
-  background: #fff;
+  font-size: 16px;
+  font-family: 'VT323', monospace;
 }
 
 p {
@@ -27,7 +24,7 @@ p {
 #game-container {
   height: 667px;
   width: 350px;
-  padding: 30px;
+  padding: 15px 30px;
   margin: 0;
   border: 3px solid #002145;
 }
@@ -110,6 +107,7 @@ p {
 .nes-btn {
   color: #fff;
   background-color: rgb(36, 44, 163);
+  padding: 0px 4px;
   margin-bottom: 10px;
 }
 
@@ -189,6 +187,7 @@ p {
 }
 
 .acceptance-letter {
+  height: auto !important;
   border: 1px solid black;
   background: white;
   padding-top: 30px;
@@ -223,43 +222,43 @@ p {
 @keyframes greenIn {
   0% {
     color: #94CB4B;
-    font-size: 10px;
+    font-size: 20px;
   }
 
   20% {
     color: #94CB4B;
-    font-size: 8px;
+    font-size: 16px;
   }
 
   85% {
     color: #94CB4B;
-    font-size: 8px;
+    font-size: 16px;
   }
 
   100% {
     color: #000;
-    font-size: 8px;
+    font-size: 16px;
   }
 }
 
 @keyframes redIn {
   0% {
     color: #ce372b;
-    font-size: 10px;
+    font-size: 20px;
   }
 
   20% {
     color: #ce372b;
-    font-size: 8px;
+    font-size: 16px;
   }
 
   85% {
     color: #ce372b;
-    font-size: 8px;
+    font-size: 16px;
   }
 
   100% {
     color: #000;
-    font-size: 8px;
+    font-size: 16px;
   }
 }
