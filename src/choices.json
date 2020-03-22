@@ -1,176 +1,152 @@
 {
-  "TrustNaturalRecursion":
-  {
-    "answer":"Trust the natural recursion",
-    "followUp":"",
-    "statChanges":[10, 0.5, -15],
+  "TrustNaturalRecursion": {
+    "answer": "Trust the natural recursion",
+    "followUp": "",
+    "statChanges": [10, 0.5, -15],
     "minigame": ""
   },
-  "OkBoomer": 
-  {
-    "answer":"Ok, Boomer",
-    "followUp":"",
-    "statChanges":[60, -0.02, -8],
+  "OkBoomer": {
+    "answer": "Ok, Boomer",
+    "followUp": "",
+    "statChanges": [60, -0.02, -8],
     "minigame": ""
   },
-  "FiveverAlone": 
-  {
-    "answer":"5ever alone",
-    "followUp":"",
-    "statChanges":[-50, -1.5, -15],
+  "FiveverAlone": {
+    "answer": "5ever alone",
+    "followUp": "",
+    "statChanges": [-50, -1.5, -15],
     "minigame": ""
   },
-  "RunAway":
-  {
-    "answer":"meep merp. run away",
-    "followUp":"",
-    "statChanges":[-25, 0, -15],
+  "RunAway": {
+    "answer": "meep merp. run away",
+    "followUp": "",
+    "statChanges": [-25, 0, -15],
     "minigame": ""
   },
-  "ShowFilas": 
-  {
-    "answer":"Show her your Filas",
-    "followUp":"",
-    "statChanges":[35, 0.5, 0],
+  "ShowFilas": {
+    "answer": "Show her your Filas",
+    "followUp": "",
+    "statChanges": [35, 0.5, 0],
     "minigame": ""
   },
-  "BuyTheTix": 
-  {
-    "answer":"Buy her EDC (Electronic Daisy Carnival) tickets",
-    "followUp":"CuteGirlTixEvent",
-    "statChanges":[5, -0.01, 0],
+  "BuyTheTix": {
+    "answer": "Buy her EDC (Electronic Daisy Carnival) tickets",
+    "followUp": "CuteGirlTixEvent",
+    "statChanges": [5, -0.01, 0],
     "minigame": ""
   },
-  "ComplimentFilas":
-  {
-    "answer":"Compliment her Filas",
-    "followUp":"CuteFilasEvent",
-    "statChanges":[1, 0, 0],
+  "ComplimentFilas": {
+    "answer": "Compliment her Filas",
+    "followUp": "CuteFilasEvent",
+    "statChanges": [1, 0, 0],
     "minigame": ""
   },
-  "StalkInstagram": 
-  {
-    "answer":"Stalk her on Instagram",
-    "followUp":"",
-    "statChanges":[-50, -1.5, -35],
+  "StalkInstagram": {
+    "answer": "Stalk her on Instagram",
+    "followUp": "",
+    "statChanges": [-50, -1.5, -35],
     "minigame": ""
   },
-  "OhYes":
-  {
-    "answer":"OH YES",
-    "followUp":"HasBoyfriendEvent",
-    "statChanges":[20, -0.02, -3],
+  "OhYes": {
+    "answer": "OH YES",
+    "followUp": "HasBoyfriendEvent",
+    "statChanges": [20, -0.02, -3],
     "minigame": ""
   },
-  "Nope":
-  {
-    "answer":"no...",
-    "followUp":"NoVIPTixEvent",
-    "statChanges":[-5, 0, 0],
+  "Nope": {
+    "answer": "no...",
+    "followUp": "NoVIPTixEvent",
+    "statChanges": [-5, 0, 0],
     "minigame": ""
   },
-  "GrossFrats":
-  {
-    "answer":"Ew! Frats are gross!",
-    "followUp":"",
-    "statChanges":[-20, 0.5, 5],
+  "GrossFrats": {
+    "answer": "Ew! Frats are gross!",
+    "followUp": "",
+    "statChanges": [-20, 0.5, 5],
     "minigame": ""
   },
-  "YayBedsheets":
-  {
-    "answer":"I love wearing my bedsheets!",
-    "followUp":"",
-    "statChanges":[40, -1.0, -50],
+  "YayBedsheets": {
+    "answer": "I love wearing my bedsheets!",
+    "followUp": "",
+    "statChanges": [40, -1.0, -50],
     "minigame": ""
   },
-  "GiveUpMidterm":
-  {
-    "answer":"*walks out*",
-    "followUp":"",
-    "statChanges":[0, -1.0, 0],
+  "GiveUpMidterm": {
+    "answer": "*walks out*",
+    "followUp": "",
+    "statChanges": [0, 0, 0],
     "minigame": ""
   },
-  "LoremIpsum":
-  {
-    "answer":"Stop thinking start writing",
-    "followUp":"",
-    "statChanges":[0, 2, 0],
+  "LoremIpsum": {
+    "answer": "Stop thinking start writing",
+    "followUp": "",
+    "statChanges": [0, 2, 0],
     "minigame": "EssayWrite"
   },
-  "UseWheels":
-  {
-    "answer":"*Puts on helmet*",
-    "followUp":"",
-    "statChanges":[10, 0.5, 0],
+  "UseWheels": {
+    "answer": "*Puts on helmet*",
+    "followUp": "",
+    "statChanges": [10, 0.5, 0],
     "minigame": "SquirrelJump"
   },
-  "SquirrelPictures":
-  {
-    "answer":"I gotta get pictures!",
-    "followUp":"",
-    "statChanges":[20, -0.5, 0],
+  "SquirrelPictures": {
+    "answer": "I gotta get pictures!",
+    "followUp": "",
+    "statChanges": [20, -0.5, 0],
     "minigame": ""
   },
-  "Start":
-  {
-    "answer":"Accept Offer",
-    "followUp":"",
-    "statChanges":[0, 0, 0],
+  "Start": {
+    "answer": "Accept Offer",
+    "followUp": "",
+    "statChanges": [0, 0, 0],
     "minigame": ""
   },
-  "Arts":
-  {
-    "answer":"Arts",
-    "followUp":"",
-    "statChanges":[50, 2.0, 100],
+  "Arts": {
+    "answer": "Arts",
+    "followUp": "",
+    "statChanges": [50, 2.0, 100],
     "minigame": "",
     "dlogo": "ARTS.png"
   },
-  "ApScience":
-  {
-    "answer":"Applied Science",
-    "followUp":"",
-    "statChanges":[0, 4.0, 100],
+  "ApScience": {
+    "answer": "Applied Science",
+    "followUp": "",
+    "statChanges": [0, 4.0, 100],
     "minigame": "",
     "dlogo": "APSC.png"
   },
-  "Science":
-  {
-    "answer":"Science",
-    "followUp":"",
-    "statChanges":[50, 3.0, 100],
+  "Science": {
+    "answer": "Science",
+    "followUp": "",
+    "statChanges": [50, 3.0, 100],
     "minigame": "",
     "dlogo": "SCIE.png"
   },
-  "Forestry":
-  {
-    "answer":"Forestry",
-    "followUp":"",
-    "statChanges":[100, 2.0, 100],
+  "Forestry": {
+    "answer": "Forestry",
+    "followUp": "",
+    "statChanges": [100, 2.0, 100],
     "minigame": "",
     "dlogo": "FORE.png"
   },
-  "Commerce":
-  {
-    "answer":"Commerce",
-    "followUp":"",
-    "statChanges":[100, 2.0, 100],
+  "Commerce": {
+    "answer": "Commerce",
+    "followUp": "",
+    "statChanges": [100, 2.0, 100],
     "minigame": "",
     "dlogo": "COMM.png"
   },
-  "Kinesiology":
-  {
-    "answer":"Kinesiology",
-    "followUp":"",
-    "statChanges":[100, 2.0, 100],
+  "Kinesiology": {
+    "answer": "Kinesiology",
+    "followUp": "",
+    "statChanges": [100, 2.0, 100],
     "minigame": "",
     "dlogo": "KIN.png"
   },
-  "LFS":
-  {
-    "answer":"Land and Food Systems",
-    "followUp":"",
-    "statChanges":[100, 2.0, 100],
+  "LFS": {
+    "answer": "Land and Food Systems",
+    "followUp": "",
+    "statChanges": [100, 2.0, 100],
     "minigame": "",
     "dlogo": "LFS.png"
   },
@@ -190,6 +166,42 @@
     "answer": "Orchard Commons",
     "followUp": "",
     "statChanges": [0, 0, 0],
+    "minigame": ""
+  },
+  "DarnIt": {
+    "answer": "Darn it ):",
+    "followUp": "",
+    "statChanges": [0, -0.5, 0],
+    "minigame": ""
+  },
+  "BlockPartyCancelled": {
+    "answer": "HAHA CANCELLED! 😭",
+    "followUp": "",
+    "statChanges": [0, 0, 10],
+    "minigame": ""
+  },
+  "TikTok": {
+    "answer": "* makes TikTok dance video *",
+    "followUp": "",
+    "statChanges": [10, -0.2, -10],
+    "minigame": ""
+  },
+  "ToiletPaper": {
+    "answer": "I NEED TOILET PAPER",
+    "followUp": "",
+    "statChanges": [0, 0, -20],
+    "minigame": ""
+  },
+  "ScaleWall": {
+    "answer": "I can totally scale 10.5 ft wall by myself",
+    "followUp": "",
+    "statChanges": [20, 0, 0],
+    "minigame": ""
+  },
+  "CantReachTopShelf": {
+    "answer": "I can't even reach the top shelf... 🥺",
+    "followUp": "",
+    "statChanges": [0, 0, 5],
     "minigame": ""
   }
 }

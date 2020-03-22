@@ -1,113 +1,140 @@
 {
-	"BoomerGregorEvent":
-	{
+	"BoomerGregorEvent": {
 		"prompt": "Dr. Gregor tells the class to start studying for CPSC 110 early!",
-		"imgPath": "Gregor.png",
+		"imgPath": "BoomerGregorEvent/Gregor.png",
 		"choices": [
 			"TrustNaturalRecursion",
 			"OkBoomer"
 		],
-		"hasBottomBoxBorder" : false,
+		"hasBottomBoxBorder": false,
 		"gamePlayMode": "Comics"
 	},
-	"CuteGirlEvent":
-	{
+	"CuteGirlEvent": {
 		"prompt": "You see a cute girl in the Life Building, what do you do?",
-		"imgPath": "abg_normal.png",
+		"imgPath": "CuteGirlEvent/abg_normal.png",
 		"choices": [
 			"BuyTheTix",
 			"ComplimentFilas"
 		],
-		"hasBottomBoxBorder" : false,
+		"hasBottomBoxBorder": false,
 		"gamePlayMode": "Comics"
 	},
-	"CuteFilasEvent":
-	{
+	"CuteFilasEvent": {
 		"prompt": "She takes out her AirPods.\n\"What did you say?\"",
-		"imgPath": "abg_no_airpods.png",
+		"imgPath": "CuteGirlEvent/abg_no_airpods.png",
 		"choices": [
 			"RunAway",
 			"ShowFilas"
 		],
-		"hasBottomBoxBorder" : false,
+		"hasBottomBoxBorder": false,
 		"gamePlayMode": "Comics"
 	},
-	"CuteGirlTixEvent": 
-	{
+	"CuteGirlTixEvent": {
 		"prompt": "The cute girl from the Life Building asked if you got the VIP tickets for EDC. Did you?",
-		"imgPath": "abg_sad.png",
+		"imgPath": "CuteGirlEvent/abg_sad.png",
 		"choices": [
 			"OhYes",
 			"Nope"
 		],
-		"hasBottomBoxBorder" : false,
+		"hasBottomBoxBorder": false,
 		"gamePlayMode": "Comics"
 	},
-	"NoVIPTixEvent": 
-	{
+	"NoVIPTixEvent": {
 		"prompt": "The cute girl from the Life Building doesn't like you anymore because you're poor ):",
-		"imgPath": "abg_sad.png",
+		"imgPath": "CuteGirlEvent/abg_sad.png",
 		"choices": [
 			"StalkInstagram"
 		],
-		"hasBottomBoxBorder" : false,
+		"hasBottomBoxBorder": false,
 		"gamePlayMode": "Comics"
 	},
-	"HasBoyfriendEvent": 
-	{
+	"HasBoyfriendEvent": {
 		"prompt": "The cute girl from the Life Building just posted a photo of her and her boyfriend at EDC.",
-		"imgPath": "abg_boyfriend.png",
+		"imgPath": "CuteGirlEvent/abg_boyfriend.png",
 		"choices": [
 			"FiveverAlone"
 		],
-		"hasBottomBoxBorder" : false,
+		"hasBottomBoxBorder": false,
 		"gamePlayMode": "Comics"
 	},
-	"FratPartyEvent": 
-	{
+	"FratPartyEvent": {
 		"prompt": "You have been asked to go to a toga party! Are you going to go?",
+		"imgPath": "FratPartyEvent/toga.png",
+		"choices": [
+			"YayBedsheets",
+			"GrossFrats"
+		],
+		"hasBottomBoxBorder": false,
+		"gamePlayMode": "Comics"
+	},
+	"SquirrelEvent": {
+		"prompt": "You have a lecture across campus but there are squirrels in the way!",
 		"imgPath": "",
 		"choices": [
-			"GrossFrats",
-			"YayBedsheets"
+			"UseWheels",
+			"SquirrelPictures"
 		],
-		"hasBottomBoxBorder" : false,
+		"hasBottomBoxBorder": false,
 		"gamePlayMode": "Comics"
-    },
-    "SquirrelEvent":
-    {
-        "prompt": "You have a lecture across campus but there are squirrels in the way!",
-        "imgPath": "",
-        "choices": [
-            "UseWheels",
-            "SquirrelPictures"
-        ],
-        "hasBottomBoxBorder": false,
-        "gamePlayMode": "Comics"
-    },
-    "MidtermEvent":
-    {
-        "prompt": "This midterm has an essay component ;_;",
-        "imgPath": "",
-        "choices": [
-            "GiveUpMidterm",
-            "LoremIpsum"
-        ],
-        "hasBottomBoxBorder": false,
-        "gamePlayMode": "Comics"
-    },
-	"LandingEvent":
-	{
+	},
+	"MidtermEvent": {
+		"prompt": "This midterm has an essay component ;_;",
+		"imgPath": "",
+		"choices": [
+			"LoremIpsum",
+			"GiveUpMidterm"
+		],
+		"hasBottomBoxBorder": false,
+		"gamePlayMode": "Comics"
+	},
+	"CryMidtermPaperEvent": {
+		"prompt": "You failed your latest midterm...",
+		"imgPath": "CryMidtermPaperEvent/midtermPaper.png",
+		"choices": [
+			"DarnIt"
+		],
+		"hasBottomBoxBorder": false,
+		"gamePlayMode": "Comics"
+	},
+	"BlockPartyEvent": {
+		"prompt": "Block party is coming up !!!",
+		"imgPath": "BlockPartyEvent/blockParty.png",
+		"choices": [
+			"BlockPartyCancelled"
+		],
+		"hasBottomBoxBorder": false,
+		"gamePlayMode": "Comics"
+	},
+	"CoronaEvent": {
+		"prompt": "CORONA VIRUS 😳",
+		"imgPath": "CoronavirusEvent/corona.png",
+		"choices": [
+			"TikTok",
+			"ToiletPaper"
+		],
+		"hasBottomBoxBorder": false,
+		"gamePlayMode": "Comics"
+	},
+	"StormTheWallEvent": {
+		"prompt": "Your friends are trying to convince you to do Storm the Wall",
+		"imgPath": "StormTheWallEvent/stormTheWall.png",
+		"choices": [
+			"ScaleWall",
+			"CantReachTopShelf"
+		],
+		"hasBottomBoxBorder": false,
+		"gamePlayMode": "Comics"
+	},
+	"LandingEvent": {
 		"prompt": "This is going to be the best 4 years of my life!",
 		"imgPath": "",
 		"choices": [
 			"Start"
 		],
-		"hasBottomBoxBorder" : true,
+		"hasBottomBoxBorder": true,
 		"gamePlayMode": "AcceptanceLetter"
 	},
-	"PickFacultyEvent":
-	{
+	"PickFacultyEvent": {
 		"prompt": "Choose your faculty!",
 		"imgPath": "",
 		"choices": [
@@ -119,15 +146,14 @@
 			"LFS",
 			"Science"
 		],
-		"hasBottomBoxBorder" : false,
+		"hasBottomBoxBorder": false,
 		"gamePlayMode": "Hide"
 	},
-	"NoMoreEventsEvent":
-	{
+	"NoMoreEventsEvent": {
 		"prompt": "Oops! No more events!",
 		"imgPath": "",
 		"choices": [],
-		"hasBottomBoxBorder" : true,
+		"hasBottomBoxBorder": true,
 		"gamePlayMode": "Hide"
 	},
 	"PickResidenceEvent": {
