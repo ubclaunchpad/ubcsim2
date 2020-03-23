@@ -125,6 +125,26 @@
 		"hasBottomBoxBorder": false,
 		"gamePlayMode": "Comics"
 	},
+	"DayOfTheLongBoatEvent": {
+		"prompt": "Day of the Longboat is coming up!",
+		"imgPath": "DayOfTheLongBoatEvent/longboat.png",
+		"choices": [
+			"RegisterToDayOfTheLongBoat",
+			"NoThankYou"
+		],
+		"hasBottomBoxBorder": false,
+		"gamePlayMode": "Comics"
+	},
+	"ImagineDayEvent": {
+		"prompt": "It's Imagine Day!",
+		"imgPath": "ImagineDayEvent/imagineDay.png",
+		"choices": [
+			"JoinLaunchPad",
+			"LookForOtherClubs"
+		],
+		"hasBottomBoxBorder": false,
+		"gamePlayMode": "Comics"
+	},
 	"LandingEvent": {
 		"prompt": "This is going to be the best 4 years of my life!",
 		"imgPath": "",

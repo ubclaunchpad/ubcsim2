@@ -203,5 +203,29 @@
     "followUp": "",
     "statChanges": [0, 0, 5],
     "minigame": ""
+  },
+  "RegisterToDayOfTheLongBoat": {
+    "answer": "I MUST REGISTER!",
+    "followUp": "",
+    "statChanges": [10, 0, -2],
+    "minigame": ""
+  },
+  "NoThankYou": {
+    "answer": "Physical activity? No thank you.",
+    "followUp": "",
+    "statChanges": [0, 0, 5],
+    "minigame": ""
+  },
+  "JoinLaunchPad": {
+    "answer": "Join Launch Pad!",
+    "followUp": "",
+    "statChanges": [40, 0, 0],
+    "minigame": ""
+  },
+  "LookForOtherClubs": {
+    "answer": "... I'm going to look for other clubs 😒",
+    "followUp": "",
+    "statChanges": [0, 0, 0],
+    "minigame": ""
   }
 }

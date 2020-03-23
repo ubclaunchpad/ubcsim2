@@ -9,7 +9,9 @@
 			"CryMidtermPaperEvent",
 			"BlockPartyEvent",
 			"CoronaEvent",
-			"StormTheWallEvent"
+			"StormTheWallEvent",
+			"DayOfTheLongBoatEvent",
+			"ImagineDayEvent"
 		],
 		"followUp": [
 			"LandingEvent",
