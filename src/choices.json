@@ -124,7 +124,7 @@
     "followUp":"",
     "statChanges":[50, 2.0, 100],
     "minigame": "",
-    "dlogo": "ARTS.png"
+    "dlogo": ["ARTS", "#522E91", "#FFFFFF"]
   },
   "ApScience":
   {
@@ -132,7 +132,7 @@
     "followUp":"",
     "statChanges":[0, 4.0, 100],
     "minigame": "",
-    "dlogo": "APSC.png"
+    "dlogo": ["APSC", "#B20E22", "#FFFFFF"]
   },
   "Science":
   {
@@ -140,7 +140,7 @@
     "followUp":"",
     "statChanges":[50, 3.0, 100],
     "minigame": "",
-    "dlogo": "SCIE.png"
+    "dlogo": ["SCIE", "#3498DB", "#FFFFFF"]
   },
   "Forestry":
   {
@@ -148,7 +148,7 @@
     "followUp":"",
     "statChanges":[100, 2.0, 100],
     "minigame": "",
-    "dlogo": "FORE.png"
+    "dlogo": ["FORE", "#162A00", "#FFFFFF"]
   },
   "Commerce":
   {
@@ -156,7 +156,7 @@
     "followUp":"",
     "statChanges":[100, 2.0, 100],
     "minigame": "",
-    "dlogo": "COMM.png"
+    "dlogo": ["COMM", "#8D8D8D", "#FFFFFF"]
   },
   "Kinesiology":
   {
@@ -164,7 +164,7 @@
     "followUp":"",
     "statChanges":[100, 2.0, 100],
     "minigame": "",
-    "dlogo": "KIN.png"
+    "dlogo": ["KIN", "#228B22", "#FFFFFF"]
   },
   "LFS":
   {
@@ -172,7 +172,7 @@
     "followUp":"",
     "statChanges":[100, 2.0, 100],
     "minigame": "",
-    "dlogo": "LFS.png"
+    "dlogo": ["LFS", "#000000", "#FFFFFF"]
   },
   "TotemPark": {
     "answer": "Totem Park",

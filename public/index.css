@@ -62,6 +62,14 @@ body {
   display: inline-block;
 }
 
+#faculty-badge {
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+  border: black 1px solid;
+  text-align: center;
+}
+
 span.editable:empty::before {
     content: 'Enter Name';
 }

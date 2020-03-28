@@ -129,7 +129,7 @@ export default class App extends React.Component<IProps, IState> {
     }
 
     finishMinigame = (statChanges: number[]) => {
-        this.state.playerStats.applyStatChanges(statChanges, "");
+        this.state.playerStats.applyStatChanges(statChanges);
         let nextEvent = this.state.eventTracker.getNextEvent(this.state.week + 1);
         this.setState(prevState => {
             return {
