@@ -62,7 +62,11 @@ body {
   display: inline-block;
 }
 
-#enter-name {
+span.editable:empty::before {
+    content: 'Enter Name';
+}
+
+.underline {
   text-decoration: underline;
 }
 

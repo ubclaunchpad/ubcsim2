@@ -21,6 +21,7 @@ export interface IProps { }
 
 export interface IState {
     week: number;
+    name: string;
     playerStats: PlayerStats;
     currentEvent: IEvent;
     eventTracker: EventTracker;
@@ -35,19 +36,17 @@ const emptyMinigame: IMinigame = {
 };
 
 export default class App extends React.Component<IProps, IState> {
-    private name: string;
     private choiceManager: ChoicesManager;
     private eventManager: EventsManager;
     private minigameManager: MinigamesManager;
+    private acceptOfferEvent: string;
 
     constructor(props: IProps) {
         super(props);
-
         const playerStats = new PlayerStats();
         const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+        this.acceptOfferEvent = "accept-offer";
 
-        //TODO: should we auto allocate a dummy player name or allow user to input their own?
-        this.name = "P1";
         this.choiceManager = new ChoicesManager(choices);
         this.eventManager = new EventsManager(events);
         let seasons = [];
@@ -65,11 +64,8 @@ export default class App extends React.Component<IProps, IState> {
         let firstEvent = eventTracker.getNextEvent(0);
         this.minigameManager = new MinigamesManager(minigames);
         this.state = {
-            // TODO: The week number may not be how we choose to track time,
-            // we should create some abstraction for this similar to how
-            // `playerStats` is done
-            // also consider Progress bar
             week: 0,
+            name: "P1",
             playerStats: playerStats,
             currentEvent: firstEvent,
             eventTracker: eventTracker,
@@ -146,6 +142,11 @@ export default class App extends React.Component<IProps, IState> {
         });
     }
 
+    handleNameChange = (name: string) => {
+      this.setState({ name: name });
+      
+    }
+
     render() {
         let currentEvent: IEvent = this.state.currentEvent;
         return (
@@ -154,13 +155,15 @@ export default class App extends React.Component<IProps, IState> {
                     <Hud
                         playerStats={this.state.playerStats}
                         week={this.state.week}
-                        name={this.name}
+                        name={this.state.name}
                     />
                     <GamePlayConsole
                         mode={currentEvent.gamePlayMode}
                         imgPath={currentEvent.imgPath}
                         minigame={this.state.currentMinigame}
                         finishMinigame={this.finishMinigame}
+                        handleNameChange={this.handleNameChange}
+                        acceptOfferEvent={this.acceptOfferEvent}
                     />
                     <section
                         id="user-interaction-box"
@@ -174,6 +177,7 @@ export default class App extends React.Component<IProps, IState> {
                                 choices={currentEvent.choices}
                                 mgr={this.choiceManager}
                                 makeChoice={this.makeChoice}
+                                acceptOfferEvent={this.acceptOfferEvent}
                             />
                         </div>
                     </section>
