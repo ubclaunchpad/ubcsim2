@@ -453,6 +453,7 @@ span.editable:empty::before {
 .stat {
   display: block;
   height: 20px;
+  line-height: 20px;
 }
 
 .choice-btn-half {
