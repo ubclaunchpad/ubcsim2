@@ -5,5 +5,5 @@ interface IProps {
 }
 
 export default function NameIndicator(props: IProps) {
-    return <span id="name" className="this-align-left column float-left">Name: {props.name}</span>;
+    return <span id="name" className="this-align-left column float-left this-margin-bottom-5">Name: {props.name}</span>;
 }

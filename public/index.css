@@ -1,6 +1,13 @@
 body {
-  font-family: "VT323", monospace;
-  background: #fff;
+  font-size: 16px;
+  font-family: 'VT323', monospace;
+  background-image: url(colourway1.png);
+  /* background-image: url(colourway2.png); */
+  /* background-image: url(colourway3.png); */
+}
+
+p {
+  color: #000 !important;
 }
 
 #root {
@@ -20,13 +27,14 @@ body {
 #game-container {
   height: 667px;
   width: 350px;
-  background: white;
-  padding: 30px;
+  padding: 15px 30px;
+  margin: 0;
+  border: 3px solid #002145;
 }
 
 #player-stat-box {
-  margin-top: 35px;
-  height: 85px;
+  margin-top: 30px;
+  height: 90px;
 }
 
 #gameplay-container {
@@ -66,21 +74,315 @@ body {
   text-decoration: underline;
 }
 
+#bottom-menu {
+  border: 4px solid #e6e6e6;
+  background-color: #f6f6f6;
+  padding: 5px;
+  z-index: 1;
+  position: relative;
+}
+
+#faculty-badge {
+  height: 60px;
+  width: 60px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
 .hide {
   display: none;
 }
 
 .nes-container {
+  border: 3px solid black;
+  background: white;
   border-width: 2px;
+  padding: 4px;
+  background-color: #0B1164;
 }
 
-.nes-container.is-rounded {
-  border-image-width: 2;
+.nes-container.has-box-shadow {
+  -webkit-box-shadow: 11px 11px 14px -8px rgba(128, 128, 128, 1);
+  -moz-box-shadow: 11px 11px 14px -8px rgba(128, 128, 128, 1);
+  box-shadow: 11px 11px 14px -8px rgba(128, 128, 128, 1);
+}
+
+/* Main */
+:root {
+  --btn-main-colour: #242CA3;
+  --btn-shadow-colour: #0B1164;
+  --btn-hover-colour: #222a99;
+
+  --btn-arts-main-colour: #674d94;
+  --btn-arts-shadow-colour: #522E91;
+  --btn-arts-hover-colour: #62419c;
+
+  --btn-apsc-main-colour: #c42135;
+  --btn-apsc-shadow-colour: #B20E22;
+  --btn-apsc-hover-colour: #b81f32;
+
+  --btn-comm-main-colour: #a3a3a3;
+  --btn-comm-shadow-colour: #8D8D8D;
+  --btn-comm-hover-colour: #9c9c9c;
+
+  --btn-fore-main-colour: #315e00;
+  --btn-fore-shadow-colour: #162A00;
+  --btn-fore-hover-colour: #2a4f01;
+
+  --btn-kin-main-colour: #2d912d;
+  --btn-kin-shadow-colour: #1e7d1e;
+  --btn-kin-hover-colour: #228B22;
+
+  --btn-lfs-main-colour: #2e2e2e;
+  --btn-lfs-shadow-colour: #1f1f1f;
+  --btn-lfs-hover-colour: #242424;
+
+  --btn-scie-main-colour: #3498DB;
+  --btn-scie-shadow-colour: #2a7eb8;
+  --btn-scie-hover-colour: #3091d1;
+
+  --btn-vanier-main-colour: #4287F5;
+  --btn-vanier-shadow-colour: #326bc7;
+  --btn-vanier-hover-colour: #3f81eb;
+
+  --btn-totem-main-colour: #F26E40;
+  --btn-totem-shadow-colour: #d95223;
+  --btn-totem-hover-colour: #eb6536;
+
+  --btn-orchard-main-colour: #FFCC00;
+  --btn-orchard-shadow-colour: #e0b400;
+  --btn-orchard-hover-colour: #fac902;
 }
 
 .nes-btn {
-  margin: 10px;
-  padding: 3px 4px;
+  color: #fff;
+  background-color: var(--btn-main-colour);
+  padding: 0px 4px;
+  margin-bottom: 10px;
+}
+
+.nes-btn.arts {
+  background-color: var(--btn-arts-main-colour);
+}
+
+.nes-btn.apsc {
+  background-color: var(--btn-apsc-main-colour);
+}
+
+.nes-btn.comm {
+  background-color: var(--btn-comm-main-colour);
+}
+
+.nes-btn.fore {
+  background-color: var(--btn-fore-main-colour);
+}
+
+.nes-btn.kin {
+  background-color: var(--btn-kin-main-colour);
+}
+
+.nes-btn.lfs {
+  background-color: var(--btn-lfs-main-colour);
+}
+
+.nes-btn.scie {
+  background-color: var(--btn-scie-main-colour);
+}
+
+.nes-btn.totem {
+  background-color: var(--btn-totem-main-colour);
+}
+
+.nes-btn.vanier {
+  background-color: var(--btn-vanier-main-colour);
+}
+
+.nes-btn.orchard {
+  color: #000;
+  background-color: var(--btn-orchard-main-colour);
+}
+
+.nes-btn::after {
+  box-shadow: inset -4px -4px var(--btn-shadow-colour);
+}
+
+.nes-btn.arts::after {
+  box-shadow: inset -4px -4px var(--btn-arts-shadow-colour);
+}
+
+.nes-btn.apsc::after {
+  box-shadow: inset -4px -4px var(--btn-apsc-shadow-colour);
+}
+
+.nes-btn.comm::after {
+  box-shadow: inset -4px -4px var(--btn-comm-shadow-colour);
+}
+
+.nes-btn.fore::after {
+  box-shadow: inset -4px -4px var(--btn-fore-shadow-colour);
+}
+
+.nes-btn.kin::after {
+  box-shadow: inset -4px -4px var(--btn-kin-shadow-colour);
+}
+
+.nes-btn.lfs::after {
+  box-shadow: inset -4px -4px var(--btn-lfs-shadow-colour);
+}
+
+.nes-btn.scie::after {
+  box-shadow: inset -4px -4px var(--btn-scie-shadow-colour);
+}
+
+.nes-btn.totem::after {
+  box-shadow: inset -4px -4px var(--btn-totem-shadow-colour);
+}
+
+.nes-btn.vanier::after {
+  box-shadow: inset -4px -4px var(--btn-vanier-shadow-colour);
+}
+
+.nes-btn.orchard::after {
+  box-shadow: inset -4px -4px var(--btn-orchard-shadow-colour);
+}
+
+.nes-btn:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--btn-hover-colour);
+}
+
+.nes-btn.arts:hover {
+  background-color: var(--btn-arts-hover-colour);
+}
+
+.nes-btn.apsc:hover {
+  background-color: var(--btn-apsc-hover-colour);
+}
+
+.nes-btn.comm:hover {
+  background-color: var(--btn-comm-hover-colour);
+}
+
+.nes-btn.fore:hover {
+  background-color: var(--btn-fore-hover-colour);
+}
+
+.nes-btn.kin:hover {
+  background-color: var(--btn-kin-hover-colour);
+}
+
+.nes-btn.lfs:hover {
+  background-color: var(--btn-lfs-hover-colour);
+}
+
+.nes-btn.scie:hover {
+  background-color: var(--btn-scie-hover-colour);
+}
+
+.nes-btn.totem:hover {
+  background-color: var(--btn-totem-hover-colour);
+}
+
+.nes-btn.vanier:hover {
+  background-color: var(--btn-vanier-hover-colour);
+}
+
+.nes-btn.orchard:hover {
+  color: #000;
+  background-color: var(--btn-orchard-hover-colour);
+}
+
+.nes-btn:hover::after {
+  box-shadow: inset -5px -5px var(--btn-shadow-colour);
+}
+
+.nes-btn.arts:hover::after {
+  box-shadow: inset -5px -5px var(--btn-arts-shadow-colour);
+}
+
+.nes-btn.apsc:hover::after {
+  box-shadow: inset -5px -5px var(--btn-apsc-shadow-colour);
+}
+
+.nes-btn.comm:hover::after {
+  box-shadow: inset -5px -5px var(--btn-comm-shadow-colour);
+}
+
+.nes-btn.fore:hover::after {
+  box-shadow: inset -5px -5px var(--btn-fore-shadow-colour);
+}
+
+.nes-btn.kin:hover::after {
+  box-shadow: inset -5px -5px var(--btn-kin-shadow-colour);
+}
+
+.nes-btn.lfs:hover::after {
+  box-shadow: inset -5px -5px var(--btn-lfs-shadow-colour);
+}
+
+.nes-btn.scie:hover::after {
+  box-shadow: inset -5px -5px var(--btn-scie-shadow-colour);
+}
+
+.nes-btn.totem:hover::after {
+  box-shadow: inset -5px -5px var(--btn-totem-shadow-colour);
+}
+
+.nes-btn.vanier:hover::after {
+  box-shadow: inset -5px -5px var(--btn-vanier-shadow-colour);
+}
+
+.nes-btn.orchard:hover::after {
+  box-shadow: inset -5px -5px var(--btn-orchard-shadow-colour);
+}
+
+.nes-btn:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px var(--btn-shadow-colour);
+}
+
+.nes-btn.arts:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px var(--btn-arts-shadow-colour);
+}
+
+.nes-btn.apsc:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px var(--btn-apsc-shadow-colour);
+}
+
+.nes-btn.comm:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px var(--btn-comm-shadow-colour);
+}
+
+.nes-btn.fore:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px var(--btn-fore-shadow-colour);
+}
+
+.nes-btn.kin:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px var(--btn-kin-shadow-colour);
+}
+
+.nes-btn.lfs:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px var(--btn-lfs-shadow-colour);
+}
+
+.nes-btn.scie:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px var(--btn-scie-shadow-colour);
+}
+
+.nes-btn.totem:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px var(--btn-totem-shadow-colour);
+}
+
+.nes-btn.vanier:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px var(--btn-vanier-shadow-colour);
+}
+
+.nes-btn.orchard:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px var(--btn-orchard-shadow-colour);
+}
+
+.is-ubc-alt-blue {
+  background-color: #97D4E9;
 }
 
 .row {
@@ -128,6 +430,22 @@ body {
   margin-right: 10px;
 }
 
+.padding-top-7 {
+  padding-top: 7px;
+}
+
+.this-margin-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.acceptance-letter {
+  height: auto !important;
+  border: 1px solid black;
+  background: white;
+  padding-top: 30px;
+  padding: 10px;
+}
+
 .stat {
   display: block;
   height: 20px;
@@ -145,20 +463,54 @@ body {
   width: 100%
 }
 
-.greenIn{
-    animation: greenIn 1s;
+.greenIn {
+  animation: greenIn 0.4s;
 }
 
-.redIn{
-    animation: redIn 1s;
+.redIn {
+  animation: redIn 0.4s;
 }
 
-@keyframes greenIn{
-    0%{     color: green; font-size: 20px;   }
-    100%{   color: #000; font-size: 16px;   }
+@keyframes greenIn {
+  0% {
+    color: #94CB4B;
+    font-size: 20px;
+  }
+
+  20% {
+    color: #94CB4B;
+    font-size: 16px;
+  }
+
+  85% {
+    color: #94CB4B;
+    font-size: 16px;
+  }
+
+  100% {
+    color: #000;
+    font-size: 16px;
+  }
 }
 
-@keyframes redIn{
-    0%{     color: red; font-size: 20px;   }
-    100%{   color: #000; font-size: 16px;    }
+@keyframes redIn {
+  0% {
+    color: #ce372b;
+    font-size: 20px;
+  }
+
+  20% {
+    color: #ce372b;
+    font-size: 16px;
+  }
+
+  85% {
+    color: #ce372b;
+    font-size: 16px;
+  }
+
+  100% {
+    color: #000;
+    font-size: 16px;
+  }
 }

@@ -16,12 +16,12 @@ export default class EventTracker {
 
     public removeMobiles(cm: ChoicesManager) {
         this.pool = this.pool.filter(evt =>
-                                     evt.choices.map(cm.get.bind(cm))
-                                     .every(c => c.minigame === ""));
+            evt.choices.map(cm.get.bind(cm))
+                .every(c => c.minigame === ""));
         for (let i = 0; i < this.seasonal.length; ++i) {
             this.seasonal[i] = this.seasonal[i].filter(evt =>
-                                                       evt.choices.map(cm.get.bind(cm))
-                                                       .every(c => c.minigame === ""));
+                evt.choices.map(cm.get.bind(cm))
+                    .every(c => c.minigame === ""));
         }
     }
 
@@ -35,7 +35,7 @@ export default class EventTracker {
         // 0 to 11
         const month = (Math.floor(week / 4) + 8) % 12;
         if (this.pool.length > 0 &&
-                (r > this.SEASONAL_CHANCE || this.seasonal[month].length === 0)) {
+            (r > this.SEASONAL_CHANCE || this.seasonal[month].length === 0)) {
             // If we roll a normal pool or if there are no seasonal events then
             // use the normal pool (given that there are still things in the
             // normal pool)
@@ -55,6 +55,7 @@ export default class EventTracker {
                 "imgPath": "",
                 "choices": [],
                 "hasBottomBoxBorder": true,
+                "hasInnerFill": true,
                 "gamePlayMode": GamePlayMode.Hide
             };
         }
