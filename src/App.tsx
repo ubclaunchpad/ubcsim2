@@ -78,7 +78,7 @@ export default class App extends React.Component<IProps, IState> {
         if (choice.minigame === "") {
             this.state.playerStats.applyStatChanges(choice.statChanges, choice.dlogo);
 
-            if (this.state.week > App.maxWeeks) {
+            if (choice.followUp === "" && this.state.week > App.maxWeeks) {
                 if (this.state.playerStats.getGpa() >= 1.0) {
                     // Winning condition
                     this.state.eventTracker.queueFollowUpEvent(
