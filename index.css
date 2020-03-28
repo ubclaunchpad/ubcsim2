@@ -73,6 +73,7 @@ p {
   width: 60px;
   border-radius: 5px;
   border: black 1px solid;
+  line-height: 60px;
   text-align: center;
 }
 
@@ -85,7 +86,7 @@ p {
 }
 
 span.editable:empty::before {
-    content: 'Enter Name';
+  content: 'Enter Name';
 }
 
 .underline {
