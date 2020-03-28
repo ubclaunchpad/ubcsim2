@@ -42,7 +42,7 @@ export default class GamePlayConsole extends React.Component<IProps, IState> {
         return (
             <div
                 id="gameplay-content-box"
-                className="nes-container is-centered"
+                className="acceptance-letter"
             >
                 <p>Dear <ContentEditable 
                     className="editable nes-pointer underline"
@@ -52,7 +52,8 @@ export default class GamePlayConsole extends React.Component<IProps, IState> {
                     // tslint:disable-next-line:jsx-alignment
                     onChange={this.handleChange} />
                 </p>
-                <p>Congratulations! <br />Please accept this offer of admission to UBC.</p>
+                <p>Congratulations! <br />Please accept this offer of admission to UBC.</p><br />
+                <p>Survive the school year by balancing your social life, grades, and sleep!</p>
             </div>
         );
     }

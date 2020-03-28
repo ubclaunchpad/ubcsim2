@@ -13,7 +13,6 @@ interface IProps {
 }
 
 export default function Hud(props: IProps) {
-
     return (
         <header id="player-stat-box" className="row">
             <div className="row">
@@ -34,8 +33,6 @@ export default function Hud(props: IProps) {
                     </span>
                 </span>
                 <span className="column">
-                    {/* TODO: need to discuss how process should be defined  */}
-                    {/* and make the progress bar meaningful. */}
                     <ProgressBar week={props.week} />
                 </span>
             </div>

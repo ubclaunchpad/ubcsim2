@@ -11,6 +11,7 @@ export interface IEvent {
     choices: string[];
     gamePlayMode: string;
     hasBottomBoxBorder: boolean;
+    hasInnerFill: boolean;
 }
 
 export interface IChoice {
@@ -19,6 +20,7 @@ export interface IChoice {
     statChanges: number[];
     dlogo?: string[];
     minigame: string;
+    btnStyle: string;
 }
 
 export interface IMinigame {
