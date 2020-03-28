@@ -36,6 +36,7 @@ const emptyMinigame: IMinigame = {
 };
 
 export default class App extends React.Component<IProps, IState> {
+    static readonly maxWeeks: number = 5;
     private choiceManager: ChoicesManager;
     private eventManager: EventsManager;
     private minigameManager: MinigamesManager;
@@ -77,16 +78,18 @@ export default class App extends React.Component<IProps, IState> {
         if (choice.minigame === "") {
             this.state.playerStats.applyStatChanges(choice.statChanges, choice.dlogo);
 
-            if (this.state.week >= 2 && this.state.playerStats.getGpa() < 1.0) {
-                // Losing condition
-                this.state.eventTracker.queueFollowUpEvent(
-                    this.eventManager.get("LoseEvent")
-                );
-            } else if (this.state.week > 5) {
-                // Winning condition if not losing
-                this.state.eventTracker.queueFollowUpEvent(
-                    this.eventManager.get("WinEvent")
-                );
+            if (this.state.week > App.maxWeeks) {
+                if (this.state.playerStats.getGpa() >= 1.0) {
+                    // Winning condition
+                    this.state.eventTracker.queueFollowUpEvent(
+                        this.eventManager.get("WinEvent")
+                    );
+                } else {
+                    // Lose condition is everything else
+                    this.state.eventTracker.queueFollowUpEvent(
+                        this.eventManager.get("LoseEvent")
+                    );
+                }
             } else if (choice.followUp !== "") {
                 // The game isn't ending and there is a follow up event
                 this.state.eventTracker.queueFollowUpEvent(
@@ -94,11 +97,12 @@ export default class App extends React.Component<IProps, IState> {
                 );
             }
 
-            let nextEvent = this.state.eventTracker.getNextEvent(this.state.week + 1);
+            let weekDelta = (choice.followUp !== "" ? 0 : 1);
+            let nextEvent = this.state.eventTracker.getNextEvent(weekDelta + this.state.week);
 
             this.setState(prevState => {
                 return {
-                    week: prevState.week + 1,
+                    week: prevState.week + weekDelta,
                     playerStats: prevState.playerStats,
                     currentEvent: nextEvent,
                     eventTracker: prevState.eventTracker,

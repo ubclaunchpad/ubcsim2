@@ -120,7 +120,7 @@
   },
   "Arts": {
     "answer": "Arts",
-    "followUp": "",
+    "followUp": "PickResidenceEvent",
     "statChanges": [50, 2.0, 100],
     "minigame": "",
     "dlogo": ["ARTS", "#522E91", "#FFFFFF"],
@@ -129,7 +129,7 @@
   "Forestry":
   {
     "answer":"Forestry",
-    "followUp":"",
+    "followUp":"PickResidenceEvent",
     "statChanges":[100, 2.0, 100],
     "minigame": "",
     "dlogo": ["FORE", "#162A00", "#FFFFFF"],
@@ -138,7 +138,7 @@
   "Commerce":
   {
     "answer":"Commerce",
-    "followUp":"",
+    "followUp":"PickResidenceEvent",
     "statChanges":[100, 2.0, 100],
     "minigame": "",
     "dlogo": ["COMM", "#8D8D8D", "#FFFFFF"],
@@ -147,7 +147,7 @@
   "Kinesiology":
   {
     "answer":"Kinesiology",
-    "followUp":"",
+    "followUp":"PickResidenceEvent",
     "statChanges":[100, 2.0, 100],
     "minigame": "",
     "dlogo": ["KIN", "#228B22", "#FFFFFF"],
@@ -156,7 +156,7 @@
   
   "ApScience": {
     "answer": "Applied Science",
-    "followUp": "",
+    "followUp": "PickResidenceEvent",
     "statChanges": [0, 4.0, 100],
     "minigame": "",
     "dlogo": ["APSC", "#B20E22", "#FFFFFF"],
@@ -164,7 +164,7 @@
   },
   "Science": {
     "answer": "Science",
-    "followUp": "",
+    "followUp": "PickResidenceEvent",
     "statChanges": [50, 3.0, 100],
     "minigame": "",
     "dlogo": ["SCIE", "#3498DB", "#FFFFFF"],
@@ -172,7 +172,7 @@
   },
   "LFS": {
     "answer": "Land and Food Systems",
-    "followUp": "",
+    "followUp": "PickResidenceEvent",
     "statChanges": [100, 2.0, 100],
     "minigame": "",
     "dlogo": ["LFS", "#000000", "#FFFFFF"],
