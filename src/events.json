@@ -65,12 +65,12 @@
 	},
 	"FratPartyEvent": {
 		"prompt": "You are invited to a toga party! Are you going to go?",
-		"imgPath": "",
+		"imgPath": "FratPartyEvent/toga.png",
 		"choices": [
 			"UseWheels",
 			"SquirrelPictures"
 		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
@@ -122,6 +122,39 @@
 		"choices": [
 			"UseWheels",
 			"SquirrelPictures"
+		],
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
+		"gamePlayMode": "Comics"
+	},
+	"ImagineDayEvent": {
+		"prompt": "It's Imagine Day!",
+		"imgPath": "ImagineDayEvent/imagineDay.png",
+		"choices": [
+			"JoinLaunchPad",
+			"LookForOtherClubs"
+		],
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
+		"gamePlayMode": "Comics"
+	},
+	"DayOfTheLongBoatEvent": {
+		"prompt": "Register for Day of the Longboat?",
+		"imgPath": "DayOfTheLongBoatEvent/longboat.png",
+		"choices": [
+			"RegisterToDayOfTheLongBoat",
+			"NoThankYou"
+		],
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
+		"gamePlayMode": "Comics"
+	},
+	"StormTheWallEvent": {
+		"prompt": "Wanna Storm the Wall bro?",
+		"imgPath": "StormTheWallEvent/stormTheWall",
+		"choices": [
+			"ScaleWall",
+			"CantReachTopShelf"
 		],
 		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,
