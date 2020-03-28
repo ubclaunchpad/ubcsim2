@@ -1,17 +1,9 @@
 {
 	"events": {
 		"pool": [
-			"BoomerGregorEvent",
 			"CuteGirlEvent",
-			"FratPartyEvent",
-			"MidtermEvent",
 			"SquirrelEvent",
-			"CryMidtermPaperEvent",
-			"BlockPartyEvent",
-			"CoronaEvent",
-			"StormTheWallEvent",
-			"DayOfTheLongBoatEvent",
-			"ImagineDayEvent"
+			"MidtermEvent"
 		],
 		"followUp": [
 			"LandingEvent",
@@ -19,18 +11,10 @@
 			"PickResidenceEvent"
 		],
 		"seasonal": [
-			[],
-			[],
-			[],
-			[],
-			[],
-			[],
-			[],
-			[],
-			[],
-			[],
-			[],
-			[]
+			["ImagineDayEvent"],
+			["DayOfTheLongBoatEvent", "BoomerGregorEvent", "FratPartyEvent"],
+			["StormTheWallEvent", "CryMidtermPaperEvent"],
+			["BlockPartyEvent", "CoronaEvent"]
 		]
 	}
 }
