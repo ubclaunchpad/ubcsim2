@@ -16,7 +16,7 @@ export default class PlayerStats {
         this.gpa = 0;
         this.sleep = 0;
         //logo[1]: background color; logo[2]: text color; 
-        this.logo = ["FACULTY ICON", "#FFFFFF", "#000000"];
+        this.logo = ["UBC", "#0B1164", "#EAA332"];
         this.scoreChangedAnimation = [];
     }
 
@@ -67,15 +67,15 @@ export default class PlayerStats {
     }
 
     public getLogoText(): string {
-      return this.logo[0];
+        return this.logo[0];
     }
 
     public getLogoBackground(): string {
-      return this.logo[1];
+        return this.logo[1];
     }
 
     public getLogoTextColor(): string {
-      return this.logo[2];
+        return this.logo[2];
     }
 
     public getScoreAnimation(): string[] {
