@@ -1,5 +1,3 @@
-// import Blank from "../assets/Blank.png";
-
 const FRIENDS_MIN = 0;
 const GPA_MAX = 4;
 const GPA_MIN = 0;
