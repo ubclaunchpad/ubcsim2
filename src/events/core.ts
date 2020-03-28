@@ -20,6 +20,7 @@ export interface IChoice {
     statChanges: number[];
     dlogo?: string;
     minigame: string;
+    btnStyle: string;
 }
 
 export interface IMinigame {
