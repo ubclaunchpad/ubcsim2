@@ -21,6 +21,7 @@ export interface IProps { }
 
 export interface IState {
     week: number;
+    name: string;
     playerStats: PlayerStats;
     currentEvent: IEvent;
     eventTracker: EventTracker;
@@ -35,19 +36,17 @@ const emptyMinigame: IMinigame = {
 };
 
 export default class App extends React.Component<IProps, IState> {
-    private name: string;
     private choiceManager: ChoicesManager;
     private eventManager: EventsManager;
     private minigameManager: MinigamesManager;
+    private acceptOfferEvent: string;
 
     constructor(props: IProps) {
         super(props);
-
         const playerStats = new PlayerStats();
         const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+        this.acceptOfferEvent = "accept-offer";
 
-        //TODO: should we auto allocate a dummy player name or allow user to input their own?
-        this.name = "P1";
         this.choiceManager = new ChoicesManager(choices);
         this.eventManager = new EventsManager(events);
         let seasons = [];
@@ -65,11 +64,8 @@ export default class App extends React.Component<IProps, IState> {
         let firstEvent = eventTracker.getNextEvent(0);
         this.minigameManager = new MinigamesManager(minigames);
         this.state = {
-            // TODO: The week number may not be how we choose to track time,
-            // we should create some abstraction for this similar to how
-            // `playerStats` is done
-            // also consider Progress bar
             week: 0,
+            name: "P1",
             playerStats: playerStats,
             currentEvent: firstEvent,
             eventTracker: eventTracker,
@@ -117,6 +113,7 @@ export default class App extends React.Component<IProps, IState> {
                 "imgPath": "",
                 "choices": [],
                 "hasBottomBoxBorder": false,
+                "hasInnerFill": false,
                 "gamePlayMode": GamePlayMode.Minigame
             };
 
@@ -133,7 +130,7 @@ export default class App extends React.Component<IProps, IState> {
     }
 
     finishMinigame = (statChanges: number[]) => {
-        this.state.playerStats.applyStatChanges(statChanges, "");
+        this.state.playerStats.applyStatChanges(statChanges);
         let nextEvent = this.state.eventTracker.getNextEvent(this.state.week + 1);
         this.setState(prevState => {
             return {
@@ -146,27 +143,52 @@ export default class App extends React.Component<IProps, IState> {
         });
     }
 
+    handleNameChange = (name: string) => {
+      this.setState({ name: name });
+      
+    }
+
     render() {
         let currentEvent: IEvent = this.state.currentEvent;
+
+        // some screen resizing things...
+        const height = 667;
+        const width = 350;
+        let scale = (Math.min(
+            window.innerHeight / height,
+            window.innerWidth / width
+        ));
+        scale = Math.floor(scale) >= 1 ? Math.floor(scale) : 1;
+
+        let topMargin = (window.innerHeight - 667) / 2;
+        topMargin = topMargin > 0 ? topMargin : 0;
+
+        var style = {
+            marginTop: topMargin + "px",
+            transform: "scale(" + scale + ")",
+        };
+
         return (
-            <div id="app">
-                <div id="game-container">
+            <div id="app" >
+                <div id="game-container" style={style} className="nes-container is-ubc-alt-blue has-box-shadow">
                     <Hud
                         playerStats={this.state.playerStats}
                         week={this.state.week}
-                        name={this.name}
+                        name={this.state.name}
                     />
                     <GamePlayConsole
                         mode={currentEvent.gamePlayMode}
                         imgPath={currentEvent.imgPath}
                         minigame={this.state.currentMinigame}
                         finishMinigame={this.finishMinigame}
+                        handleNameChange={this.handleNameChange}
+                        acceptOfferEvent={this.acceptOfferEvent}
                     />
                     <section
                         id="user-interaction-box"
-                        className={currentEvent.hasBottomBoxBorder ? "nes-container is-rounded" : ""}
+                        className={currentEvent.hasBottomBoxBorder ? "nes-container" : ""}
                     >
-                        <div id="bottom-menu" className="bottom-container">
+                        <div id="bottom-menu" className="bottom-container" style={currentEvent.hasInnerFill ? {} : { border: "none", background: "none" }}>
                             <p id="prompt" className="this-align-center">
                                 {currentEvent.prompt}
                             </p>
@@ -174,6 +196,7 @@ export default class App extends React.Component<IProps, IState> {
                                 choices={currentEvent.choices}
                                 mgr={this.choiceManager}
                                 makeChoice={this.makeChoice}
+                                acceptOfferEvent={this.acceptOfferEvent}
                             />
                         </div>
                     </section>

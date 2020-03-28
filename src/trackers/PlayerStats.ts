@@ -1,5 +1,3 @@
-import Blank from "../assets/Blank.png";
-
 const FRIENDS_MIN = 0;
 const GPA_MAX = 4;
 const GPA_MIN = 0;
@@ -10,18 +8,19 @@ export default class PlayerStats {
     private friends: number;
     private gpa: number;
     private sleep: number;
-    private logo: string;
+    private logo: string[];
     private scoreChangedAnimation: string[];
 
     constructor() {
         this.friends = 0;
         this.gpa = 0;
         this.sleep = 0;
-        this.logo = Blank;
+        //logo[1]: background color; logo[2]: text color; 
+        this.logo = ["FACULTY ICON", "#FFFFFF", "#000000"];
         this.scoreChangedAnimation = [];
     }
 
-    public applyStatChanges(statChanges: number[], dlogo?: string) {
+    public applyStatChanges(statChanges: number[], dlogo?: string[]) {
         let friends: number = this.friends + statChanges[0];
         this.friends = friends >= FRIENDS_MIN ? friends : 0;
 
@@ -41,7 +40,7 @@ export default class PlayerStats {
         else
             this.sleep = sleep;
 
-        if (dlogo) this.logo = require(`../assets/${dlogo}`);
+        if (dlogo) this.logo = dlogo;
 
         this.scoreChangedAnimation = [];
         statChanges.forEach((s) => {
@@ -67,8 +66,16 @@ export default class PlayerStats {
         return this.sleep;
     }
 
-    public getLogo(): string {
-        return this.logo;
+    public getLogoText(): string {
+      return this.logo[0];
+    }
+
+    public getLogoBackground(): string {
+      return this.logo[1];
+    }
+
+    public getLogoTextColor(): string {
+      return this.logo[2];
     }
 
     public getScoreAnimation(): string[] {

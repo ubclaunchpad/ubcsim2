@@ -6,7 +6,8 @@
 			"TrustNaturalRecursion",
 			"OkBoomer"
 		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
 	"CuteGirlEvent": {
@@ -16,7 +17,8 @@
 			"BuyTheTix",
 			"ComplimentFilas"
 		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
 	"CuteFilasEvent": {
@@ -26,7 +28,8 @@
 			"RunAway",
 			"ShowFilas"
 		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
 	"CuteGirlTixEvent": {
@@ -36,7 +39,8 @@
 			"OhYes",
 			"Nope"
 		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
 	"NoVIPTixEvent": {
@@ -45,7 +49,8 @@
 		"choices": [
 			"StalkInstagram"
 		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
 	"HasBoyfriendEvent": {
@@ -54,27 +59,19 @@
 		"choices": [
 			"FiveverAlone"
 		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
 	"FratPartyEvent": {
-		"prompt": "You have been asked to go to a toga party! Are you going to go?",
-		"imgPath": "FratPartyEvent/toga.png",
-		"choices": [
-			"YayBedsheets",
-			"GrossFrats"
-		],
-		"hasBottomBoxBorder": false,
-		"gamePlayMode": "Comics"
-	},
-	"SquirrelEvent": {
-		"prompt": "You have a lecture across campus but there are squirrels in the way!",
+		"prompt": "You are invited to a toga party! Are you going to go?",
 		"imgPath": "",
 		"choices": [
 			"UseWheels",
 			"SquirrelPictures"
 		],
 		"hasBottomBoxBorder": false,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
 	"MidtermEvent": {
@@ -85,6 +82,7 @@
 			"GiveUpMidterm"
 		],
 		"hasBottomBoxBorder": false,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
 	"CryMidtermPaperEvent": {
@@ -94,6 +92,7 @@
 			"DarnIt"
 		],
 		"hasBottomBoxBorder": false,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
 	"BlockPartyEvent": {
@@ -103,6 +102,7 @@
 			"BlockPartyCancelled"
 		],
 		"hasBottomBoxBorder": false,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
 	"CoronaEvent": {
@@ -112,37 +112,19 @@
 			"TikTok",
 			"ToiletPaper"
 		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
-	"StormTheWallEvent": {
-		"prompt": "Your friends are trying to convince you to do Storm the Wall",
-		"imgPath": "StormTheWallEvent/stormTheWall.png",
+	"SquirrelEvent": {
+		"prompt": "You have a lecture across campus but there are squirrels in the way!",
+		"imgPath": "",
 		"choices": [
-			"ScaleWall",
-			"CantReachTopShelf"
+			"UseWheels",
+			"SquirrelPictures"
 		],
-		"hasBottomBoxBorder": false,
-		"gamePlayMode": "Comics"
-	},
-	"DayOfTheLongBoatEvent": {
-		"prompt": "Day of the Longboat is coming up!",
-		"imgPath": "DayOfTheLongBoatEvent/longboat.png",
-		"choices": [
-			"RegisterToDayOfTheLongBoat",
-			"NoThankYou"
-		],
-		"hasBottomBoxBorder": false,
-		"gamePlayMode": "Comics"
-	},
-	"ImagineDayEvent": {
-		"prompt": "It's Imagine Day!",
-		"imgPath": "ImagineDayEvent/imagineDay.png",
-		"choices": [
-			"JoinLaunchPad",
-			"LookForOtherClubs"
-		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
 	"LandingEvent": {
@@ -152,6 +134,7 @@
 			"Start"
 		],
 		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "AcceptanceLetter"
 	},
 	"PickFacultyEvent": {
@@ -167,6 +150,7 @@
 			"Science"
 		],
 		"hasBottomBoxBorder": false,
+		"hasInnerFill": false,
 		"gamePlayMode": "Hide"
 	},
 	"NoMoreEventsEvent": {
@@ -174,6 +158,7 @@
 		"imgPath": "",
 		"choices": [],
 		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "Hide"
 	},
 	"PickResidenceEvent": {
@@ -185,20 +170,23 @@
 			"OrchardCommons"
 		],
 		"hasBottomBoxBorder": false,
+		"hasInnerFill": false,
 		"gamePlayMode": "Hide"
 	},
 	"WinEvent": {
 		"prompt": "You win! You have survived!",
 		"imgPath": "",
 		"choices": [],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "GameOver"
 	},
 	"LoseEvent": {
 		"prompt": "Game over. You lose.",
 		"imgPath": "",
 		"choices": [],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
 		"gamePlayMode": "GameOver"
 	}
 }

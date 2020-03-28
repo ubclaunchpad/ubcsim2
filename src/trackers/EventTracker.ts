@@ -55,6 +55,7 @@ export default class EventTracker {
                 "imgPath": "",
                 "choices": [],
                 "hasBottomBoxBorder": true,
+                "hasInnerFill": true,
                 "gamePlayMode": GamePlayMode.Hide
             };
         }

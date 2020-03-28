@@ -6,6 +6,7 @@ cache:
   - node_modules
 script:
 - npm install
+- scripts/unity_fetch.sh
 - scripts/build_check.sh
 deploy:
   local-dir: "./build"
