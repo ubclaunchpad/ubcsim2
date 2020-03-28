@@ -2,8 +2,6 @@ body {
   font-size: 16px;
   font-family: 'VT323', monospace;
   background-image: url(colourway1.png);
-  /* background-image: url(colourway2.png); */
-  /* background-image: url(colourway3.png); */
 }
 
 p {
@@ -70,8 +68,12 @@ p {
   display: inline-block;
 }
 
-#enter-name {
-  text-decoration: underline;
+#faculty-badge {
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+  border: black 1px solid;
+  text-align: center;
 }
 
 #bottom-menu {
@@ -82,11 +84,12 @@ p {
   position: relative;
 }
 
-#faculty-badge {
-  height: 60px;
-  width: 60px;
-  border: 1px solid black;
-  border-radius: 5px;
+span.editable:empty::before {
+    content: 'Enter Name';
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .hide {
