@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 484438819}
-  enemy: {fileID: 3559188644662122502, guid: 6c0aab9775d2fdf4c8f5c691c11781ad, type: 3}
+  enemy: {fileID: 8489293340401837656, guid: 6c0aab9775d2fdf4c8f5c691c11781ad, type: 3}
   enemySpawnPoint: {fileID: 721167955}
   enemiesToSpawn: 10
 --- !u!4 &693602126
