@@ -72,8 +72,8 @@ p {
   height: 60px;
   width: 60px;
   border-radius: 5px;
-  border: black 1px solid;
-  line-height: 60px;
+  border: black 2px solid;
+  line-height: 56px;
   text-align: center;
 }
 
