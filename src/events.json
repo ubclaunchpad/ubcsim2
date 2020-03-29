@@ -67,8 +67,8 @@
 		"prompt": "You are invited to a toga party! Are you going to go?",
 		"imgPath": "FratPartyEvent/toga.png",
 		"choices": [
-			"UseWheels",
-			"SquirrelPictures"
+			"GrossFrats",
+			"YayBedsheets"
 		],
 		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,
@@ -78,12 +78,11 @@
 		"prompt": "This midterm has an essay component ;_;",
 		"imgPath": "",
 		"choices": [
-			"LoremIpsum",
-			"GiveUpMidterm"
+			"LoremIpsum"
 		],
 		"hasBottomBoxBorder": false,
 		"hasInnerFill": true,
-		"gamePlayMode": "Comics"
+		"gamePlayMode": "Minigame"
 	},
 	"CryMidtermPaperEvent": {
 		"prompt": "You failed your latest midterm...",
@@ -120,12 +119,11 @@
 		"prompt": "You have a lecture across campus but there are squirrels in the way!",
 		"imgPath": "",
 		"choices": [
-			"UseWheels",
-			"SquirrelPictures"
+			"UseWheels"
 		],
 		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,
-		"gamePlayMode": "Comics"
+		"gamePlayMode": "Minigame"
 	},
 	"ImagineDayEvent": {
 		"prompt": "It's Imagine Day!",
