@@ -534,6 +534,8 @@ MonoBehaviour:
   moveSpeed: 8
   toiletPaperRollsNeeded: 8
   winlockObject: {fileID: 500568796}
+  leftSpawnBound: {fileID: 987309769}
+  rightSpawnBound: {fileID: 1963959743}
 --- !u!1 &1963959742
 GameObject:
   m_ObjectHideFlags: 0
