@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.InteropServices;
 
 public class PlayerControls : MonoBehaviour
 {
+    [DllImport("__Internal")]
+    private static extern void WinMiniGame();
+
     public float moveSpeed;
     public int toiletPaperRollsNeeded;
     public GameObject winlockObject;
@@ -25,6 +29,11 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if (winlockObject == null)
+        // {
+        //     Debug.Log("hello world");
+        // }
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         if ((moveHorizontal > 0 && transform.position.x >= rightSpawnBound.transform.position.x) ||
             (moveHorizontal < 0 && transform.position.x <= leftSpawnBound.transform.position.x))
@@ -39,8 +48,8 @@ public class PlayerControls : MonoBehaviour
         if (toiletPaperRollsCollected >= toiletPaperRollsNeeded && !gameEnded)
         {
             gameEnded = true;
-            Debug.Log("Won!");
             Destroy(winlockObject);
+            WinMiniGame();
         }
     }
 

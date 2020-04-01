@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.InteropServices;
 
 public class GameController : MonoBehaviour
 {
+    [DllImport("__Internal")]
+    private static extern void LoseMiniGame();
+
     public int enemiesToSpawn;
     public GameObject enemy;
     public GameObject winlockObject;
@@ -39,14 +43,14 @@ public class GameController : MonoBehaviour
             enemiesSpawned++;
             gameStarted = true;
         }
-        else if (gameStarted && winlockObject != null)
+        else if (gameStarted && winlockObject != null && enemiesSpawned >= enemiesToSpawn)
         {
             GameObject[] activeEnemies = GameObject.FindGameObjectsWithTag("Enemy");
 
             if (activeEnemies.Length == 0 && !gameEnded)
             {
                 gameEnded = true;
-                Debug.Log("Lost!");
+                LoseMiniGame();
             }
         }
     }
