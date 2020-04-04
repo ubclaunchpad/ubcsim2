@@ -126,34 +126,31 @@
     "dlogo": ["ARTS", "#522E91", "#FFFFFF"],
     "btnStyle": "arts"
   },
-  "Forestry":
-  {
-    "answer":"Forestry",
-    "followUp":"",
-    "statChanges":[100, 2.0, 100],
+  "Forestry": {
+    "answer": "Forestry",
+    "followUp": "",
+    "statChanges": [100, 2.0, 100],
     "minigame": "",
     "dlogo": ["FORE", "#162A00", "#FFFFFF"],
     "btnStyle": "fore"
   },
-  "Commerce":
-  {
-    "answer":"Commerce",
-    "followUp":"",
-    "statChanges":[100, 2.0, 100],
+  "Commerce": {
+    "answer": "Commerce",
+    "followUp": "",
+    "statChanges": [100, 2.0, 100],
     "minigame": "",
     "dlogo": ["COMM", "#8D8D8D", "#FFFFFF"],
     "btnStyle": "comm"
   },
-  "Kinesiology":
-  {
-    "answer":"Kinesiology",
-    "followUp":"",
-    "statChanges":[100, 2.0, 100],
+  "Kinesiology": {
+    "answer": "Kinesiology",
+    "followUp": "",
+    "statChanges": [100, 2.0, 100],
     "minigame": "",
     "dlogo": ["KIN", "#228B22", "#FFFFFF"],
     "btnStyle": "kin"
   },
-  
+
   "ApScience": {
     "answer": "Applied Science",
     "followUp": "",
@@ -198,5 +195,75 @@
     "statChanges": [0, 0, 0],
     "minigame": "",
     "btnStyle": "orchard"
+  },
+  "DarnIt": {
+    "answer": "Darn it ):",
+    "followUp": "",
+    "statChanges": [0, -0.5, 0],
+    "minigame": "",
+    "btnStyle": ""
+  },
+  "BlockPartyCancelled": {
+    "answer": "HAHA CANCELLED! 😭",
+    "followUp": "",
+    "statChanges": [0, 0, 10],
+    "minigame": "",
+    "btnStyle": ""
+  },
+  "TikTok": {
+    "answer": "* makes TikTok dance video *",
+    "followUp": "",
+    "statChanges": [10, -0.2, -10],
+    "minigame": "",
+    "btnStyle": ""
+  },
+  "ToiletPaper": {
+    "answer": "I NEED TOILET PAPER",
+    "followUp": "",
+    "statChanges": [0, 0, -20],
+    "minigame": "",
+    "btnStyle": ""
+  },
+  "ScaleWall": {
+    "answer": "I can totally scale 10.5 ft wall by myself",
+    "followUp": "",
+    "statChanges": [20, 0, 0],
+    "minigame": "",
+    "btnStyle": ""
+  },
+  "CantReachTopShelf": {
+    "answer": "I can't even reach the top shelf... 🥺",
+    "followUp": "",
+    "statChanges": [0, 0, 5],
+    "minigame": "",
+    "btnStyle": ""
+  },
+  "RegisterToDayOfTheLongBoat": {
+    "answer": "I MUST REGISTER!",
+    "followUp": "",
+    "statChanges": [10, 0, -2],
+    "minigame": "",
+    "btnStyle": ""
+  },
+  "NoThankYou": {
+    "answer": "Physical activity? No thank you.",
+    "followUp": "",
+    "statChanges": [0, 0, 5],
+    "minigame": "",
+    "btnStyle": ""
+  },
+  "JoinLaunchPad": {
+    "answer": "Join Launch Pad!",
+    "followUp": "",
+    "statChanges": [40, 0, 0],
+    "minigame": "",
+    "btnStyle": ""
+  },
+  "LookForOtherClubs": {
+    "answer": "... I'm going to look for other clubs 😒",
+    "followUp": "",
+    "statChanges": [0, 0, 0],
+    "minigame": "",
+    "btnStyle": ""
   }
 }
