@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b8ab66817190b8408f0e3625f33b9889",
+    "revision": "27841d589f7425a630ed1148573f5ed3",
     "url": "/ubcsim2/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ubcsim2/static/js/2.db9614d2.chunk.js"
   },
   {
-    "revision": "55427683a597dfd4190b",
-    "url": "/ubcsim2/static/js/main.c315792b.chunk.js"
+    "revision": "f3fff70fdfb047a8bc2b",
+    "url": "/ubcsim2/static/js/main.02ff2dbf.chunk.js"
   },
   {
     "revision": "1da95db5d95cf9e8c37b",
@@ -42,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4f524b23611f96726f7c3c716767fea8",
     "url": "/ubcsim2/static/media/longboat.4f524b23.png"
+  },
+  {
+    "revision": "1f309422a493e7cc0c6706471b9e545c",
+    "url": "/ubcsim2/static/media/losing.1f309422.png"
   },
   {
     "revision": "841b2939ddc76389e470c66fedad304d",

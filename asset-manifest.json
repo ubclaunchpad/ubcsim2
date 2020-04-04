@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/ubcsim2/static/js/main.c315792b.chunk.js",
-    "main.js.map": "/ubcsim2/static/js/main.c315792b.chunk.js.map",
+    "main.js": "/ubcsim2/static/js/main.02ff2dbf.chunk.js",
+    "main.js.map": "/ubcsim2/static/js/main.02ff2dbf.chunk.js.map",
     "runtime-main.js": "/ubcsim2/static/js/runtime-main.8f9f83a3.js",
     "runtime-main.js.map": "/ubcsim2/static/js/runtime-main.8f9f83a3.js.map",
     "static/js/2.db9614d2.chunk.js": "/ubcsim2/static/js/2.db9614d2.chunk.js",
     "static/js/2.db9614d2.chunk.js.map": "/ubcsim2/static/js/2.db9614d2.chunk.js.map",
     "index.html": "/ubcsim2/index.html",
-    "precache-manifest.cbd96613df757ddbe4c37fe28588ef42.js": "/ubcsim2/precache-manifest.cbd96613df757ddbe4c37fe28588ef42.js",
+    "precache-manifest.dceb5f34e7c715ebb46c0d7c86056e60.js": "/ubcsim2/precache-manifest.dceb5f34e7c715ebb46c0d7c86056e60.js",
     "service-worker.js": "/ubcsim2/service-worker.js",
     "static/media/abg_boyfriend.png": "/ubcsim2/static/media/abg_boyfriend.5eb701e5.png",
     "static/media/abg_no_airpods.png": "/ubcsim2/static/media/abg_no_airpods.e58d9c98.png",
@@ -16,6 +16,7 @@
     "static/media/corona.png": "/ubcsim2/static/media/corona.2d568632.png",
     "static/media/imagineDay.png": "/ubcsim2/static/media/imagineDay.e362e7f2.png",
     "static/media/longboat.png": "/ubcsim2/static/media/longboat.4f524b23.png",
+    "static/media/losing.png": "/ubcsim2/static/media/losing.1f309422.png",
     "static/media/midtermPaper.png": "/ubcsim2/static/media/midtermPaper.841b2939.png",
     "static/media/place-holder-image.png": "/ubcsim2/static/media/place-holder-image.fd8094cc.png",
     "static/media/stormTheWall.png": "/ubcsim2/static/media/stormTheWall.b15b15dd.png",
@@ -24,6 +25,6 @@
   "entrypoints": [
     "static/js/runtime-main.8f9f83a3.js",
     "static/js/2.db9614d2.chunk.js",
-    "static/js/main.c315792b.chunk.js"
+    "static/js/main.02ff2dbf.chunk.js"
   ]
 }
