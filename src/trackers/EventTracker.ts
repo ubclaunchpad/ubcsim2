@@ -31,11 +31,11 @@ export default class EventTracker {
         if (this.queue.length > 0)
             return this.queue.shift() as IEvent;
 
-        const r = Math.random() * 100;
+        // const r = Math.random() * 100;
         // 0 to 11
-        const month = (Math.floor(week / 4) + 8) % 12;
+        const month = (Math.floor(week / 4)) % 4;
         if (this.pool.length > 0 &&
-            (r > this.SEASONAL_CHANCE || this.seasonal[month].length === 0)) {
+            (this.seasonal[month].length === 0)) {
             // If we roll a normal pool or if there are no seasonal events then
             // use the normal pool (given that there are still things in the
             // normal pool)
@@ -43,7 +43,7 @@ export default class EventTracker {
             const index = this.pool.indexOf(event);
             this.pool.splice(index, 1);
             return event;
-        } else if (r <= this.SEASONAL_CHANCE && this.seasonal[month].length > 0) {
+        } else if (this.seasonal[month].length > 0) {
             // Else we use the seasonal events pool
             let event = this.seasonal[month][Math.floor(Math.random() * this.seasonal[month].length)];
             const index = this.seasonal[month].indexOf(event);
