@@ -206,7 +206,7 @@
 	},
 	"WinEvent": {
 		"prompt": "You win! You have survived!",
-		"imgPath": "",
+		"imgPath": "winning.png",
 		"choices": [],
 		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,
@@ -214,7 +214,7 @@
 	},
 	"LoseEvent": {
 		"prompt": "Game over. You lose.",
-		"imgPath": "",
+		"imgPath": "losing.png",
 		"choices": [],
 		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,

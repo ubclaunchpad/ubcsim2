@@ -22,6 +22,7 @@ export interface IProps { }
 export interface IState {
     week: number;
     name: string;
+    gameOver: boolean;
     playerStats: PlayerStats;
     currentEvent: IEvent;
     eventTracker: EventTracker;
@@ -36,6 +37,7 @@ const emptyMinigame: IMinigame = {
 };
 
 export default class App extends React.Component<IProps, IState> {
+    static readonly maxWeeks: number = 5;
     private choiceManager: ChoicesManager;
     private eventManager: EventsManager;
     private minigameManager: MinigamesManager;
@@ -66,6 +68,7 @@ export default class App extends React.Component<IProps, IState> {
         this.state = {
             week: 0,
             name: "P1",
+            gameOver: false,
             playerStats: playerStats,
             currentEvent: firstEvent,
             eventTracker: eventTracker,
@@ -75,18 +78,22 @@ export default class App extends React.Component<IProps, IState> {
 
     makeChoice = (choice: IChoice) => {
         if (choice.minigame === "") {
+            let gameOver = false;
             this.state.playerStats.applyStatChanges(choice.statChanges, choice.dlogo);
 
-            if (this.state.week >= 2 && this.state.playerStats.getGpa() < 1.0) {
-                // Losing condition
-                this.state.eventTracker.queueFollowUpEvent(
-                    this.eventManager.get("LoseEvent")
-                );
-            } else if (this.state.week > 5) {
-                // Winning condition if not losing
-                this.state.eventTracker.queueFollowUpEvent(
-                    this.eventManager.get("WinEvent")
-                );
+            if (choice.followUp === "" && this.state.week > App.maxWeeks) {
+                if (this.state.playerStats.getGpa() >= 1.0) {
+                    // Winning condition
+                    this.state.eventTracker.queueFollowUpEvent(
+                        this.eventManager.get("WinEvent")
+                    );
+                } else {
+                    // Lose condition is everything else
+                    this.state.eventTracker.queueFollowUpEvent(
+                        this.eventManager.get("LoseEvent")
+                    );
+                }
+                gameOver = true;
             } else if (choice.followUp !== "") {
                 // The game isn't ending and there is a follow up event
                 this.state.eventTracker.queueFollowUpEvent(
@@ -94,11 +101,13 @@ export default class App extends React.Component<IProps, IState> {
                 );
             }
 
-            let nextEvent = this.state.eventTracker.getNextEvent(this.state.week + 1);
+            let weekDelta = (choice.followUp !== "" ? 0 : 1);
+            let nextEvent = this.state.eventTracker.getNextEvent(weekDelta + this.state.week);
 
             this.setState(prevState => {
                 return {
-                    week: prevState.week + 1,
+                    week: prevState.week + weekDelta,
+                    gameOver: gameOver,
                     playerStats: prevState.playerStats,
                     currentEvent: nextEvent,
                     eventTracker: prevState.eventTracker,
@@ -120,6 +129,7 @@ export default class App extends React.Component<IProps, IState> {
             this.setState(prevState => {
                 return {
                     week: prevState.week,
+                    gameOver: false,
                     playerStats: prevState.playerStats,
                     currentEvent: minigameEvent,
                     eventTracker: prevState.eventTracker,
@@ -135,6 +145,7 @@ export default class App extends React.Component<IProps, IState> {
         this.setState(prevState => {
             return {
                 week: prevState.week + 1,
+                gameOver: false,
                 playerStats: prevState.playerStats,
                 currentEvent: nextEvent,
                 eventTracker: prevState.eventTracker,
@@ -168,6 +179,15 @@ export default class App extends React.Component<IProps, IState> {
             transform: "scale(" + scale + ")",
         };
 
+        const ggButt = this.state.gameOver && (
+            <button
+                className="this-align-center choice-btn-70 nes-btn"
+                onClick={() => window.location.reload(false)}
+            >
+                Play Again?
+            </button>
+        );
+
         return (
             <div id="app" >
                 <div id="game-container" style={style} className="nes-container is-ubc-alt-blue has-box-shadow">
@@ -192,6 +212,8 @@ export default class App extends React.Component<IProps, IState> {
                             <p id="prompt" className="this-align-center">
                                 {currentEvent.prompt}
                             </p>
+
+                            {ggButt}
                             <Choices
                                 choices={currentEvent.choices}
                                 mgr={this.choiceManager}
