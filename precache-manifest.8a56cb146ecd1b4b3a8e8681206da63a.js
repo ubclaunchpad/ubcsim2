@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cc9ff99d97436793e9fb750d7f6ef606",
+    "revision": "e107984612df9c8f0d063a07592c70f2",
     "url": "/ubcsim2/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ubcsim2/static/js/2.db9614d2.chunk.js"
   },
   {
-    "revision": "6a83df83bf2fe27f5ce0",
-    "url": "/ubcsim2/static/js/main.175164af.chunk.js"
+    "revision": "1bd3e5c71a1920bb4633",
+    "url": "/ubcsim2/static/js/main.6b3dbeb4.chunk.js"
   },
   {
     "revision": "1da95db5d95cf9e8c37b",
@@ -32,7 +32,31 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ubcsim2/static/media/abg_sad.1262121d.png"
   },
   {
+    "revision": "2d5686322f96a55163a50ce4077f117d",
+    "url": "/ubcsim2/static/media/corona.2d568632.png"
+  },
+  {
+    "revision": "e362e7f2ab3f9e3c06a19e9bdfe0060e",
+    "url": "/ubcsim2/static/media/imagineDay.e362e7f2.png"
+  },
+  {
+    "revision": "4f524b23611f96726f7c3c716767fea8",
+    "url": "/ubcsim2/static/media/longboat.4f524b23.png"
+  },
+  {
+    "revision": "841b2939ddc76389e470c66fedad304d",
+    "url": "/ubcsim2/static/media/midtermPaper.841b2939.png"
+  },
+  {
     "revision": "fd8094cc2d4c50eacfdd7db3c97c6113",
     "url": "/ubcsim2/static/media/place-holder-image.fd8094cc.png"
+  },
+  {
+    "revision": "b15b15dd515022bbee1e3fb51ebb7fba",
+    "url": "/ubcsim2/static/media/stormTheWall.b15b15dd.png"
+  },
+  {
+    "revision": "8509c588549751f64db10f7fabc1640c",
+    "url": "/ubcsim2/static/media/toga.8509c588.png"
   }
 ]);
