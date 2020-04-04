@@ -1,7 +1,7 @@
 {
 	"BoomerGregorEvent": {
 		"prompt": "Dr. Gregor tells the class to start studying for CPSC 110 early!",
-		"imgPath": "Gregor.png",
+		"imgPath": "BoomerGregorEvent/Gregor.png",
 		"choices": [
 			"TrustNaturalRecursion",
 			"OkBoomer"
@@ -12,7 +12,7 @@
 	},
 	"CuteGirlEvent": {
 		"prompt": "You see a cute girl in the Life Building, what do you do?",
-		"imgPath": "abg_normal.png",
+		"imgPath": "CuteGirlEvent/abg_normal.png",
 		"choices": [
 			"BuyTheTix",
 			"ComplimentFilas"
@@ -23,7 +23,7 @@
 	},
 	"CuteFilasEvent": {
 		"prompt": "She takes out her AirPods.\n\"What did you say?\"",
-		"imgPath": "abg_no_airpods.png",
+		"imgPath": "CuteGirlEvent/abg_no_airpods.png",
 		"choices": [
 			"RunAway",
 			"ShowFilas"
@@ -34,7 +34,7 @@
 	},
 	"CuteGirlTixEvent": {
 		"prompt": "The cute girl from the Life Building asked if you got the VIP tickets for EDC. Did you?",
-		"imgPath": "abg_sad.png",
+		"imgPath": "CuteGirlEvent/abg_sad.png",
 		"choices": [
 			"OhYes",
 			"Nope"
@@ -45,7 +45,7 @@
 	},
 	"NoVIPTixEvent": {
 		"prompt": "The cute girl from the Life Building doesn't like you anymore because you're poor ):",
-		"imgPath": "abg_sad.png",
+		"imgPath": "CuteGirlEvent/abg_sad.png",
 		"choices": [
 			"StalkInstagram"
 		],
@@ -55,7 +55,7 @@
 	},
 	"HasBoyfriendEvent": {
 		"prompt": "The cute girl from the Life Building just posted a photo of her and her boyfriend at EDC.",
-		"imgPath": "abg_boyfriend.png",
+		"imgPath": "CuteGirlEvent/abg_boyfriend.png",
 		"choices": [
 			"FiveverAlone"
 		],
@@ -65,21 +65,10 @@
 	},
 	"FratPartyEvent": {
 		"prompt": "You are invited to a toga party! Are you going to go?",
-		"imgPath": "",
+		"imgPath": "FratPartyEvent/toga.png",
 		"choices": [
 			"GrossFrats",
 			"YayBedsheets"
-		],
-		"hasBottomBoxBorder": true,
-		"hasInnerFill": true,
-		"gamePlayMode": "Comics"
-	},
-	"SquirrelEvent": {
-		"prompt": "You have a lecture across campus but there are squirrels in the way!",
-		"imgPath": "",
-		"choices": [
-			"UseWheels",
-			"SquirrelPictures"
 		],
 		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,
@@ -89,8 +78,81 @@
 		"prompt": "This midterm has an essay component ;_;",
 		"imgPath": "",
 		"choices": [
-			"GiveUpMidterm",
 			"LoremIpsum"
+		],
+		"hasBottomBoxBorder": false,
+		"hasInnerFill": true,
+		"gamePlayMode": "Minigame"
+	},
+	"CryMidtermPaperEvent": {
+		"prompt": "You failed your latest midterm...",
+		"imgPath": "CryMidtermPaperEvent/midtermPaper.png",
+		"choices": [
+			"DarnIt"
+		],
+		"hasBottomBoxBorder": false,
+		"hasInnerFill": true,
+		"gamePlayMode": "Comics"
+	},
+	"BlockPartyEvent": {
+		"prompt": "Block party is coming up !!!",
+		"imgPath": "BlockPartyEvent/blockParty.png",
+		"choices": [
+			"BlockPartyCancelled"
+		],
+		"hasBottomBoxBorder": false,
+		"hasInnerFill": true,
+		"gamePlayMode": "Comics"
+	},
+	"CoronaEvent": {
+		"prompt": "CORONA VIRUS 😳",
+		"imgPath": "CoronavirusEvent/corona.png",
+		"choices": [
+			"TikTok",
+			"ToiletPaper"
+		],
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
+		"gamePlayMode": "Comics"
+	},
+	"SquirrelEvent": {
+		"prompt": "You have a lecture across campus but there are squirrels in the way!",
+		"imgPath": "",
+		"choices": [
+			"UseWheels"
+		],
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
+		"gamePlayMode": "Minigame"
+	},
+	"ImagineDayEvent": {
+		"prompt": "It's Imagine Day!",
+		"imgPath": "ImagineDayEvent/imagineDay.png",
+		"choices": [
+			"JoinLaunchPad",
+			"LookForOtherClubs"
+		],
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
+		"gamePlayMode": "Comics"
+	},
+	"DayOfTheLongBoatEvent": {
+		"prompt": "Register for Day of the Longboat?",
+		"imgPath": "DayOfTheLongBoatEvent/longboat.png",
+		"choices": [
+			"RegisterToDayOfTheLongBoat",
+			"NoThankYou"
+		],
+		"hasBottomBoxBorder": true,
+		"hasInnerFill": true,
+		"gamePlayMode": "Comics"
+	},
+	"StormTheWallEvent": {
+		"prompt": "Wanna Storm the Wall bro?",
+		"imgPath": "StormTheWallEvent/stormTheWall",
+		"choices": [
+			"ScaleWall",
+			"CantReachTopShelf"
 		],
 		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,

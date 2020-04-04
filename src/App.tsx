@@ -41,13 +41,13 @@ export default class App extends React.Component<IProps, IState> {
     private choiceManager: ChoicesManager;
     private eventManager: EventsManager;
     private minigameManager: MinigamesManager;
-    private acceptOfferEvent: string;
+    private acceptOfferLabel: string;
 
     constructor(props: IProps) {
         super(props);
         const playerStats = new PlayerStats();
         const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
-        this.acceptOfferEvent = "accept-offer";
+        this.acceptOfferLabel = "accept-offer";
 
         this.choiceManager = new ChoicesManager(choices);
         this.eventManager = new EventsManager(events);
@@ -202,7 +202,7 @@ export default class App extends React.Component<IProps, IState> {
                         minigame={this.state.currentMinigame}
                         finishMinigame={this.finishMinigame}
                         handleNameChange={this.handleNameChange}
-                        acceptOfferEvent={this.acceptOfferEvent}
+                        acceptOfferLabel={this.acceptOfferLabel}
                     />
                     <section
                         id="user-interaction-box"
@@ -218,7 +218,7 @@ export default class App extends React.Component<IProps, IState> {
                                 choices={currentEvent.choices}
                                 mgr={this.choiceManager}
                                 makeChoice={this.makeChoice}
-                                acceptOfferEvent={this.acceptOfferEvent}
+                                acceptOfferLabel={this.acceptOfferLabel}
                             />
                         </div>
                     </section>

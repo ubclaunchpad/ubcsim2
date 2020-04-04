@@ -7,7 +7,7 @@ import ChoicesManager from "./../../events/ChoicesManager";
 interface IProps {
     choices: string[];
     mgr: ChoicesManager;
-    acceptOfferEvent: string;
+    acceptOfferLabel: string;
     makeChoice(choice: IChoice): void;
 }
 
@@ -19,7 +19,7 @@ export default function Choices(props: IProps) {
             key={c.answer}
             choice={c}
             makeChoice={props.makeChoice}
-            acceptOfferEvent={props.acceptOfferEvent}
+            acceptOfferLabel={props.acceptOfferLabel}
         />
     );
   });
