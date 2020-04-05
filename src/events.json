@@ -82,7 +82,7 @@
 		],
 		"hasBottomBoxBorder": false,
 		"hasInnerFill": true,
-		"gamePlayMode": "Minigame"
+		"gamePlayMode": "Comics"
 	},
 	"CryMidtermPaperEvent": {
 		"prompt": "You failed your latest midterm...",
@@ -123,7 +123,7 @@
 		],
 		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,
-		"gamePlayMode": "Minigame"
+		"gamePlayMode": "Comics"
 	},
 	"ImagineDayEvent": {
 		"prompt": "It's Imagine Day!",
