@@ -6,9 +6,7 @@
 			"MidtermEvent"
 		],
 		"followUp": [
-			"LandingEvent",
-			"PickFacultyEvent",
-			"PickResidenceEvent"
+			"LandingEvent", "PickFacultyEvent"
 		],
 		"seasonal": [
 			["ImagineDayEvent"],

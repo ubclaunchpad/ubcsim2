@@ -9,7 +9,7 @@ interface IProps {
     mode: string;
     imgPath: string;
     minigame: IMinigame;
-    acceptOfferEvent: string;
+    acceptOfferLabel: string;
     finishMinigame(statChanges: number[]): void;
     handleNameChange(name: string): void;
 }
@@ -36,8 +36,27 @@ export default class GamePlayConsole extends React.Component<IProps, IState> {
         if(this.state.name !== "" ) this.props.handleNameChange(this.state.name);
     }
 
+    handleEnterKeyPress = (e: React.KeyboardEvent) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log(this.state.name);
+            let newName = this.removeTags(this.state.name);
+            this.setState({ name: newName });
+            document.getElementById(this.props.acceptOfferLabel)!.focus();
+        }
+    }
+
+    removeTags(str: string) {
+        if ((str === null) || (str === ""))
+          return "";
+        else
+          str = str.toString();
+        return str.replace(/(<([^>]+)>)/ig, "");
+    }
+
     generateAcceptanceLetter = () => {
-        document.addEventListener(this.props.acceptOfferEvent, this.changeName);
+        document.addEventListener(this.props.acceptOfferLabel, this.changeName);
 
         return (
             <div
@@ -49,8 +68,9 @@ export default class GamePlayConsole extends React.Component<IProps, IState> {
                     tagName="span"
                     html={this.state.name}
                     disabled={!this.state.editable}
+                    onChange={this.handleChange}
                     // tslint:disable-next-line:jsx-alignment
-                    onChange={this.handleChange} />
+                    onKeyUp={this.handleEnterKeyPress} />
                 </p>
                 <p>Congratulations! <br />Please accept this offer of admission to UBC.</p><br />
                 <p>Survive the school year by balancing your social life, grades, and sleep!</p>
