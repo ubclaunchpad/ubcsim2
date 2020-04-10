@@ -223,8 +223,8 @@
   "ToiletPaper": {
     "answer": "I NEED TOILET PAPER",
     "followUp": "",
-    "statChanges": [0, 0, -20],
-    "minigame": "",
+    "statChanges": [0, 0, 0],
+    "minigame": "ToiletPaperCatch",
     "btnStyle": ""
   },
   "ScaleWall": {

@@ -12,5 +12,12 @@
         "winStatChanges": [10, 0.5, 0],
         "loseStatChanges": [-20, -0.5, 0],
         "prompt": "Jump over all the squirrels!"
+    },
+    "ToiletPaperCatch":
+    {
+        "build": "toilet_paper_catch",
+        "winStatChanges": [10, 0, 10],
+        "loseStatChanges": [-10, -0, -10],
+        "prompt": "Use the arrow keys to catch toilet paper!"
     }
 }
