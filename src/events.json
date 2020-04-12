@@ -80,7 +80,7 @@
 		"choices": [
 			"LoremIpsum"
 		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
@@ -90,7 +90,7 @@
 		"choices": [
 			"DarnIt"
 		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
@@ -100,7 +100,7 @@
 		"choices": [
 			"BlockPartyCancelled"
 		],
-		"hasBottomBoxBorder": false,
+		"hasBottomBoxBorder": true,
 		"hasInnerFill": true,
 		"gamePlayMode": "Comics"
 	},
@@ -149,7 +149,7 @@
 	},
 	"StormTheWallEvent": {
 		"prompt": "Wanna Storm the Wall bro?",
-		"imgPath": "StormTheWallEvent/stormTheWall",
+		"imgPath": "StormTheWallEvent/stormTheWall.png",
 		"choices": [
 			"ScaleWall",
 			"CantReachTopShelf"
