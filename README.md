@@ -67,7 +67,7 @@ To standardize character creations, we created a character template system with 
 
 Minigames have moving parts and animations. Below is the sprite sequence.
 ![alt text](showcase_images/animation_sequence.png)
-![alt text](showcase_images/skaterboi.gif) | ![alt text](showcase_images/squirrel.gif =250x)
+![alt text](showcase_images/skaterboi.gif) | ![alt text](showcase_images/squirrel.gif)
 
 ## The Challenges
 
