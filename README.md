@@ -53,6 +53,22 @@ Using React's state management proved to be useful in the way we decided to buil
 
 We chose Unity as our primary driver for developing minigames mainly for the utility of not having to create a new game engine for every minigame we want to create. This helped us expedite the number of minigames we were able to include in the game, as without it, we could have potentially gone the whole school year without finishing a single minigame. Luckily, we were able to find a library we could use to display WebGL builds of Unity projects in a React project in [React Unity WebGL](https://github.com/elraccoone/react-unity-webgl).
 
+## The Art
+
+We went for a 90s game console look, so pixel art was an appropriate choice! This art style also makes creating templates a lot easier such that art between each designer is consistent.
+
+### Backgrounds
+### Characters
+
+To standardize character creations, we created a character template system with different skintones, hairstyles, clothing, shoes, and accessories options.
+![alt text](showcase_images/character_sheet.png)
+
+### Animations
+
+Minigames have moving parts and animations. Below is the sprite sequence.
+![alt text](showcase_images/animation_sequence.png)
+![alt text](showcase_images/skaterboi.gif) | ![alt text](showcase_images/squirrel.gif =250x)
+
 ## The Challenges
 
 As with any team, our team had our share of struggles in working on this project together.
