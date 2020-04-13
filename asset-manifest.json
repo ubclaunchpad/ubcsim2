@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/ubcsim2/static/js/main.f7f08ff7.chunk.js",
-    "main.js.map": "/ubcsim2/static/js/main.f7f08ff7.chunk.js.map",
+    "main.js": "/ubcsim2/static/js/main.7baa57b4.chunk.js",
+    "main.js.map": "/ubcsim2/static/js/main.7baa57b4.chunk.js.map",
     "runtime-main.js": "/ubcsim2/static/js/runtime-main.8f9f83a3.js",
     "runtime-main.js.map": "/ubcsim2/static/js/runtime-main.8f9f83a3.js.map",
     "static/js/2.db9614d2.chunk.js": "/ubcsim2/static/js/2.db9614d2.chunk.js",
     "static/js/2.db9614d2.chunk.js.map": "/ubcsim2/static/js/2.db9614d2.chunk.js.map",
     "index.html": "/ubcsim2/index.html",
-    "precache-manifest.f653943fee6c9ce34f9d6d9f6bb1e0dd.js": "/ubcsim2/precache-manifest.f653943fee6c9ce34f9d6d9f6bb1e0dd.js",
+    "precache-manifest.4a268330ae7a6899a3808510917c3589.js": "/ubcsim2/precache-manifest.4a268330ae7a6899a3808510917c3589.js",
     "service-worker.js": "/ubcsim2/service-worker.js",
     "static/media/abg_boyfriend.png": "/ubcsim2/static/media/abg_boyfriend.5eb701e5.png",
     "static/media/abg_no_airpods.png": "/ubcsim2/static/media/abg_no_airpods.e58d9c98.png",
@@ -25,6 +25,6 @@
   "entrypoints": [
     "static/js/runtime-main.8f9f83a3.js",
     "static/js/2.db9614d2.chunk.js",
-    "static/js/main.f7f08ff7.chunk.js"
+    "static/js/main.7baa57b4.chunk.js"
   ]
 }
