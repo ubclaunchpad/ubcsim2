@@ -3,16 +3,17 @@
 		"pool": [
 			"CuteGirlEvent",
 			"SquirrelEvent",
-			"MidtermEvent"
+			"MidtermEvent",
+			"BlockPartyEvent",
+			"CoronaEvent"
 		],
 		"followUp": [
-			"LandingEvent", "PickFacultyEvent"
+			"LandingEvent", "PickFacultyEvent", "ImagineDayEvent"
 		],
 		"seasonal": [
-			["ImagineDayEvent"],
+			[],
 			["DayOfTheLongBoatEvent", "BoomerGregorEvent", "FratPartyEvent"],
-			["StormTheWallEvent", "CryMidtermPaperEvent"],
-			["BlockPartyEvent", "CoronaEvent"]
+			["StormTheWallEvent", "CryMidtermPaperEvent"]
 		]
 	}
 }
