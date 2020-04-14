@@ -1,20 +1,17 @@
 {
-    "EssayWrite":
-    {
+    "EssayWrite": {
         "build": "essay_write",
         "winStatChanges": [0, 1, 0],
         "loseStatChanges": [0, -1, 0],
         "prompt": "Click to write your essay!"
     },
-    "SquirrelJump":
-    {
+    "SquirrelJump": {
         "build": "squirrel_jump",
         "winStatChanges": [10, 0.5, 0],
         "loseStatChanges": [-20, -0.5, 0],
-        "prompt": "Jump over all the squirrels!"
+        "prompt": "Click to jump over all the squirrels!"
     },
-    "ToiletPaperCatch":
-    {
+    "ToiletPaperCatch": {
         "build": "toilet_paper_catch",
         "winStatChanges": [10, 0, 10],
         "loseStatChanges": [-10, -0, -10],
