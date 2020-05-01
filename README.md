@@ -1,4 +1,4 @@
-# :thought_balloon: UBC Simulator 2
+![UBC Simulator 2](./.static/thumbnail.png)
 
 [![Build Status](https://travis-ci.com/ubclaunchpad/ubcsim2.svg?branch=master)](https://travis-ci.com/ubclaunchpad/ubcsim2)
 
