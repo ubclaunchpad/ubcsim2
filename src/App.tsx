@@ -223,6 +223,11 @@ export default class App extends React.Component<IProps, IState> {
                         </div>
                     </section>
                 </div>
+                <div style={{ marginTop: "32px" }}>
+                    <p>
+                        A <a href="https://ubclaunchpad.com" target="_blank" rel="noopener noreferrer">UBC Launch Pad</a> project.
+                    </p>
+                </div>
             </div>
         );
     }
