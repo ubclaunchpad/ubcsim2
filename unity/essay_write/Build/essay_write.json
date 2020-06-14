@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "ubcsim2-essay",
+"dataUrl": "essay_write.data.unityweb",
+"wasmCodeUrl": "essay_write.wasm.code.unityweb",
+"wasmFrameworkUrl": "essay_write.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}
