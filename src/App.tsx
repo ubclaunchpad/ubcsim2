@@ -37,7 +37,7 @@ const emptyMinigame: IMinigame = {
 };
 
 export default class App extends React.Component<IProps, IState> {
-    static readonly maxWeeks: number = 5;
+    static readonly maxWeeks: number = 9;
     private choiceManager: ChoicesManager;
     private eventManager: EventsManager;
     private minigameManager: MinigamesManager;
@@ -222,6 +222,11 @@ export default class App extends React.Component<IProps, IState> {
                             />
                         </div>
                     </section>
+                </div>
+                <div style={{ marginTop: "32px" }}>
+                    <p>
+                        A <a href="https://ubclaunchpad.com" target="_blank" rel="noopener noreferrer">UBC Launch Pad</a> project.
+                    </p>
                 </div>
             </div>
         );
