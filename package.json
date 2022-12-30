@@ -27,7 +27,7 @@
     "cross-env": "^6.0.3",
     "gh-pages": "^2.1.1",
     "jest": "^24.9.0",
-    "mocha": "^6.2.1",
+    "mocha": "^10.2.0",
     "react": "^16.11.0",
     "react-contenteditable": "^3.3.3",
     "react-dom": "^16.11.0",
